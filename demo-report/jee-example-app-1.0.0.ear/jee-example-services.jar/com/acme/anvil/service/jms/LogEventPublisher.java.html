@@ -1,0 +1,186 @@
+<html>
+	<head>
+		<script type='text/javascript' src='../../../../../../../jquery.min.js'></script>
+		<script type='text/javascript' src='../../../../../../../jquery-ui/jquery.ui.widget.js'></script>
+		<script type='text/javascript' src='../../../../../../../snippet/jquery.snippet.min.js'></script>
+		<script type='text/javascript' src='../../../../../../../snippet/jquery.snippet.java-manifest.js'></script>
+		<script type='text/javascript' src='../../../../../../../sausage/jquery.sausage.min.js'></script>
+
+		<link rel='stylesheet' type='text/css' href='../../../../../../../snippet/jquery.snippet.min.css' />
+		<link rel='stylesheet' type='text/css' href='../../../../../../../windup.css' />
+
+		<link rel='stylesheet' type='text/css' href='../../../../../../../sausage/sausage.css' />
+	</head>
+	<body class='sourceReport'>
+		<div class="windupHeader"><img src="../../../../../../../img/windup-logo.png"></div>
+		
+
+			<div class='windupBody'>
+
+		<div class='windupHighLevel'>
+
+
+
+			<h3>Notification</h3>
+			<ul class='notifications'>
+					<li class='notification warning'><a href="#1851360400">Import of 'weblogic.transaction.ClientTransactionManager' at line 20</a></li>
+					<li class='notification warning'><a href="#-2127439917">Import of 'weblogic.transaction.TransactionHelper' at line 21</a></li>
+					<li class='notification warning'><a href="#-852930759">Declaring type 'weblogic.transaction.ClientTransactionManager' at line 32</a></li>
+					<li class='notification warning'><a href="#-689862085">Usage of 'weblogic.transaction.TransactionHelper.getTransactionHelper().getTransactionManager()' at line 32</a></li>
+					<li class='notification warning'><a href="#1960672030">Usage of 'weblogic.transaction.TransactionHelper.getTransactionHelper()' at line 32</a></li>
+					<li class='notification warning'><a href="#1028538209">Declaring type 'weblogic.transaction.Transaction' at line 33</a></li>
+					<li class='notification warning'><a href="#-529635337">Usage of 'weblogic.transaction.ClientTransactionManager.forceSuspend()' at line 36</a></li>
+					<li class='notification warning'><a href="#-205761888">Usage of 'weblogic.transaction.ClientTransactionManager.forceResume(weblogic.transaction.Transaction)' at line 57</a></li>
+					<li class='notification warning'><a href="#-704894584">Constructing type 'javax.naming.InitialContext(java.util.Properties)' at line 67</a></li>
+					<li class='notification warning'><a href="#2137301298">Usage of 'javax.naming.Context.lookup(java.lang.String)' at line 74</a></li>
+					<li class='notification warning'><a href="#701599078">Usage of 'javax.naming.Context.lookup(java.lang.String)' at line 80</a></li>
+			</ul>
+		
+		</div>
+		</div>
+
+		<div class='windupReportBody'>
+
+<pre id='source'>// Decompiled by Jad v1.5.8g. Copyright 2001 Pavel Kouznetsov.
+// Jad home page: http://www.kpdus.com/jad.html
+// Decompiler options: fullnames 
+// Source File Name:   LogEventPublisher.java
+
+package com.acme.anvil.service.jms;
+
+import com.acme.anvil.vo.LogEvent;
+import java.util.Properties;
+import javax.jms.JMSException;
+import javax.jms.Queue;
+import javax.jms.QueueConnection;
+import javax.jms.QueueConnectionFactory;
+import javax.jms.QueueSender;
+import javax.jms.QueueSession;
+import javax.naming.Context;
+import javax.naming.InitialContext;
+import javax.naming.NamingException;
+import org.apache.log4j.Logger;
+import weblogic.transaction.ClientTransactionManager;
+import weblogic.transaction.TransactionHelper;
+
+public class LogEventPublisher
+{
+
+    public LogEventPublisher()
+    {
+    }
+
+    public static void publishLogEvent(com.acme.anvil.vo.LogEvent log)
+    {
+        weblogic.transaction.ClientTransactionManager ctm = weblogic.transaction.TransactionHelper.getTransactionHelper().getTransactionManager();
+        weblogic.transaction.Transaction saveTx = null;
+        try
+        {
+            saveTx = ctm.forceSuspend();
+            try
+            {
+                javax.naming.Context ic = com.acme.anvil.service.jms.LogEventPublisher.getContext();
+                javax.jms.QueueSession session = com.acme.anvil.service.jms.LogEventPublisher.getQueueSession(ic);
+                javax.jms.Queue queue = com.acme.anvil.service.jms.LogEventPublisher.getQueue(ic);
+                javax.jms.QueueSender sender = session.createSender(queue);
+                javax.jms.ObjectMessage logMsg = session.createObjectMessage(log);
+                sender.send(logMsg);
+            }
+            catch(javax.jms.JMSException e)
+            {
+                LOG.error(&quot;Exception sending message.&quot;, e);
+            }
+            catch(javax.naming.NamingException e)
+            {
+                LOG.error(&quot;Exception looking up required resource.&quot;, e);
+            }
+        }
+        finally
+        {
+            ctm.forceResume(saveTx);
+        }
+    }
+
+    private static javax.naming.Context getContext()
+        throws javax.naming.NamingException
+    {
+        java.util.Properties environment = new Properties();
+        environment.put(&quot;java.naming.factory.initial&quot;, &quot;weblogic.jndi.WLInitialContextFactory&quot;);
+        environment.put(&quot;java.naming.provider.url&quot;, &quot;t3://localhost:7001&quot;);
+        javax.naming.Context context = new InitialContext(environment);
+        return context;
+    }
+
+    private static javax.jms.Queue getQueue(javax.naming.Context context)
+        throws javax.naming.NamingException
+    {
+        return (javax.jms.Queue)context.lookup(&quot;jms/LogEventQueue&quot;);
+    }
+
+    private static javax.jms.QueueSession getQueueSession(javax.naming.Context context)
+        throws javax.jms.JMSException, javax.naming.NamingException
+    {
+        javax.jms.QueueConnectionFactory cf = (javax.jms.QueueConnectionFactory)context.lookup(&quot;jms/LogEventQueue&quot;);
+        javax.jms.QueueConnection connection = cf.createQueueConnection();
+        return (javax.jms.QueueSession)connection.createSession(false, 1);
+    }
+
+    static java.lang.Class _mthclass$(java.lang.String s)
+    {
+        try
+        {
+            return java.lang.Class.forName(s);
+        }
+        catch(java.lang.ClassNotFoundException classnotfoundexception)
+        {
+            throw new NoClassDefFoundError(classnotfoundexception.getMessage());
+        }
+    }
+
+    private static final org.apache.log4j.Logger LOG;
+    private static final java.lang.String QUEUE_JNDI_NAME = &quot;jms/LogEventQueue&quot;;
+    private static final java.lang.String QUEUE_FACTORY_JNDI_NAME = &quot;jms/LogEventQueue&quot;;
+
+    static 
+    {
+        LOG = org.apache.log4j.Logger.getLogger(com.acme.anvil.service.jms.LogEventPublisher.class);
+    }
+}
+</pre>
+		</div>
+		
+
+<script type='text/javascript'>
+	$(document).ready(function(){
+		$('pre').snippet('java',{style:'ide-eclipse', showNum:true,boxFill:'#ffeeb9', box: '20,21,32,32,32,33,36,57,67,74,80' });
+
+
+		
+$("<a name='1851360400'></a>			<div class='inline-source-comment green'><div class='inline-comment'><div class='inline-comment-heading'><h2 class='notification warning'>Import of \'weblogic.transaction.ClientTransactionManager\' at line 20</h2></div></div></div>").appendTo('ol.snippet-num li:nth-child(20)');		
+$("<a name='-2127439917'></a>			<div class='inline-source-comment green'><div class='inline-comment'><div class='inline-comment-heading'><h2 class='notification warning'>Import of \'weblogic.transaction.TransactionHelper\' at line 21</h2></div></div></div>").appendTo('ol.snippet-num li:nth-child(21)');		
+$("<a name='-852930759'></a>			<div class='inline-source-comment green'><div class='inline-comment'><div class='inline-comment-heading'><h2 class='notification warning'>Declaring type \'weblogic.transaction.ClientTransactionManager\' at line 32</h2></div></div></div>").appendTo('ol.snippet-num li:nth-child(32)');		
+$("<a name='-689862085'></a>			<div class='inline-source-comment green'><div class='inline-comment'><div class='inline-comment-heading'><h2 class='notification warning'>Usage of \'weblogic.transaction.TransactionHelper.getTransactionHelper().getTransactionManager()\' at line 32</h2></div></div></div>").appendTo('ol.snippet-num li:nth-child(32)');		
+$("<a name='1960672030'></a>			<div class='inline-source-comment green'><div class='inline-comment'><div class='inline-comment-heading'><h2 class='notification warning'>Usage of \'weblogic.transaction.TransactionHelper.getTransactionHelper()\' at line 32</h2></div></div></div>").appendTo('ol.snippet-num li:nth-child(32)');		
+$("<a name='1028538209'></a>			<div class='inline-source-comment green'><div class='inline-comment'><div class='inline-comment-heading'><h2 class='notification warning'>Declaring type \'weblogic.transaction.Transaction\' at line 33</h2></div></div></div>").appendTo('ol.snippet-num li:nth-child(33)');		
+$("<a name='-529635337'></a>			<div class='inline-source-comment green'><div class='inline-comment'><div class='inline-comment-heading'><h2 class='notification warning'>Usage of \'weblogic.transaction.ClientTransactionManager.forceSuspend()\' at line 36</h2></div></div></div>").appendTo('ol.snippet-num li:nth-child(36)');		
+$("<a name='-205761888'></a>			<div class='inline-source-comment green'><div class='inline-comment'><div class='inline-comment-heading'><h2 class='notification warning'>Usage of \'weblogic.transaction.ClientTransactionManager.forceResume(weblogic.transaction.Transaction)\' at line 57</h2></div></div></div>").appendTo('ol.snippet-num li:nth-child(57)');		
+$("<a name='-704894584'></a>			<div class='inline-source-comment green'><div class='inline-comment'><div class='inline-comment-heading'><h2 class='notification warning'>Constructing type \'javax.naming.InitialContext(java.util.Properties)\' at line 67</h2></div><div class='inline-comment-body'><p>Ensure that the InitialContext connection properties do not need to change for JBoss</p></div></div></div>").appendTo('ol.snippet-num li:nth-child(67)');		
+$("<a name='2137301298'></a>			<div class='inline-source-comment green'><div class='inline-comment'><div class='inline-comment-heading'><h2 class='notification warning'>Usage of \'javax.naming.Context.lookup(java.lang.String)\' at line 74</h2></div><div class='inline-comment-body'><p>Ensure that the JNDI Name does not need to change for JBoss</p><p><em>For Example:</em></p><p><pre><code data-code-syntax='java'>\n(ConnectionFactory)initialContext.lookup(&quot;weblogic.jms.ConnectionFactory&quot;);\n</code></pre></p><p><em>should become:</em></p><p><pre><code data-code-syntax='java'>\n(ConnectionFactory)initialContext.lookup(&quot;/ConnectionFactory&quot;);\n</code></pre></p></div></div></div>").appendTo('ol.snippet-num li:nth-child(74)');		
+$("<a name='701599078'></a>			<div class='inline-source-comment green'><div class='inline-comment'><div class='inline-comment-heading'><h2 class='notification warning'>Usage of \'javax.naming.Context.lookup(java.lang.String)\' at line 80</h2></div><div class='inline-comment-body'><p>Ensure that the JNDI Name does not need to change for JBoss</p><p><em>For Example:</em></p><p><pre><code data-code-syntax='java'>\n(ConnectionFactory)initialContext.lookup(&quot;weblogic.jms.ConnectionFactory&quot;);\n</code></pre></p><p><em>should become:</em></p><p><pre><code data-code-syntax='java'>\n(ConnectionFactory)initialContext.lookup(&quot;/ConnectionFactory&quot;);\n</code></pre></p></div></div></div>").appendTo('ol.snippet-num li:nth-child(80)');	
+	
+		$('code[data-code-syntax]').each(function(){
+	         var codeSyntax = ($(this).data('code-syntax'));
+	         if(codeSyntax) {
+	            $(this).parent().snippet(codeSyntax,{style:'ide-eclipse', menu:false, showNum:false});
+	         }
+		});
+		$(window).sausage({ page: 'li.box' });
+	}); 
+</script>		
+		<script type='text/javascript' src='../../../../../../../windup.js'></script>
+		<div class='windupFooter'>
+			<a href='http://redhat.com'><img src='../../../../../../../img/rh-logo.png'/></a>
+		</div>
+
+	</body>
+</html>

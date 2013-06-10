@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?><ns2:resource xmlns:ns2=""><decorations><java-line-result><description></description><effort xsi:type="" xmlns:xsi=""/><level></level><pattern></pattern><lineNumber></lineNumber><sourceType></sourceType></java-line-result><java-line-result><description></description><effort xsi:type="" xmlns:xsi=""><hours></hours></effort><hints xsi:type="" xmlns:xsi=""><markdown><![CDATA[This class is proprietary to Weblogic, remove.]]></markdown></hints><level></level><pattern></pattern><lineNumber></lineNumber><sourceType></sourceType></java-line-result><java-line-result><description></description><effort xsi:type="" xmlns:xsi=""><hours></hours></effort><hints xsi:type="" xmlns:xsi=""><markdown><![CDATA[This class is proprietary to Weblogic, remove.]]></markdown></hints><level></level><pattern></pattern><lineNumber></lineNumber><sourceType></sourceType></java-line-result><java-line-result><description></description><effort xsi:type="" xmlns:xsi=""><hours></hours></effort><hints xsi:type="" xmlns:xsi=""><markdown><![CDATA[Use a javax.servlet.ServletContextListener with @javax.annotation.servlet.WebListener, or EJB 3.1 @javax.ejb.Startup @javax.ejb.Singleton service bean.]]></markdown></hints><level></level><pattern></pattern><lineNumber></lineNumber><sourceType></sourceType></java-line-result><java-line-result><description></description><effort xsi:type="" xmlns:xsi=""/><hints xsi:type="" xmlns:xsi=""><markdown><![CDATA[
+
+Using a ServletContextListener, you can use an ServletContextEvent to access the properties of the web application container.  Or, use an EJB 3.1 with annotated methods with javax.annotation.PostContruct and javax.annotation.PreDestory
+
+*Example leveraging WebListener annotations:*
+
+```java
+@WebListener
+public class ContextListener implements ServletContextListener { ... }
+```
+
+*Example leveraging Startup and Singleton annotations:*
+
+```java
+@Startup
+@Singleton
+public class StartupBean { ... }
+```
+
+
+]]></markdown></hints><level></level><pattern></pattern><lineNumber></lineNumber><sourceType></sourceType></java-line-result><java-line-result><description></description><effort xsi:type="" xmlns:xsi=""/><level></level><pattern></pattern><lineNumber></lineNumber><sourceType></sourceType></java-line-result><java-line-result><description></description><effort xsi:type="" xmlns:xsi=""/><hints xsi:type="" xmlns:xsi=""><markdown><![CDATA[
+
+Using a ServletContextListener, you can use an ServletContextEvent to access the properties of the web application container.  Or, use an EJB 3.1 with annotated methods with javax.annotation.PostContruct and javax.annotation.PreDestory
+
+*Example leveraging WebListener annotations:*
+
+```java
+@WebListener
+public class ContextListener implements ServletContextListener { ... }
+```
+
+*Example leveraging Startup and Singleton annotations:*
+
+```java
+@Startup
+@Singleton
+public class StartupBean { ... }
+```
+
+
+]]></markdown></hints><level></level><pattern></pattern><lineNumber></lineNumber><sourceType></sourceType></java-line-result><java-line-result><description></description><effort xsi:type="" xmlns:xsi=""/><level></level><pattern></pattern><lineNumber></lineNumber><sourceType></sourceType></java-line-result><java-line-result><description></description><effort xsi:type="" xmlns:xsi=""/><hints xsi:type="" xmlns:xsi=""><markdown><![CDATA[
+
+Using a ServletContextListener, you can use an ServletContextEvent to access the properties of the web application container.  Or, use an EJB 3.1 with annotated methods with javax.annotation.PostContruct and javax.annotation.PreDestory
+
+*Example leveraging WebListener annotations:*
+
+```java
+@WebListener
+public class ContextListener implements ServletContextListener { ... }
+```
+
+*Example leveraging Startup and Singleton annotations:*
+
+```java
+@Startup
+@Singleton
+public class StartupBean { ... }
+```
+
+
+]]></markdown></hints><level></level><pattern></pattern><lineNumber></lineNumber><sourceType></sourceType></java-line-result><java-line-result><description></description><effort xsi:type="" xmlns:xsi=""/><level></level><pattern></pattern><lineNumber></lineNumber><sourceType></sourceType></java-line-result><java-line-result><description></description><effort xsi:type="" xmlns:xsi=""/><hints xsi:type="" xmlns:xsi=""><markdown><![CDATA[
+
+Using a ServletContextListener, you can use an ServletContextEvent to access the properties of the web application container.  Or, use an EJB 3.1 with annotated methods with javax.annotation.PostContruct and javax.annotation.PreDestory
+
+*Example leveraging WebListener annotations:*
+
+```java
+@WebListener
+public class ContextListener implements ServletContextListener { ... }
+```
+
+*Example leveraging Startup and Singleton annotations:*
+
+```java
+@Startup
+@Singleton
+public class StartupBean { ... }
+```
+
+
+]]></markdown></hints><level></level><pattern></pattern><lineNumber></lineNumber><sourceType></sourceType></java-line-result><java-line-result><description></description><effort xsi:type="" xmlns:xsi=""/><level></level><pattern></pattern><lineNumber></lineNumber><sourceType></sourceType></java-line-result><java-line-result><description></description><effort xsi:type="" xmlns:xsi=""><hours></hours></effort><hints xsi:type="" xmlns:xsi=""><markdown><![CDATA[Ensure that the InitialContext connection properties do not need to change for JBoss]]></markdown></hints><level></level><pattern></pattern><lineNumber></lineNumber><sourceType></sourceType></java-line-result><java-line-result><description></description><effort xsi:type="" xmlns:xsi=""><hours></hours></effort><hints xsi:type="" xmlns:xsi=""><markdown><![CDATA[
+
+Ensure that the JNDI Name does not need to change for JBoss
+
+*For Example:*
+
+```java
+(ConnectionFactory)initialContext.lookup("weblogic.jms.ConnectionFactory");
+```
+
+*should become:*
+
+```java
+(ConnectionFactory)initialContext.lookup("/ConnectionFactory");
+```
+
+
+
+
+]]></markdown></hints><level></level><pattern></pattern><lineNumber></lineNumber><sourceType></sourceType></java-line-result><java-line-result><description></description><effort xsi:type="" xmlns:xsi=""/><level></level><pattern></pattern><lineNumber></lineNumber><sourceType></sourceType></java-line-result><java-line-result><description></description><effort xsi:type="" xmlns:xsi=""><hours></hours></effort><hints xsi:type="" xmlns:xsi=""><markdown><![CDATA[Ensure that the ObjectName exists in JBoss]]></markdown></hints><level></level><pattern></pattern><lineNumber></lineNumber><sourceType></sourceType></java-line-result><java-line-result><description></description><effort xsi:type="" xmlns:xsi=""/><level></level><pattern></pattern><lineNumber></lineNumber><sourceType></sourceType></java-line-result><java-line-result><description></description><effort xsi:type="" xmlns:xsi=""><hours></hours></effort><hints xsi:type="" xmlns:xsi=""><markdown><![CDATA[Ensure that the ObjectName exists in JBoss]]></markdown></hints><level></level><pattern></pattern><lineNumber></lineNumber><sourceType></sourceType></java-line-result><classification-result><description></description><effort xsi:type="" xmlns:xsi=""><hours></hours></effort><level></level><pattern></pattern></classification-result><link-result><description></description><effort xsi:type="" xmlns:xsi=""/><level></level><link></link></link-result><link-result><description></description><effort xsi:type="" xmlns:xsi=""/><level></level><link></link></link-result><link-result><description></description><effort xsi:type="" xmlns:xsi=""/><level></level><link></link></link-result></decorations><relativePathFromRoot></relativePathFromRoot><relativePathToRoot></relativePathToRoot><syntax></syntax></ns2:resource>

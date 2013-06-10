@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?><ns2:resource xmlns:ns2=""><decorations><java-line-result><description></description><effort xsi:type="" xmlns:xsi=""/><level></level><pattern></pattern><lineNumber></lineNumber><sourceType></sourceType></java-line-result><java-line-result><description></description><effort xsi:type="" xmlns:xsi=""/><level></level><pattern></pattern><lineNumber></lineNumber><sourceType></sourceType></java-line-result><java-line-result><description></description><effort xsi:type="" xmlns:xsi=""/><level></level><pattern></pattern><lineNumber></lineNumber><sourceType></sourceType></java-line-result><java-line-result><description></description><effort xsi:type="" xmlns:xsi=""/><level></level><pattern></pattern><lineNumber></lineNumber><sourceType></sourceType></java-line-result><java-line-result><description></description><effort xsi:type="" xmlns:xsi=""/><hints xsi:type="" xmlns:xsi=""><markdown><![CDATA[T3StartupDef defines a startup service in Weblogic.  The main method is executed when the server starts up, if it is registered in the Weblogic context.xml  The equivalent in JBoss 5 is to use a JMX Management annotation: org.jboss.annotation.ejb.Management.]]></markdown></hints><level></level><pattern></pattern><lineNumber></lineNumber><sourceType></sourceType></java-line-result><java-line-result><description></description><effort xsi:type="" xmlns:xsi=""><hours></hours></effort><hints xsi:type="" xmlns:xsi=""><markdown><![CDATA[
+
+Migrate the NonCatalogLogger to Apache Log4j.
+
+```java
+Logger LOG = Logger.getLog("Example");
+```
+
+
+
+]]></markdown></hints><level></level><pattern></pattern><lineNumber></lineNumber><sourceType></sourceType></java-line-result><java-line-result><description></description><effort xsi:type="" xmlns:xsi=""><hours></hours></effort><hints xsi:type="" xmlns:xsi=""><markdown><![CDATA[In JBoss 6, inject the @Singleton, @Startup EJB3.]]></markdown></hints><hints xsi:type="" xmlns:xsi=""><markdown><![CDATA[In JBoss 5, look up the MBean replacement for the T3ServicesDef.]]></markdown></hints><level></level><pattern></pattern><lineNumber></lineNumber><sourceType></sourceType></java-line-result><java-line-result><description></description><effort xsi:type="" xmlns:xsi=""/><level></level><pattern></pattern><lineNumber></lineNumber><sourceType></sourceType></java-line-result><java-line-result><description></description><effort xsi:type="" xmlns:xsi=""/><level></level><pattern></pattern><lineNumber></lineNumber><sourceType></sourceType></java-line-result><java-line-result><description></description><effort xsi:type="" xmlns:xsi=""/><level></level><pattern></pattern><lineNumber></lineNumber><sourceType></sourceType></java-line-result><java-line-result><description></description><effort xsi:type="" xmlns:xsi=""/><level></level><pattern></pattern><lineNumber></lineNumber><sourceType></sourceType></java-line-result><java-line-result><description></description><effort xsi:type="" xmlns:xsi=""/><level></level><pattern></pattern><lineNumber></lineNumber><sourceType></sourceType></java-line-result><java-line-result><description></description><effort xsi:type="" xmlns:xsi=""/><level></level><pattern></pattern><lineNumber></lineNumber><sourceType></sourceType></java-line-result><java-line-result><description></description><effort xsi:type="" xmlns:xsi=""><hours></hours></effort><hints xsi:type="" xmlns:xsi=""><markdown><![CDATA[
+
+Ensure that the JNDI Name does not need to change for JBoss
+
+*For Example:*
+
+```java
+(ConnectionFactory)initialContext.lookup("weblogic.jms.ConnectionFactory");
+```
+
+*should become:*
+
+```java
+(ConnectionFactory)initialContext.lookup("/ConnectionFactory");
+```
+
+
+
+
+]]></markdown></hints><level></level><pattern></pattern><lineNumber></lineNumber><sourceType></sourceType></java-line-result><java-line-result><description></description><effort xsi:type="" xmlns:xsi=""/><level></level><pattern></pattern><lineNumber></lineNumber><sourceType></sourceType></java-line-result><java-line-result><description></description><effort xsi:type="" xmlns:xsi=""><hours></hours></effort><hints xsi:type="" xmlns:xsi=""><markdown><![CDATA[Ensure that the ObjectName exists in JBoss]]></markdown></hints><level></level><pattern></pattern><lineNumber></lineNumber><sourceType></sourceType></java-line-result><java-line-result><description></description><effort xsi:type="" xmlns:xsi=""/><level></level><pattern></pattern><lineNumber></lineNumber><sourceType></sourceType></java-line-result><java-line-result><description></description><effort xsi:type="" xmlns:xsi=""><hours></hours></effort><hints xsi:type="" xmlns:xsi=""><markdown><![CDATA[In JBoss 6, inject the @Singleton, @Startup EJB3.]]></markdown></hints><hints xsi:type="" xmlns:xsi=""><markdown><![CDATA[In JBoss 5, look up the MBean replacement for the T3ServicesDef.]]></markdown></hints><level></level><pattern></pattern><lineNumber></lineNumber><sourceType></sourceType></java-line-result><classification-result><description></description><effort xsi:type="" xmlns:xsi=""><hours></hours></effort><level></level><pattern></pattern></classification-result><link-result><description></description><effort xsi:type="" xmlns:xsi=""/><level></level><link></link></link-result><link-result><description></description><effort xsi:type="" xmlns:xsi=""/><level></level><link></link></link-result></decorations><relativePathFromRoot></relativePathFromRoot><relativePathToRoot></relativePathToRoot><syntax></syntax></ns2:resource>

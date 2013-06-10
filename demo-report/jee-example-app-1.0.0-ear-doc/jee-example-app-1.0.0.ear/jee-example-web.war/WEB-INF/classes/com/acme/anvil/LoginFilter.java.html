@@ -1,0 +1,113 @@
+<html>
+	<head>
+		<script type='text/javascript' src='../../../../../../../jquery.min.js'></script>
+		<script type='text/javascript' src='../../../../../../../jquery-ui/jquery.ui.widget.js'></script>
+		<script type='text/javascript' src='../../../../../../../snippet/jquery.snippet.min.js'></script>
+		<script type='text/javascript' src='../../../../../../../snippet/jquery.snippet.java-manifest.js'></script>
+		<script type='text/javascript' src='../../../../../../../sausage/jquery.sausage.min.js'></script>
+
+		<link rel='stylesheet' type='text/css' href='../../../../../../../snippet/jquery.snippet.min.css' />
+		<link rel='stylesheet' type='text/css' href='../../../../../../../windup.css' />
+
+		<link rel='stylesheet' type='text/css' href='../../../../../../../sausage/sausage.css' />
+	</head>
+	<body class='sourceReport'>
+		<div class="windupHeader"><img src="../../../../../../../img/windup-logo.png"></div>
+		
+
+			<div class='windupBody'>
+
+		<div class='windupHighLevel'>
+
+
+
+			<h3>Notification</h3>
+			<ul class='notifications'>
+					<li class='notification warning'><a href="#-1431863733">Import of 'weblogic.i18n.logging.NonCatalogLogger' at line 17</a></li>
+					<li class='notification warning'><a href="#-99036406">Constructing type 'weblogic.i18n.logging.NonCatalogLogger(java.lang.String)' at line 25</a></li>
+					<li class='notification warning'><a href="#-1768798431">Declaring type 'weblogic.i18n.logging.NonCatalogLogger' at line 47</a></li>
+			</ul>
+		
+		</div>
+		</div>
+
+		<div class='windupReportBody'>
+
+<pre id='source'>// Decompiled by Jad v1.5.8g. Copyright 2001 Pavel Kouznetsov.
+// Jad home page: http://www.kpdus.com/jad.html
+// Decompiler options: fullnames 
+// Source File Name:   LoginFilter.java
+
+package com.acme.anvil;
+
+import java.io.IOException;
+import javax.servlet.Filter;
+import javax.servlet.FilterChain;
+import javax.servlet.FilterConfig;
+import javax.servlet.ServletException;
+import javax.servlet.ServletRequest;
+import javax.servlet.ServletResponse;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+import weblogic.i18n.logging.NonCatalogLogger;
+
+public class LoginFilter
+    implements javax.servlet.Filter
+{
+
+    public LoginFilter()
+    {
+        ncl = new NonCatalogLogger(&quot;LoginFilter&quot;);
+    }
+
+    public void destroy()
+    {
+        ncl.debug(&quot;LoginFilter destroy.&quot;);
+    }
+
+    public void doFilter(javax.servlet.ServletRequest req, javax.servlet.ServletResponse resp, javax.servlet.FilterChain chain)
+        throws java.io.IOException, javax.servlet.ServletException
+    {
+        javax.servlet.http.HttpServletRequest request = (javax.servlet.http.HttpServletRequest)req;
+        javax.servlet.http.HttpServletResponse response = (javax.servlet.http.HttpServletResponse)resp;
+        javax.servlet.http.HttpSession session = request.getSession();
+    }
+
+    public void init(javax.servlet.FilterConfig config)
+        throws javax.servlet.ServletException
+    {
+        ncl.debug(&quot;LoginFilter init.&quot;);
+    }
+
+    private weblogic.i18n.logging.NonCatalogLogger ncl;
+}
+</pre>
+		</div>
+		
+
+<script type='text/javascript'>
+	$(document).ready(function(){
+		$('pre').snippet('java',{style:'ide-eclipse', showNum:true,boxFill:'#ffeeb9', box: '17,25,47' });
+
+
+		
+$("<a name='-1431863733'></a>			<div class='inline-source-comment green'><div class='inline-comment'><div class='inline-comment-heading'><h2 class='notification warning'>Import of \'weblogic.i18n.logging.NonCatalogLogger\' at line 17</h2></div></div></div>").appendTo('ol.snippet-num li:nth-child(17)');		
+$("<a name='-99036406'></a>			<div class='inline-source-comment green'><div class='inline-comment'><div class='inline-comment-heading'><h2 class='notification warning'>Constructing type \'weblogic.i18n.logging.NonCatalogLogger(java.lang.String)\' at line 25</h2></div><div class='inline-comment-body'><p>Migrate the NonCatalogLogger to Apache Log4j.</p><p><pre><code data-code-syntax='java'>\nLogger LOG = Logger.getLog(&quot;Example&quot;);\n</code></pre></p></div></div></div>").appendTo('ol.snippet-num li:nth-child(25)');		
+$("<a name='-1768798431'></a>			<div class='inline-source-comment green'><div class='inline-comment'><div class='inline-comment-heading'><h2 class='notification warning'>Declaring type \'weblogic.i18n.logging.NonCatalogLogger\' at line 47</h2></div></div></div>").appendTo('ol.snippet-num li:nth-child(47)');	
+	
+		$('code[data-code-syntax]').each(function(){
+	         var codeSyntax = ($(this).data('code-syntax'));
+	         if(codeSyntax) {
+	            $(this).parent().snippet(codeSyntax,{style:'ide-eclipse', menu:false, showNum:false});
+	         }
+		});
+		$(window).sausage({ page: 'li.box' });
+	}); 
+</script>		
+		<script type='text/javascript' src='../../../../../../../windup.js'></script>
+		<div class='windupFooter'>
+			<a href='http://redhat.com'><img src='../../../../../../../img/rh-logo.png'/></a>
+		</div>
+
+	</body>
+</html>

@@ -1,0 +1,93 @@
+<html>
+	<head>
+		<script type='text/javascript' src='../../../../../../jquery.min.js'></script>
+		<script type='text/javascript' src='../../../../../../jquery-ui/jquery.ui.widget.js'></script>
+		<script type='text/javascript' src='../../../../../../snippet/jquery.snippet.min.js'></script>
+		<script type='text/javascript' src='../../../../../../snippet/jquery.snippet.java-manifest.js'></script>
+		<script type='text/javascript' src='../../../../../../sausage/jquery.sausage.min.js'></script>
+
+		<link rel='stylesheet' type='text/css' href='../../../../../../snippet/jquery.snippet.min.css' />
+		<link rel='stylesheet' type='text/css' href='../../../../../../windup.css' />
+
+		<link rel='stylesheet' type='text/css' href='../../../../../../sausage/sausage.css' />
+	</head>
+	<body class='sourceReport'>
+		<div class="windupHeader"><img src="../../../../../../img/windup-logo.png"></div>
+		
+
+			<div class='windupBody'>
+
+		<div class='windupHighLevel'>
+
+			<h3>Classification</h3>
+			<ul>
+					<li>Maven POM
+					</li>
+			</ul>
+
+
+
+
+		
+		</div>
+		</div>
+
+		<div class='windupReportBody'>
+
+<pre id='source'>&lt;project xmlns=&quot;http://maven.apache.org/POM/4.0.0&quot; xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot; xsi:schemaLocation=&quot;http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd&quot;&gt;
+  &lt;modelVersion&gt;4.0.0&lt;/modelVersion&gt;
+  &lt;parent&gt;
+    &lt;artifactId&gt;jee-example&lt;/artifactId&gt;
+    &lt;groupId&gt;org.windup.example&lt;/groupId&gt;
+    &lt;version&gt;1.0.0&lt;/version&gt;
+    &lt;relativePath&gt;..&lt;/relativePath&gt;
+  &lt;/parent&gt;
+  &lt;artifactId&gt;jee-example-web&lt;/artifactId&gt;
+  &lt;packaging&gt;war&lt;/packaging&gt;
+  &lt;dependencies&gt;
+  	&lt;dependency&gt;
+  		&lt;groupId&gt;org.windup.example&lt;/groupId&gt;
+  		&lt;artifactId&gt;jee-example-services&lt;/artifactId&gt;
+  		&lt;version&gt;1.0.0&lt;/version&gt;
+  		&lt;scope&gt;provided&lt;/scope&gt;
+  	&lt;/dependency&gt;
+  	&lt;dependency&gt;
+  		&lt;groupId&gt;javaee&lt;/groupId&gt;
+  		&lt;artifactId&gt;javaee-api&lt;/artifactId&gt;
+  		&lt;version&gt;5&lt;/version&gt;
+  		&lt;scope&gt;provided&lt;/scope&gt;
+  	&lt;/dependency&gt;
+  	&lt;dependency&gt;
+  		&lt;groupId&gt;commons-lang&lt;/groupId&gt;
+  		&lt;artifactId&gt;commons-lang&lt;/artifactId&gt;
+  		&lt;version&gt;2.5&lt;/version&gt;
+  	&lt;/dependency&gt;
+  &lt;/dependencies&gt;
+  &lt;name&gt;JEE Example Web Application&lt;/name&gt;
+&lt;/project&gt;</pre>
+		</div>
+		
+
+<script type='text/javascript'>
+	$(document).ready(function(){
+		$('pre').snippet('xml',{style:'ide-eclipse', showNum:true,boxFill:'#ffeeb9', box: '' });
+
+
+	
+	
+		$('code[data-code-syntax]').each(function(){
+	         var codeSyntax = ($(this).data('code-syntax'));
+	         if(codeSyntax) {
+	            $(this).parent().snippet(codeSyntax,{style:'ide-eclipse', menu:false, showNum:false});
+	         }
+		});
+		$(window).sausage({ page: 'li.box' });
+	}); 
+</script>		
+		<script type='text/javascript' src='../../../../../../windup.js'></script>
+		<div class='windupFooter'>
+			<a href='http://redhat.com'><img src='../../../../../../img/rh-logo.png'/></a>
+		</div>
+
+	</body>
+</html>

@@ -1,0 +1,123 @@
+<html>
+	<head>
+		<script type='text/javascript' src='../../../jquery.min.js'></script>
+		<script type='text/javascript' src='../../../jquery-ui/jquery.ui.widget.js'></script>
+		<script type='text/javascript' src='../../../snippet/jquery.snippet.min.js'></script>
+		<script type='text/javascript' src='../../../snippet/jquery.snippet.java-manifest.js'></script>
+		<script type='text/javascript' src='../../../sausage/jquery.sausage.min.js'></script>
+
+		<link rel='stylesheet' type='text/css' href='../../../snippet/jquery.snippet.min.css' />
+		<link rel='stylesheet' type='text/css' href='../../../windup.css' />
+
+		<link rel='stylesheet' type='text/css' href='../../../sausage/sausage.css' />
+	</head>
+	<body class='sourceReport'>
+		<div class="windupHeader"><img src="../../../img/windup-logo.png"></div>
+		
+
+			<div class='windupBody'>
+
+		<div class='windupHighLevel'>
+
+			<h3>Classification</h3>
+			<ul>
+					<li>Weblogic EJB XML
+					</li>
+			</ul>
+
+
+
+			<h3>Links</h3>
+			<ul class='links'>
+					<li><a href='weblogic-ejb-jar-xml-jboss.xml'>weblogic-ejb-jar-xml-jboss.xml</a><span class='dash'>-</span>JBoss EJB Descriptor (Windup-Generated)</li>
+			</ul>
+
+		
+		</div>
+		</div>
+
+		<div class='windupReportBody'>
+
+<pre id='source'>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
+&lt;weblogic-ejb-jar xmlns=&quot;http://www.bea.com/ns/weblogic/90&quot; xmlns:j2ee=&quot;http://java.sun.com/xml/ns/j2ee&quot; xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot;
+	xsi:schemaLocation=&quot;http://www.bea.com/ns/weblogic/90 http://www.bea.com/ns/weblogic/90/weblogic-ejb-jar.xsd&quot;&gt;
+	&lt;weblogic-enterprise-bean&gt;
+		&lt;ejb-name&gt;ItemLookupBean&lt;/ejb-name&gt;
+		&lt;stateless-session-descriptor&gt;
+		&lt;/stateless-session-descriptor&gt;
+		&lt;transaction-descriptor&gt;
+			&lt;trans-timeout-seconds&gt;180&lt;/trans-timeout-seconds&gt;
+		&lt;/transaction-descriptor&gt;
+		&lt;enable-call-by-reference&gt;true&lt;/enable-call-by-reference&gt;
+		&lt;run-as-principal-name&gt;Admin&lt;/run-as-principal-name&gt;
+		&lt;jndi-name&gt;ejb/ItemLookupBean&lt;/jndi-name&gt;
+	&lt;/weblogic-enterprise-bean&gt;
+
+	&lt;weblogic-enterprise-bean&gt;
+		&lt;ejb-name&gt;ProductCatalogBean&lt;/ejb-name&gt;
+		&lt;stateless-session-descriptor&gt;
+		&lt;/stateless-session-descriptor&gt;
+		&lt;transaction-descriptor&gt;
+			&lt;trans-timeout-seconds&gt;180&lt;/trans-timeout-seconds&gt;
+		&lt;/transaction-descriptor&gt;
+		&lt;enable-call-by-reference&gt;true&lt;/enable-call-by-reference&gt;
+		&lt;run-as-principal-name&gt;Admin&lt;/run-as-principal-name&gt;
+		&lt;jndi-name&gt;ejb/ProductCatalogBean&lt;/jndi-name&gt;
+	&lt;/weblogic-enterprise-bean&gt;
+	
+	&lt;weblogic-enterprise-bean&gt;
+		&lt;ejb-name&gt;LogEventSubscriber&lt;/ejb-name&gt;
+		&lt;message-driven-descriptor&gt;
+			&lt;destination-jndi-name&gt;jms/LogEventQueue&lt;/destination-jndi-name&gt;
+		&lt;/message-driven-descriptor&gt;
+		&lt;run-as-principal-name&gt;admin_user&lt;/run-as-principal-name&gt;
+	&lt;/weblogic-enterprise-bean&gt;
+
+	&lt;security-role-assignment&gt;
+		&lt;role-name&gt;acme_user&lt;/role-name&gt;
+		&lt;principal-name&gt;AnvilUser&lt;/principal-name&gt;
+		&lt;principal-name&gt;Admin&lt;/principal-name&gt;
+	&lt;/security-role-assignment&gt;
+
+	&lt;!-- http://docs.oracle.com/cd/E15051_01/wls/docs103/ejb/DDreference-ejb-jar.html#wp1114299 --&gt;
+	&lt;idempotent-methods&gt;
+		&lt;method&gt;
+			&lt;ejb-name&gt;ItemLookupBean&lt;/ejb-name&gt;
+			&lt;method-name&gt;lookupItem&lt;/method-name&gt;
+			&lt;method-params&gt;
+				&lt;method-param&gt;java.lang.Long&lt;/method-param&gt;
+			&lt;/method-params&gt;
+		&lt;/method&gt;
+		&lt;method&gt;
+			&lt;ejb-name&gt;ProductCatalogBean&lt;/ejb-name&gt;
+			&lt;method-name&gt;populateCatalog&lt;/method-name&gt;
+		&lt;/method&gt;
+	&lt;/idempotent-methods&gt;
+&lt;/weblogic-ejb-jar&gt;
+</pre>
+		</div>
+		
+
+<script type='text/javascript'>
+	$(document).ready(function(){
+		$('pre').snippet('xml',{style:'ide-eclipse', showNum:true,boxFill:'#ffeeb9', box: '' });
+
+
+	
+	
+		$('code[data-code-syntax]').each(function(){
+	         var codeSyntax = ($(this).data('code-syntax'));
+	         if(codeSyntax) {
+	            $(this).parent().snippet(codeSyntax,{style:'ide-eclipse', menu:false, showNum:false});
+	         }
+		});
+		$(window).sausage({ page: 'li.box' });
+	}); 
+</script>		
+		<script type='text/javascript' src='../../../windup.js'></script>
+		<div class='windupFooter'>
+			<a href='http://redhat.com'><img src='../../../img/rh-logo.png'/></a>
+		</div>
+
+	</body>
+</html>

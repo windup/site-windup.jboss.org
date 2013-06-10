@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+			<title>Guides | Windup Migation Platform</title>
+			<link href="assets/img/favicon.ico" rel="shortcut icon">
+			<link href="assets/css/bootstrap.css" rel="stylesheet">
+			<link href="assets/css/windup.css" rel="stylesheet">
+	</head>
+	<body>
+
+
+    <div class="navbar navbar-fixed-top">
+      <div class="navbar-inner">
+        <div class="container">
+          <a class="brand" href="#"><img src='assets/img/windup_logo_100px.png'/></a>
+          <div class="windup-nav-right">
+            <a href="http://github.com/windup/windup" class="social"><img title="Github" src="assets/img/glyphicons_blue_github.png"/></a>
+            <a href="http://twitter.com/jbosswindup" class="social"><img title="Twitter" src="assets/img/glyphicons_blue_twitter.png"/></a>
+          </div>
+          <div class="nav-collapse collapse">
+            <ul class="nav">
+              <li><a href="index.html">Overview</a></li>
+              <li><a href="features.html">Features</a></li>
+              <li class="active"><a href="guides.html">Guides</a></li>
+              <li><a href="download.html">Download</a></li>
+              <li><a href="code.html">Code</a></li>
+              <li><a href="demo.html">Demo</a></li>
+            </ul>
+          </div><!--/.nav-collapse -->
+        </div>
+      </div>
+    </div>
+
+    <!--START OF MAIN-->
+    <div class="wrapper"> 
+        
+        <div class="hero-unit content-header">
+          <div class="container">
+          <div class="row">
+            <div class="span8">
+              <h1>Guides</h1>
+            </div>
+            <div class="span4">
+              <div style="margin-top:16px; text-align:right;">
+              <a href="#" class="btn btn-primary btn-large windup-download-now">Download Now &raquo;</a>
+              <a href="demo.html" class="btn btn-success btn-large">View Demo &raquo;</a>
+              </div>
+            </div>
+          </div>
+          </div>
+        </div>
+
+
+        <div class="container page">
+          <div class="row">
+            <div class="span4 text-center">
+              <p><img src="assets/img/windup_icon_256px.png"></p>
+            </div>
+            <div class="span8">
+              <h2>Take Flight!</h2>
+              
+              <p>
+                <ul>
+                  <li>
+                    <strong><a href="http://github.com/windup/windup/wiki/1.0-What-is-Windup">1.0 What is Windup</a></strong>
+                  </li>
+                  <li>
+                    <strong><a href="http://github.com/windup/windup/wiki/2.0-Build-Windup">2.0 Build Windup</a></strong>
+                  </li>
+                  <li>
+                    <strong><a href="http://github.com/windup/windup/wiki/3.0-Execute-Windup">3.0 Execute Windup</a></strong>
+                  </li>
+                  <li>
+                    <strong><a href="http://github.com/windup/windup/wiki/4.0-Extend-Windup-Rules">4.0 Extend Windup Rules</a></strong>
+                  </li>
+                  <li>
+                    <strong><a href="http://github.com/windup/windup/wiki/5.0-Reviewing-the-Report">5.0 Reviewing the Report</a></strong>
+                  </li>
+                  <li>
+                    <strong><a href="http://github.com/windup/windup/wiki/6.0-Coding-Windup-Rules">6.0 Coding Windup Rules</a></strong>
+                  </li>
+                  <li>
+                    <strong><a href="http://github.com/windup/windup/wiki/6.1-Java-Classification">6.1 Java Classification</a></strong>
+                  </li>
+                  <li>
+                    <strong><a href="http://github.com/windup/windup/wiki/6.2-Java-Source-Hints">6.2 Java Source Hints</a></strong>
+                  </li>
+                  <li>
+                    <strong><a href="http://github.com/windup/windup/wiki/6.3-XML-Classification">6.3 XML Classification</a></strong>
+                  </li>
+                  <li>
+                    <strong><a href="http://github.com/windup/windup/wiki/6.4-XML-Source-Hints">6.4 XML Source Hints</a></strong>
+                  </li>
+                  <li>
+                    <strong><a href="http://github.com/windup/windup/wiki/7.0-JadRetro-and-Jad-Decompiler-Setup">7.0 JadRetro and Jad Decompiler Setup</a></strong>
+                  </li>
+                </ul>
+              </p>
+            </div>
+            
+          </div>
+
+          <hr/>
+
+          <div class="row text-center">
+            <div class="span4">
+              
+              <h3>1. Overview</h3>  
+              <p class="thumbnail"><iframe width="360" height="180" src="http://www.youtube.com/embed/L9E2C3L994c" frameborder="0" allowfullscreen></iframe></p>
+              <p>Background on Windup, what is produces, and how it helps to migrate.</p>
+            </div>
+            <div class="span4">
+              <h3>2. Running and Reports</h3>
+              <p class="thumbnail"><iframe width="360" height="180" src="http://www.youtube.com/embed/NwbTmWxZ3XI" frameborder="0" allowfullscreen></iframe></p>
+              <p>Runs Windup against a real application, and provides insight on reading the report.</p>
+            </div>
+            <div class="span4">
+              <h3>3. Enhancing Rules</h3>
+              <p class="thumbnail"><iframe width="360" height="180" src="http://www.youtube.com/embed/2f91zAV6_OY" frameborder="0" allowfullscreen></iframe></p>
+              <p>Enhances Windup rules for Java, to show you how to extend Windup to meet your needs!</p>
+            </div>
+          </div>
+
+          <hr />
+
+          <div class="row">
+            <h2>Quick Guide: Running Windup on Source</h2>
+            <p>
+              <ol>
+                <li>Download Windup and Unzip to your favorite directory.</li>
+                <li>Edit the jboss-windup.sh, with the <i>-input</i> parameter set to your source directory.</li>
+                <li>Make sure to set your <i>-javaPkg</i> parameter to your Java package structure.</li>
+                <li>Make sure to set the <i>-source true</i> flag.</li>
+                <li>Make sure to set your <i>-output</i> parameter to your favorite output directory for the report.</li>
+                <li>Execute the jboss-windup.sh</li>
+                <li>View the report!</li>
+              </ol>
+            </p>
+          </div>
+
+          <hr />
+
+          <div class="row">
+            <h2>Quick Guide: Running Windup on Archives</h2>
+            <div class="alert alert-info">
+              <strong>Before you get started: </strong>Make sure you setup your favorite decompiler to run in Archive mode! | 
+              <a href="http://github.com/windup/windup/wiki/7.0-JadRetro-and-Jad-Decompiler-Setup">See How!</a>
+            </div>
+            <p>
+              <ol>
+                <li>Download Windup and Unzip to your favorite directory.</li>
+                <li>Edit the jboss-windup.sh, with the <i>-input</i> parameter set to a directory containing your archive.</li>
+                <li>Make sure to set your <i>-javaPkg</i> parameter to your Java package structure.</li>
+                <li>Execute the jboss-windup.sh</li>
+                <li>View the report!</li>
+              </ol>
+            </p>
+          </div>
+        </div>
+      	
+		</div>
+    <!--END OF MAIN-->
+
+    <div class="footer">
+      <div class="footer-logo">
+        <a href="http://redhat.com"><img src="assets/img/redhat_logo.png"/></a>
+      </div>
+    </div>
+
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="assets/js/jquery-1.10.1.min.js"></script>
+    <script src="assets/js/bootstrap.js"></script>
+    <script src="assets/js/windup.js"></script>
+
+	</body>
+</html>

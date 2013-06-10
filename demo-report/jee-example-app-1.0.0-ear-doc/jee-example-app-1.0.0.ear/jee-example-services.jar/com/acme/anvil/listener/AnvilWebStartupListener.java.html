@@ -1,0 +1,182 @@
+<html>
+	<head>
+		<script type='text/javascript' src='../../../../../../jquery.min.js'></script>
+		<script type='text/javascript' src='../../../../../../jquery-ui/jquery.ui.widget.js'></script>
+		<script type='text/javascript' src='../../../../../../snippet/jquery.snippet.min.js'></script>
+		<script type='text/javascript' src='../../../../../../snippet/jquery.snippet.java-manifest.js'></script>
+		<script type='text/javascript' src='../../../../../../sausage/jquery.sausage.min.js'></script>
+
+		<link rel='stylesheet' type='text/css' href='../../../../../../snippet/jquery.snippet.min.css' />
+		<link rel='stylesheet' type='text/css' href='../../../../../../windup.css' />
+
+		<link rel='stylesheet' type='text/css' href='../../../../../../sausage/sausage.css' />
+	</head>
+	<body class='sourceReport'>
+		<div class="windupHeader"><img src="../../../../../../img/windup-logo.png"></div>
+		
+
+			<div class='windupBody'>
+
+		<div class='windupHighLevel'>
+
+			<h3>Classification</h3>
+			<ul>
+					<li>Weblogic Startup Service
+					</li>
+			</ul>
+
+
+
+			<h3>Links</h3>
+			<ul class='links'>
+					<li><a href='http://docs.oracle.com/javaee/6/api/javax/ejb/Singleton.html'>http://docs.oracle.com/javaee/6/api/javax/ejb/Singleton.html</a><span class='dash'>-</span>EJB3.1 Singleton Bean</li>
+					<li><a href='http://docs.oracle.com/javaee/6/api/javax/ejb/Startup.html'>http://docs.oracle.com/javaee/6/api/javax/ejb/Startup.html</a><span class='dash'>-</span>EJB3.1 Startup Bean</li>
+			</ul>
+
+			<h3>Notification</h3>
+			<ul class='notifications'>
+					<li class='notification warning'><a href="#-139380579">Import of 'weblogic.common.T3ServicesDef' at line 16</a></li>
+					<li class='notification warning'><a href="#-566823113">Import of 'weblogic.common.T3StartupDef' at line 17</a></li>
+					<li class='notification warning'><a href="#880757031">Import of 'weblogic.i18n.logging.NonCatalogLogger' at line 18</a></li>
+					<li class='notification warning'><a href="#1519125786">Import of 'weblogic.jndi.Environment' at line 19</a></li>
+					<li class='notification warning'><a href="#-626897677">Implementing interface 'weblogic.common.T3StartupDef' at line 22</a></li>
+					<li class='notification warning'><a href="#479299795">Constructing type 'weblogic.i18n.logging.NonCatalogLogger(java.lang.String)' at line 27</a></li>
+					<li class='notification warning'><a href="#-1173742165">Method parameter 'weblogic.common.T3ServicesDef' at line 30</a></li>
+					<li class='notification warning'><a href="#859915052">Declaring type 'weblogic.jndi.Environment' at line 48</a></li>
+					<li class='notification warning'><a href="#129528778">Constructing type 'weblogic.jndi.Environment()' at line 48</a></li>
+					<li class='notification warning'><a href="#-1064788652">Usage of 'weblogic.jndi.Environment.setProviderUrl(java.lang.String)' at line 49</a></li>
+					<li class='notification warning'><a href="#1264578728">Usage of 'weblogic.jndi.Environment.setSecurityPrincipal(java.lang.String)' at line 50</a></li>
+					<li class='notification warning'><a href="#174740773">Usage of 'weblogic.jndi.Environment.setSecurityCredentials(java.lang.String)' at line 51</a></li>
+					<li class='notification warning'><a href="#-842684871">Usage of 'weblogic.jndi.Environment.getContext()' at line 52</a></li>
+					<li class='notification warning'><a href="#1845340303">Usage of 'javax.naming.Context.lookup(java.lang.String)' at line 53</a></li>
+					<li class='notification warning'><a href="#717877530">Usage of 'javax.management.MBeanServer.registerMBean(com.acme.anvil.management.AnvilInvokeBeanImpl, javax.management.ObjectName)' at line 63</a></li>
+					<li class='notification warning'><a href="#-1254900171">Constructing type 'javax.management.ObjectName(java.lang.String)' at line 63</a></li>
+					<li class='notification warning'><a href="#-100894793">Declaring type 'weblogic.i18n.logging.NonCatalogLogger' at line 73</a></li>
+					<li class='notification warning'><a href="#1913786775">Declaring type 'weblogic.common.T3ServicesDef' at line 74</a></li>
+			</ul>
+		
+		</div>
+		</div>
+
+		<div class='windupReportBody'>
+
+<pre id='source'>// Decompiled by Jad v1.5.8g. Copyright 2001 Pavel Kouznetsov.
+// Jad home page: http://www.kpdus.com/jad.html
+// Decompiler options: fullnames 
+// Source File Name:   AnvilWebStartupListener.java
+
+package com.acme.anvil.listener;
+
+import com.acme.anvil.management.AnvilInvokeBeanImpl;
+import java.util.Hashtable;
+import java.util.Iterator;
+import java.util.Set;
+import javax.management.MBeanServer;
+import javax.management.ObjectName;
+import javax.naming.Context;
+import javax.naming.NamingException;
+import weblogic.common.T3ServicesDef;
+import weblogic.common.T3StartupDef;
+import weblogic.i18n.logging.NonCatalogLogger;
+import weblogic.jndi.Environment;
+
+public class AnvilWebStartupListener
+    implements weblogic.common.T3StartupDef
+{
+
+    public AnvilWebStartupListener()
+    {
+        log = new NonCatalogLogger(&quot;AnvilWebStartupListener&quot;);
+    }
+
+    public void setServices(weblogic.common.T3ServicesDef services)
+    {
+        this.services = services;
+    }
+
+    public java.lang.String startup(java.lang.String name, java.util.Hashtable ht)
+    {
+        log.info((new StringBuilder()).append(&quot;Starting Server Startup Class: &quot;).append(name).append(&quot; with properties: &quot;).toString());
+        java.lang.Object key;
+        for(java.util.Iterator i$ = ht.keySet().iterator(); i$.hasNext(); log.info((new StringBuilder()).append(&quot;Key[&quot;).append(key).append(&quot;] = Value[&quot;).append(ht.get(key)).append(&quot;]&quot;).toString()))
+            key = i$.next();
+
+        return (new StringBuilder()).append(&quot;Completed Startup Class: &quot;).append(name).toString();
+    }
+
+    private javax.management.MBeanServer getMBeanServer()
+        throws javax.naming.NamingException
+    {
+        weblogic.jndi.Environment env = new Environment();
+        env.setProviderUrl(&quot;t3://weblogicServer:7001&quot;);
+        env.setSecurityPrincipal(&quot;fred&quot;);
+        env.setSecurityCredentials(&quot;seafood&quot;);
+        javax.naming.Context context = env.getContext();
+        javax.management.MBeanServer server = (javax.management.MBeanServer)context.lookup(&quot;java:comp/jmx/runtime&quot;);
+        return server;
+    }
+
+    private void registerMBean()
+    {
+        log.info(&quot;Registering MBeans.&quot;);
+        try
+        {
+            javax.management.MBeanServer server = getMBeanServer();
+            server.registerMBean(new AnvilInvokeBeanImpl(), new ObjectName(&quot;com.acme:Name=anvil,Type=com.acme.anvil.management.AnvilInvokeBeanT3StartupDef&quot;));
+            log.info(&quot;Registered MBean[com.acme:Name=anvil,Type=com.acme.anvil.management.AnvilInvokeBeanT3StartupDef]&quot;);
+        }
+        catch(java.lang.Exception e)
+        {
+            log.error(&quot;Exception while registering MBean[com.acme:Name=anvil,Type=com.acme.anvil.management.AnvilInvokeBeanT3StartupDef]&quot;);
+        }
+    }
+
+    private static final java.lang.String MBEAN_NAME = &quot;com.acme:Name=anvil,Type=com.acme.anvil.management.AnvilInvokeBeanT3StartupDef&quot;;
+    private weblogic.i18n.logging.NonCatalogLogger log;
+    private weblogic.common.T3ServicesDef services;
+}
+</pre>
+		</div>
+		
+
+<script type='text/javascript'>
+	$(document).ready(function(){
+		$('pre').snippet('java',{style:'ide-eclipse', showNum:true,boxFill:'#ffeeb9', box: '16,17,18,19,22,27,30,48,48,49,50,51,52,53,63,63,73,74' });
+
+
+		
+$("<a name='-139380579'></a>			<div class='inline-source-comment green'><div class='inline-comment'><div class='inline-comment-heading'><h2 class='notification warning'>Import of \'weblogic.common.T3ServicesDef\' at line 16</h2></div></div></div>").appendTo('ol.snippet-num li:nth-child(16)');		
+$("<a name='-566823113'></a>			<div class='inline-source-comment green'><div class='inline-comment'><div class='inline-comment-heading'><h2 class='notification warning'>Import of \'weblogic.common.T3StartupDef\' at line 17</h2></div></div></div>").appendTo('ol.snippet-num li:nth-child(17)');		
+$("<a name='880757031'></a>			<div class='inline-source-comment green'><div class='inline-comment'><div class='inline-comment-heading'><h2 class='notification warning'>Import of \'weblogic.i18n.logging.NonCatalogLogger\' at line 18</h2></div></div></div>").appendTo('ol.snippet-num li:nth-child(18)');		
+$("<a name='1519125786'></a>			<div class='inline-source-comment green'><div class='inline-comment'><div class='inline-comment-heading'><h2 class='notification warning'>Import of \'weblogic.jndi.Environment\' at line 19</h2></div></div></div>").appendTo('ol.snippet-num li:nth-child(19)');		
+$("<a name='-626897677'></a>			<div class='inline-source-comment green'><div class='inline-comment'><div class='inline-comment-heading'><h2 class='notification warning'>Implementing interface \'weblogic.common.T3StartupDef\' at line 22</h2></div><div class='inline-comment-body'><p>T3StartupDef defines a startup service in Weblogic. The main method is executed when the server starts up, if it is registered in the Weblogic context.xml The equivalent in JBoss 5 is to use a JMX Management annotation: org.jboss.annotation.ejb.Management.</p></div></div></div>").appendTo('ol.snippet-num li:nth-child(22)');		
+$("<a name='479299795'></a>			<div class='inline-source-comment green'><div class='inline-comment'><div class='inline-comment-heading'><h2 class='notification warning'>Constructing type \'weblogic.i18n.logging.NonCatalogLogger(java.lang.String)\' at line 27</h2></div><div class='inline-comment-body'><p>Migrate the NonCatalogLogger to Apache Log4j.</p><p><pre><code data-code-syntax='java'>\nLogger LOG = Logger.getLog(&quot;Example&quot;);\n</code></pre></p></div></div></div>").appendTo('ol.snippet-num li:nth-child(27)');		
+$("<a name='-1173742165'></a>			<div class='inline-source-comment green'><div class='inline-comment'><div class='inline-comment-heading'><h2 class='notification warning'>Method parameter \'weblogic.common.T3ServicesDef\' at line 30</h2></div><div class='inline-comment-body'><p>In JBoss 5, look up the MBean replacement for the T3ServicesDef.</p></div><div class='inline-comment-body'><p>In JBoss 6, inject the @Singleton, @Startup EJB3.</p></div></div></div>").appendTo('ol.snippet-num li:nth-child(30)');		
+$("<a name='859915052'></a>			<div class='inline-source-comment green'><div class='inline-comment'><div class='inline-comment-heading'><h2 class='notification warning'>Declaring type \'weblogic.jndi.Environment\' at line 48</h2></div></div></div>").appendTo('ol.snippet-num li:nth-child(48)');		
+$("<a name='129528778'></a>			<div class='inline-source-comment green'><div class='inline-comment'><div class='inline-comment-heading'><h2 class='notification warning'>Constructing type \'weblogic.jndi.Environment()\' at line 48</h2></div></div></div>").appendTo('ol.snippet-num li:nth-child(48)');		
+$("<a name='-1064788652'></a>			<div class='inline-source-comment green'><div class='inline-comment'><div class='inline-comment-heading'><h2 class='notification warning'>Usage of \'weblogic.jndi.Environment.setProviderUrl(java.lang.String)\' at line 49</h2></div></div></div>").appendTo('ol.snippet-num li:nth-child(49)');		
+$("<a name='1264578728'></a>			<div class='inline-source-comment green'><div class='inline-comment'><div class='inline-comment-heading'><h2 class='notification warning'>Usage of \'weblogic.jndi.Environment.setSecurityPrincipal(java.lang.String)\' at line 50</h2></div></div></div>").appendTo('ol.snippet-num li:nth-child(50)');		
+$("<a name='174740773'></a>			<div class='inline-source-comment green'><div class='inline-comment'><div class='inline-comment-heading'><h2 class='notification warning'>Usage of \'weblogic.jndi.Environment.setSecurityCredentials(java.lang.String)\' at line 51</h2></div></div></div>").appendTo('ol.snippet-num li:nth-child(51)');		
+$("<a name='-842684871'></a>			<div class='inline-source-comment green'><div class='inline-comment'><div class='inline-comment-heading'><h2 class='notification warning'>Usage of \'weblogic.jndi.Environment.getContext()\' at line 52</h2></div></div></div>").appendTo('ol.snippet-num li:nth-child(52)');		
+$("<a name='1845340303'></a>			<div class='inline-source-comment green'><div class='inline-comment'><div class='inline-comment-heading'><h2 class='notification warning'>Usage of \'javax.naming.Context.lookup(java.lang.String)\' at line 53</h2></div><div class='inline-comment-body'><p>Ensure that the JNDI Name does not need to change for JBoss</p><p><em>For Example:</em></p><p><pre><code data-code-syntax='java'>\n(ConnectionFactory)initialContext.lookup(&quot;weblogic.jms.ConnectionFactory&quot;);\n</code></pre></p><p><em>should become:</em></p><p><pre><code data-code-syntax='java'>\n(ConnectionFactory)initialContext.lookup(&quot;/ConnectionFactory&quot;);\n</code></pre></p></div></div></div>").appendTo('ol.snippet-num li:nth-child(53)');		
+$("<a name='717877530'></a>			<div class='inline-source-comment green'><div class='inline-comment'><div class='inline-comment-heading'><h2 class='notification warning'>Usage of \'javax.management.MBeanServer.registerMBean(com.acme.anvil.management.AnvilInvokeBeanImpl, javax.management.ObjectName)\' at line 63</h2></div></div></div>").appendTo('ol.snippet-num li:nth-child(63)');		
+$("<a name='-1254900171'></a>			<div class='inline-source-comment green'><div class='inline-comment'><div class='inline-comment-heading'><h2 class='notification warning'>Constructing type \'javax.management.ObjectName(java.lang.String)\' at line 63</h2></div><div class='inline-comment-body'><p>Ensure that the ObjectName exists in JBoss</p></div></div></div>").appendTo('ol.snippet-num li:nth-child(63)');		
+$("<a name='-100894793'></a>			<div class='inline-source-comment green'><div class='inline-comment'><div class='inline-comment-heading'><h2 class='notification warning'>Declaring type \'weblogic.i18n.logging.NonCatalogLogger\' at line 73</h2></div></div></div>").appendTo('ol.snippet-num li:nth-child(73)');		
+$("<a name='1913786775'></a>			<div class='inline-source-comment green'><div class='inline-comment'><div class='inline-comment-heading'><h2 class='notification warning'>Declaring type \'weblogic.common.T3ServicesDef\' at line 74</h2></div><div class='inline-comment-body'><p>In JBoss 6, inject the @Singleton, @Startup EJB3.</p></div><div class='inline-comment-body'><p>In JBoss 5, look up the MBean replacement for the T3ServicesDef.</p></div></div></div>").appendTo('ol.snippet-num li:nth-child(74)');	
+	
+		$('code[data-code-syntax]').each(function(){
+	         var codeSyntax = ($(this).data('code-syntax'));
+	         if(codeSyntax) {
+	            $(this).parent().snippet(codeSyntax,{style:'ide-eclipse', menu:false, showNum:false});
+	         }
+		});
+		$(window).sausage({ page: 'li.box' });
+	}); 
+</script>		
+		<script type='text/javascript' src='../../../../../../windup.js'></script>
+		<div class='windupFooter'>
+			<a href='http://redhat.com'><img src='../../../../../../img/rh-logo.png'/></a>
+		</div>
+
+	</body>
+</html>

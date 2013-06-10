@@ -1,0 +1,104 @@
+<html>
+	<head>
+		<script type='text/javascript' src='../../../../../../jquery.min.js'></script>
+		<script type='text/javascript' src='../../../../../../jquery-ui/jquery.ui.widget.js'></script>
+		<script type='text/javascript' src='../../../../../../snippet/jquery.snippet.min.js'></script>
+		<script type='text/javascript' src='../../../../../../snippet/jquery.snippet.java-manifest.js'></script>
+		<script type='text/javascript' src='../../../../../../sausage/jquery.sausage.min.js'></script>
+
+		<link rel='stylesheet' type='text/css' href='../../../../../../snippet/jquery.snippet.min.css' />
+		<link rel='stylesheet' type='text/css' href='../../../../../../windup.css' />
+
+		<link rel='stylesheet' type='text/css' href='../../../../../../sausage/sausage.css' />
+	</head>
+	<body class='sourceReport'>
+		<div class="windupHeader"><img src="../../../../../../img/windup-logo.png"></div>
+		
+
+			<div class='windupBody'>
+
+		<div class='windupHighLevel'>
+
+			<h3>Classification</h3>
+			<ul>
+					<li>JMX MBean
+					</li>
+			</ul>
+
+
+
+
+			<h3>Notification</h3>
+			<ul class='notifications'>
+					<li class='notification warning'><a href="#1136403768">Extending class 'javax.management.StandardMBean' at line 14</a></li>
+			</ul>
+		
+		</div>
+		</div>
+
+		<div class='windupReportBody'>
+
+<pre id='source'>// Decompiled by Jad v1.5.8g. Copyright 2001 Pavel Kouznetsov.
+// Jad home page: http://www.kpdus.com/jad.html
+// Decompiler options: fullnames 
+// Source File Name:   AnvilInvokeBeanImpl.java
+
+package com.acme.anvil.management;
+
+import javax.management.NotCompliantMBeanException;
+import javax.management.StandardMBean;
+
+// Referenced classes of package com.acme.anvil.management:
+//            AnvilInvokeBean
+
+public class AnvilInvokeBeanImpl extends javax.management.StandardMBean
+    implements com.acme.anvil.management.AnvilInvokeBean
+{
+
+    public AnvilInvokeBeanImpl()
+        throws javax.management.NotCompliantMBeanException
+    {
+        super(com.acme.anvil.management.AnvilInvokeBean.class);
+        invoked = 0;
+    }
+
+    public void addInvoked()
+    {
+        invoked++;
+    }
+
+    public int getInvoked()
+    {
+        return invoked;
+    }
+
+    private int invoked;
+}
+</pre>
+		</div>
+		
+
+<script type='text/javascript'>
+	$(document).ready(function(){
+		$('pre').snippet('java',{style:'ide-eclipse', showNum:true,boxFill:'#ffeeb9', box: '14' });
+
+
+		
+$("<a name='1136403768'></a>			<div class='inline-source-comment green'><div class='inline-comment'><div class='inline-comment-heading'><h2 class='notification warning'>Extending class \'javax.management.StandardMBean\' at line 14</h2></div></div></div>").appendTo('ol.snippet-num li:nth-child(14)');	
+	
+		$('code[data-code-syntax]').each(function(){
+	         var codeSyntax = ($(this).data('code-syntax'));
+	         if(codeSyntax) {
+	            $(this).parent().snippet(codeSyntax,{style:'ide-eclipse', menu:false, showNum:false});
+	         }
+		});
+		$(window).sausage({ page: 'li.box' });
+	}); 
+</script>		
+		<script type='text/javascript' src='../../../../../../windup.js'></script>
+		<div class='windupFooter'>
+			<a href='http://redhat.com'><img src='../../../../../../img/rh-logo.png'/></a>
+		</div>
+
+	</body>
+</html>
