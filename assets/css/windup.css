@@ -11,6 +11,21 @@ html, body {
 	margin: 10px 0;
 }
 
+.windup-demo-bar {
+	padding:60px 40px;
+	border-bottom: 3px solid #0e1f2b;
+	position: fixed;
+	width: 100%;
+
+	background: rgba(242,247,251,0.9) url(../img/cloudbg.png) bottom repeat-x;
+	background-repeat: repeat-x;
+
+	animation: animatedBackground 20s linear infinite;
+	-ms-animation: animatedBackground 20s linear infinite;
+	-moz-animation: animatedBackground 20s linear infinite;
+	-webkit-animation: animatedBackground 20s linear infinite;
+}
+
 .wrapper {
 	margin-top: 60px;
 	min-height: 100%;
@@ -170,6 +185,8 @@ hr {
 	from { background-position: 0 bottom; }
 	to { background-position: 1200px bottom; }
 }
+
+
 /*
 
 	Colors:

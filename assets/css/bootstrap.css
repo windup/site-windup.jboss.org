@@ -5231,6 +5231,7 @@ button.close {
 .visible-desktop {
   display: inherit !important;
 }
+/*
 @media (min-width: 768px) and (max-width: 979px) {
   .hidden-desktop {
     display: inherit !important;
@@ -5758,7 +5759,8 @@ button.close {
     width: 28px;
   }
 }
-@media (min-width: 1200px) {
+*/
+//@media (min-width: 1200px) {
   .row {
     margin-left: -30px;
     *zoom: 1;
@@ -6106,7 +6108,8 @@ button.close {
   .row-fluid .thumbnails {
     margin-left: 0;
   }
-}
+//}
+/*
 @media (max-width: 979px) {
   body {
     padding-top: 0;
@@ -6264,3 +6267,4 @@ button.close {
     overflow: visible !important;
   }
 }
+*/
