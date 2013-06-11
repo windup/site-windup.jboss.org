@@ -169,6 +169,10 @@ hr {
 	-webkit-animation: animatedBackground 20s linear infinite;
 }
 
+.content-header h1 {
+	line-height: 99px;
+}
+
 @keyframes animatedBackground {
 	from { background-position: 0 bottom; }
 	to { background-position: 1200px bottom; }

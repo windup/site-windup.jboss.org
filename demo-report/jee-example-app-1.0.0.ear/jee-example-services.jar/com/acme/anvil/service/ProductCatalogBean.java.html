@@ -30,10 +30,10 @@
 
 			<h3>Notification</h3>
 			<ul class='notifications'>
-					<li class='notification warning'><a href="#76774357">Import of 'weblogic.i18n.logging.NonCatalogLogger' at line 12</a></li>
-					<li class='notification info'><a href="#-1436008496">Implementing interface 'javax.ejb.SessionBean' at line 15</a></li>
-					<li class='notification warning'><a href="#-1477237717">Declaring type 'weblogic.i18n.logging.NonCatalogLogger' at line 51</a></li>
-					<li class='notification warning'><a href="#-774764564">Constructing type 'weblogic.i18n.logging.NonCatalogLogger(java.lang.String)' at line 51</a></li>
+					<li class='notification warning'><a href="#-1336620344">Import of 'weblogic.i18n.logging.NonCatalogLogger' at line 12</a></li>
+					<li class='notification info'><a href="#24297073">Implementing interface 'javax.ejb.SessionBean' at line 15</a></li>
+					<li class='notification warning'><a href="#-1918587366">Declaring type 'weblogic.i18n.logging.NonCatalogLogger' at line 51</a></li>
+					<li class='notification warning'><a href="#377125442">Constructing type 'weblogic.i18n.logging.NonCatalogLogger(java.lang.String)' at line 51</a></li>
 			</ul>
 		
 		</div>
@@ -104,11 +104,16 @@ public class ProductCatalogBean
 		$('pre').snippet('java',{style:'ide-eclipse', showNum:true,boxFill:'#ffeeb9', box: '12,15,51,51' });
 
 
+$("<div id='12-inlines' class='inline-source-hint-group'>		").appendTo('ol.snippet-num li:nth-child(12)');
+$("<div id='15-inlines' class='inline-source-hint-group'>		").appendTo('ol.snippet-num li:nth-child(15)');
+$("<div id='51-inlines' class='inline-source-hint-group'>		").appendTo('ol.snippet-num li:nth-child(51)');
+$("<div id='51-inlines' class='inline-source-hint-group'>		").appendTo('ol.snippet-num li:nth-child(51)');
+	
 		
-$("<a name='76774357'></a>			<div class='inline-source-comment green'><div class='inline-comment'><div class='inline-comment-heading'><h2 class='notification warning'>Import of \'weblogic.i18n.logging.NonCatalogLogger\' at line 12</h2></div></div></div>").appendTo('ol.snippet-num li:nth-child(12)');		
-$("<a name='-1436008496'></a>			<div class='inline-source-comment green'><div class='inline-comment'><div class='inline-comment-heading'><h2 class='notification info'>Implementing interface \'javax.ejb.SessionBean\' at line 15</h2></div></div></div>").appendTo('ol.snippet-num li:nth-child(15)');		
-$("<a name='-1477237717'></a>			<div class='inline-source-comment green'><div class='inline-comment'><div class='inline-comment-heading'><h2 class='notification warning'>Declaring type \'weblogic.i18n.logging.NonCatalogLogger\' at line 51</h2></div></div></div>").appendTo('ol.snippet-num li:nth-child(51)');		
-$("<a name='-774764564'></a>			<div class='inline-source-comment green'><div class='inline-comment'><div class='inline-comment-heading'><h2 class='notification warning'>Constructing type \'weblogic.i18n.logging.NonCatalogLogger(java.lang.String)\' at line 51</h2></div><div class='inline-comment-body'><p>Migrate the NonCatalogLogger to Apache Log4j.</p><p><pre><code data-code-syntax='java'>\nLogger LOG = Logger.getLog(&quot;Example&quot;);\n</code></pre></p></div></div></div>").appendTo('ol.snippet-num li:nth-child(51)');	
+$("<a name='-1336620344'></a>			<div class='inline-source-comment green'><div class='inline-comment'><div class='inline-comment-heading'><h2 class='notification warning'>Import of \'weblogic.i18n.logging.NonCatalogLogger\' at line 12</h2></div></div></div>").appendTo('#12-inlines');		
+$("<a name='24297073'></a>			<div class='inline-source-comment green'><div class='inline-comment'><div class='inline-comment-heading'><h2 class='notification info'>Implementing interface \'javax.ejb.SessionBean\' at line 15</h2></div></div></div>").appendTo('#15-inlines');		
+$("<a name='-1918587366'></a>			<div class='inline-source-comment green'><div class='inline-comment'><div class='inline-comment-heading'><h2 class='notification warning'>Declaring type \'weblogic.i18n.logging.NonCatalogLogger\' at line 51</h2></div></div></div>").appendTo('#51-inlines');		
+$("<a name='377125442'></a>			<div class='inline-source-comment green'><div class='inline-comment'><div class='inline-comment-heading'><h2 class='notification warning'>Constructing type \'weblogic.i18n.logging.NonCatalogLogger(java.lang.String)\' at line 51</h2></div><div class='inline-comment-body'><p>Migrate the NonCatalogLogger to Apache Log4j.</p><p><pre><code data-code-syntax='java'>\nLogger LOG = Logger.getLog(&quot;Example&quot;);\n</code></pre></p></div></div></div>").appendTo('#51-inlines');	
 	
 		$('code[data-code-syntax]').each(function(){
 	         var codeSyntax = ($(this).data('code-syntax'));

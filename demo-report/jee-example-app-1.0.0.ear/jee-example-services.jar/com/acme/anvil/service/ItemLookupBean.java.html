@@ -30,9 +30,9 @@
 
 			<h3>Notification</h3>
 			<ul class='notifications'>
-					<li class='notification warning'><a href="#89706367">Import of 'weblogic.ejb.GenericSessionBean' at line 14</a></li>
-					<li class='notification warning'><a href="#1170272720">Extending class 'weblogic.ejb.GenericSessionBean' at line 19</a></li>
-					<li class='notification info'><a href="#-514505637">Implementing interface 'javax.ejb.SessionBean' at line 20</a></li>
+					<li class='notification warning'><a href="#-1252431670">Import of 'weblogic.ejb.GenericSessionBean' at line 14</a></li>
+					<li class='notification warning'><a href="#1944916393">Extending class 'weblogic.ejb.GenericSessionBean' at line 19</a></li>
+					<li class='notification info'><a href="#-199623187">Implementing interface 'javax.ejb.SessionBean' at line 20</a></li>
 			</ul>
 		
 		</div>
@@ -104,10 +104,14 @@ public class ItemLookupBean extends weblogic.ejb.GenericSessionBean
 		$('pre').snippet('java',{style:'ide-eclipse', showNum:true,boxFill:'#ffeeb9', box: '14,19,20' });
 
 
+$("<div id='14-inlines' class='inline-source-hint-group'>		").appendTo('ol.snippet-num li:nth-child(14)');
+$("<div id='19-inlines' class='inline-source-hint-group'>		").appendTo('ol.snippet-num li:nth-child(19)');
+$("<div id='20-inlines' class='inline-source-hint-group'>		").appendTo('ol.snippet-num li:nth-child(20)');
+	
 		
-$("<a name='89706367'></a>			<div class='inline-source-comment green'><div class='inline-comment'><div class='inline-comment-heading'><h2 class='notification warning'>Import of \'weblogic.ejb.GenericSessionBean\' at line 14</h2></div></div></div>").appendTo('ol.snippet-num li:nth-child(14)');		
-$("<a name='1170272720'></a>			<div class='inline-source-comment green'><div class='inline-comment'><div class='inline-comment-heading'><h2 class='notification warning'>Extending class \'weblogic.ejb.GenericSessionBean\' at line 19</h2></div></div></div>").appendTo('ol.snippet-num li:nth-child(19)');		
-$("<a name='-514505637'></a>			<div class='inline-source-comment green'><div class='inline-comment'><div class='inline-comment-heading'><h2 class='notification info'>Implementing interface \'javax.ejb.SessionBean\' at line 20</h2></div></div></div>").appendTo('ol.snippet-num li:nth-child(20)');	
+$("<a name='-1252431670'></a>			<div class='inline-source-comment green'><div class='inline-comment'><div class='inline-comment-heading'><h2 class='notification warning'>Import of \'weblogic.ejb.GenericSessionBean\' at line 14</h2></div></div></div>").appendTo('#14-inlines');		
+$("<a name='1944916393'></a>			<div class='inline-source-comment green'><div class='inline-comment'><div class='inline-comment-heading'><h2 class='notification warning'>Extending class \'weblogic.ejb.GenericSessionBean\' at line 19</h2></div></div></div>").appendTo('#19-inlines');		
+$("<a name='-199623187'></a>			<div class='inline-source-comment green'><div class='inline-comment'><div class='inline-comment-heading'><h2 class='notification info'>Implementing interface \'javax.ejb.SessionBean\' at line 20</h2></div></div></div>").appendTo('#20-inlines');	
 	
 		$('code[data-code-syntax]').each(function(){
 	         var codeSyntax = ($(this).data('code-syntax'));

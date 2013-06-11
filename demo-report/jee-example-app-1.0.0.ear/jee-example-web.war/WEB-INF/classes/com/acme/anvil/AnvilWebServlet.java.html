@@ -23,7 +23,7 @@
 
 			<h3>Notification</h3>
 			<ul class='notifications'>
-					<li class='notification warning'><a href="#804239819">Usage of 'javax.naming.InitialContext.lookup(java.lang.String)' at line 35</a></li>
+					<li class='notification warning'><a href="#1175720987">Usage of 'javax.naming.InitialContext.lookup(java.lang.String)' at line 35</a></li>
 			</ul>
 		
 		</div>
@@ -116,8 +116,10 @@ public class AnvilWebServlet extends javax.servlet.http.HttpServlet
 		$('pre').snippet('java',{style:'ide-eclipse', showNum:true,boxFill:'#ffeeb9', box: '35' });
 
 
+$("<div id='35-inlines' class='inline-source-hint-group'>		").appendTo('ol.snippet-num li:nth-child(35)');
+	
 		
-$("<a name='804239819'></a>			<div class='inline-source-comment green'><div class='inline-comment'><div class='inline-comment-heading'><h2 class='notification warning'>Usage of \'javax.naming.InitialContext.lookup(java.lang.String)\' at line 35</h2></div><div class='inline-comment-body'><p>Ensure that the JNDI Name does not need to change for JBoss</p><p><em>For Example:</em></p><p><pre><code data-code-syntax='java'>\n(ConnectionFactory)initialContext.lookup(&quot;weblogic.jms.ConnectionFactory&quot;);\n</code></pre></p><p><em>should become:</em></p><p><pre><code data-code-syntax='java'>\n(ConnectionFactory)initialContext.lookup(&quot;/ConnectionFactory&quot;);\n</code></pre></p></div></div></div>").appendTo('ol.snippet-num li:nth-child(35)');	
+$("<a name='1175720987'></a>			<div class='inline-source-comment green'><div class='inline-comment'><div class='inline-comment-heading'><h2 class='notification warning'>Usage of \'javax.naming.InitialContext.lookup(java.lang.String)\' at line 35</h2></div><div class='inline-comment-body'><p>Ensure that the JNDI Name does not need to change for JBoss</p><p><em>For Example:</em></p><p><pre><code data-code-syntax='java'>\n(ConnectionFactory)initialContext.lookup(&quot;weblogic.jms.ConnectionFactory&quot;);\n</code></pre></p><p><em>should become:</em></p><p><pre><code data-code-syntax='java'>\n(ConnectionFactory)initialContext.lookup(&quot;/ConnectionFactory&quot;);\n</code></pre></p></div></div></div>").appendTo('#35-inlines');	
 	
 		$('code[data-code-syntax]').each(function(){
 	         var codeSyntax = ($(this).data('code-syntax'));
