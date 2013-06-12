@@ -56,8 +56,8 @@
           <div class="row">
             <div class="span4">
               <div style="padding:20px">
-                <p><a href="#" class="btn btn-primary btn-large btn-block windup-download-now"><i class="icon-circle-arrow-down icon-white"></i> Binary</a></p>
-                <p><a href="http://github.com/windup/windup" class="btn btn-danger btn-large btn-block">Source <i class="icon-circle-arrow-right icon-white"></i></a></p>
+                <p><a href="#" class="btn btn-success btn-large btn-block windup-download-now"><i class="icon-circle-arrow-down icon-white"></i> Download Binary</a></p>
+                <p><a href="http://github.com/windup/windup" class="btn btn-default btn-large btn-block">Source <i class="icon-circle-arrow-right icon-black"></i></a></p>
               </div>
             </div>
 
@@ -79,8 +79,8 @@
           <div class="row">
             <div class="span4">
               <div style="padding:20px">
-                <p><a href="http://download.jboss.org/windup/jee-example-app-1.0.0.ear" class="btn btn-primary btn-large btn-block"><i class="icon-circle-arrow-down icon-white"></i> Binary</a></p>
-                <p><a href="https://github.com/bradsdavis/jee-migration-example-app" class="btn btn-danger btn-large btn-block">Source <i class="icon-circle-arrow-right icon-white"></i></a></p>
+                <p><a href="http://download.jboss.org/windup/jee-example-app-1.0.0.ear" class="btn btn-success btn-large btn-block"><i class="icon-circle-arrow-down icon-white"></i> Download Binary</a></p>
+                <p><a href="https://github.com/bradsdavis/jee-migration-example-app" class="btn btn-default btn-large btn-block">Source <i class="icon-circle-arrow-right icon-black"></i></a></p>
               </div>
             </div>
 
@@ -112,5 +112,58 @@
     <script src="assets/js/jquery-1.10.1.min.js"></script>
     <script src="assets/js/bootstrap.js"></script>
     <script src="assets/js/windup.js"></script>
+     <script type="text/javascript">
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount','UA-41014823-1']);
+    _gaq.push(['_trackPageview']);
+    (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+    </script>
+    <script src="http://www.redhat.com/j/elqNow/elqCfg.js" type="text/javascript"></script>
+    <script src="http://www.redhat.com/j/elqNow/elqImg.js" type="text/javascript"></script>
+    <div id="oTags">
+    <script src="http://www.redhat.com/j/s_code.js" type="text/javascript"></script>
+    <script>
+    var coreUrl = encodeURI(document.URL.split("?")[0]);
+    var urlSplit = coreUrl.toLowerCase().split(/\//);
+    var urlLast = urlSplit[urlSplit.length-1];
+    var pageNameString = "";
+    var siteName = "";
+    var minorSectionIndex = 3
+    if (urlLast == "") {
+    urlSplit.splice(-1,1);
+    }
+    if (urlLast.search(/\./) >= 0) {
+    if (urlLast == "index.html") {
+    urlSplit.splice(-1,1);
+    }
+    else {
+    urlSplit[urlSplit.length-1] = urlLast.split(".").splice(0,1);
+    }
+    }
+    siteName = urlSplit[2].split(".")[1];
+    s.prop14 = s.eVar27 = siteName || "";
+    s.prop15 = s.eVar28 = urlSplit[minorSectionIndex] || "";
+    s.prop16 = s.eVar29 = urlSplit[minorSectionIndex+1] || "";
+    pageNameString = urlSplit.splice(3).join(" | ");
+    s.pageName = "jboss | community | windup | " + pageNameString;
+    s.channel = "jboss | community";
+    s.prop4 = s.eVar23 = encodeURI(document.URL);
+    s.prop21 = s.eVar18 = coreUrl;
+    s.prop2 = s.eVar22 = "en";
+    s.prop3 = s.eVar19 = "us";
+    </script>
+    <script src="http://www.redhat.com/j/rh_omni_footer.js" type="text/javascript"></script>
+    <script language="JavaScript" type="text/javascript">
+    if(navigator.appVersion.indexOf('MSIE')>=0)document.write(unescape('%3C')+'\!-'+'-')
+    </script>
+    <noscript>
+    <a href="http://www.omniture.com" title="Web Analytics">
+    <img alt="" border="0" height="1" src="https://smtrcs.redhat.com/b/ss/redhatcom,redhatglobal/1/H.25.4--NS/0?[AQB]&amp;cdp=3&amp;[AQE]" width="1">
+    </a>
+    </noscript>
 	</body>
 </html>
