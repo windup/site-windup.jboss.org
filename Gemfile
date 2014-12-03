@@ -13,12 +13,15 @@ def darwin_only(require_as)
 end
  
 # GEMS
-gem 'awestruct', '~> 0.5.6.beta4'
+gem 'awestruct', '0.5.6.beta4'
 gem 'slim', '~> 2.0.0'
 gem 'kramdown', '~> 1.0.1'
 gem 'asciidoctor', '~> 1.5.0'
 gem 'uglifier', '~> 2.0.1'
 gem 'htmlcompressor', '~> 0.0.6'
+gem 'sass', '~> 3.4', '< 3.4.6'
+gem 'webrick', '~> 1.3'
+#gem 'awestruct', path: '../awestruct'
 
 group :development do
   gem 'rb-inotify', require: false
