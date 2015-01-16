@@ -1,95 +1,61 @@
-# windup.jboss.org
+Introduction
+============
+The aim of this repository is to provide a template for the creation of new JBoss Community projects using [Awestruct](http://awestruct.org) and [Bootstrap](http://twitter.github.com/bootstrap). These are projects created and led by [Red Hat](http://www.redhat.com) who own the associated trademarks. To avoid unnecessary complexity and satisfy legal requirements users are kindly asked to observe the following:
 
-## Getting Started
-This section covers the steps you need to do in order to setup your environment and get the site running for the first time. Further sections cover the details.
+* This template should represent the majority view amongst users about the simplest and best way to create a website using Awestruct and Bootstrap (using LESS). It should strive to have the fewest dependencies and use the smallest number of template engines.
 
-1. Configure environment variables needed for the site. 
+* Changes to the L&F will be vetoed by the [Visual Design Team](http://design.jboss.org) to ensure they meet branding guidelines and are consistent with the JBoss Community brand.
 
-    Currently no environment variables are needed!
+* Project logos and other trademarked images must be hosted at http://static.jboss.org/[project]/images.
 
-2. Configure the software.
-    _NOTE:_ You must use a version of Ruby installed via RVM.
-    * Install RVM from here http://rvm.io if you don't already have it.
-    * [upgrade RVM](http://rvm.io/rvm/upgrading).
-    * Install the correct Ruby version (See [here](http://stackoverflow.com/questions/22605921/fresh-installs-of-rvm-and-ruby-2-1-1-dyld-library-pathing-error) for details on why '--disable-binary' is needed):
+License
+=======
+Contents of this repository are available as open source software under [Apache License Version 2.0](./LICENSE.txt).
 
-            rvm install ruby-2.1.2 --disable-binary
-            
-    * If you see the `Error running 'requirements_osx_brew_libs_install autoconf automake libtool pkg-config libyaml readline libksba openssl'` error message, you may need to run the following, and then retry the above install command:
-    
-            rvm requirements
-            
-    * Install any required supporting software. For example, on Fedora you may need to:
+System Requirements
+===================
+* Ruby 1.8.7 or above
+* RubyGems - 1.3.6 or above
+* Bundler - 1.3.5
 
-            sudo yum install -y rubygem-nokogiri
-            sudo yum install -y gcc ruby-devel libxml2 libxml2-devel libxslt libxslt-devel
-            sudo sysctl fs.inotify.max_user_watches=524288
-            sudo sysctl -p
-3. Fork the project, then clone your fork and add the upstream repository.
- 
-         git clone git@github.com:YOUR_USER_NAME/windup.jboss.org.git
-         cd windup.jboss.org
-         git remote add -f upstream git@github.com:jboss-developer/windup.jboss.org.git
+* GNU Wget 1.14
 
-4. Bootstrap the environment (only needed the first time)
-        
-        bundle install
+Getting Started
+===============
+1. Fork the repository
+------------------------------------------
+To use the template simply navigate to [GitHub page](https://github.com/jbossorg/bootstrap-community) and use *Fork* button to fork this repository into your own GitHub organization. Afterwards choose a tag from which you want to start your website development and create a development branch from it. Additionally, in GitHub repository settings tab you may want to rename your forked repository to follow your site name.
 
-5. Configure the enviornment:
+**Note:** The first part of the tag version number indicates the Bootstrap version the template is based on.
 
-        rake setup
+2. Build the website
+--------------------
+Run Awestruct in development mode from the top-level directory to build the website and host it using a local web server:
 
-6. Build the site for display at <http://localhost:4242>
-        rake clean preview
+`bundle exec awestruct -d`
 
-_NOTE_ The site will take a long time to build for the first time (10 minutes+). Subsequent builds are much quicker.
+**Note:** The first time the site is built common JavaScript, font and image files will be downloaded from [http://static.jboss.org](http://static.jboss.org) and cached into a local *cache/* directory using wget. This then allows you to run the site locally rather than relying on a network connection. Since the cache download takes a considerable amount of time by default the `wget` command will run only once a day to prevent unrequired delays in build times. The time interval and other settings of this process can be configured in site.yml.
 
-If the build was successful, you should be able to visit the site here: <http://localhost:4242>
+**Tip:** Use the `--directory-prefix` option of the `wget: urls:` property in *_config/site.yml* if you wish to use a different directory name. A *.gitignore* file is automatically created in this directory containing a * to prevent you adding cached files to GIT by mistake.
 
+3. View the website
+-------------------
+Use a web browser to visit [http://localhost:4242](http://localhost:4242) where you can see the site.
 
-## Development
+4. Add/edit web pages and layouts
+---------------------------------
+Use a text editor to create/edit web pages and/or layouts. Use the `bootstrap_css_url` and `bootstrap_js_url` variables to ensure you refer to the locally built versions of the files in the development profile and the hosted versions in the staging and production profiles.
 
-If you are working on the CSS, make sure to also run `compass watch`
+**Note:** Currently the template uses images from an example project. If you wish to use your own project images then you must upload them to http://static.jboss.org/[project]/images, edit `project` and `project_images_url` variables and edit the `http://static.jboss.org/example/images/` line in the `wget: urls:` property, all three settings can be found in *_config/site.yml*.
 
-New pages should be added to the root with the extension `.html.slim`
+5. Customize the theme
+----------------------
+To use the theme simply reference the hosted *bootstrap-community.css* and *bootstrap-community.js* files on [http://static.jboss.org](http://static.jboss.org). However if you wish to make project-specific changes then test them locally using the development profile and host the compiled css and js files in your project-specific staging/production domains. Update the `bootstrap_css_url` and `bootstrap_js_url` variables in the staging/production profiles to refer to them.
 
-## Deployment
+6. Stage the website
+--------------------
+Once you're happy with your website in development mode update the `profiles: staging: base_url:` property in *_config/site.yml* to point to your staging domain and run the `bundle exec awestruct -P staging` command to generate a version that can be uploaded for others to review.
 
-Run `rake deploy[staging]` or `rake deploy[production]`
-
-To run in Awestruct in development mode, execute:
-
-`rake`
-
-To run Awestruct while developing, execute:
-
-`rake preview`
-
-To clean the generated site before you build, execute:
-
-`rake clean preview`
-
-To deploy using the production profile, execute:
-
-`rake deploy`
-
-To get a list of all tasks, execute:
-
-`rake -T`
-
-Now you're Awestruct with rake!
-
-## Common issues
-This area documents fixes to common issues:
-
-
-### "Too many open files"
-This can be caused by running out of file descriptors. Currently only seen on Macs. See the following for how to fix: http://superuser.com/questions/433746/is-there-a-fix-for-the-too-many-open-files-in-system-error-on-os-x-10-7-1
-
-### "An error occurred: getaddrinfo: nodename nor servname provided, or not known"
-Same fix as "Too many open files"
-
-### "Unable to decrypt vault (GPGME::Error::BadPassphrase)" 
-If using GNU PGP, sometimes you're not presented with a popup asking for the passphrase. This will result in the following error being presented:  `Unable to decrypt vault (GPGME::Error::BadPassphrase)`.
-To fix, use the instructions in the following url:
-https://www.gnupg.org/documentation/manuals/gnupg/Invoking-GPG_002dAGENT.html
+7. Publish the website
+----------------------
+If everyone is happy with staging then update the `profiles: production: base_url:` property in *_config/site.yml* to point to your production domain and run the `bundle exec awestruct -P production` command to produce a version that can be uploaded for the public to view.

@@ -1,36 +1,8 @@
-# Gemfile
-source "https://rubygems.org"
+source 'https://rubygems.org'
 
-# Platform helpers
-def windows_only(require_as)
-  RbConfig::CONFIG['host_os'] =~ /mingw|mswin/i ? require_as : false
-end
-def linux_only(require_as)
-  RbConfig::CONFIG['host_os'] =~ /linux/ ? require_as : false
-end
-def darwin_only(require_as)
-  RbConfig::CONFIG['host_os'] =~ /darwin/ ? require_as : false
-end
- 
-# GEMS
-gem 'awestruct', '0.5.6.beta4'
-gem 'slim', '~> 2.0.0'
-gem 'kramdown', '~> 1.0.1'
-gem 'asciidoctor', '~> 1.5.0'
-gem 'uglifier', '~> 2.0.1'
-gem 'htmlcompressor', '~> 0.0.6'
-gem 'sass', '~> 3.4', '< 3.4.6'
-gem 'webrick', '~> 1.3'
-#gem 'awestruct', path: '../awestruct'
-
-group :development do
-  gem 'rb-inotify', require: false
-  gem 'rb-fsevent', require: false
-  gem 'rb-fchange', require: false
-  gem 'rake', '~> 10.0.4'
-  #gem 'pry', require: false
-  #gem 'pry-byebug', require: false
-  #gem 'pry-stack_explorer', require: false
-  #gem 'pry-exception_explorer', require: false
-end
-
+gem 'awestruct', '~> 0.5.0'	# Framework for creating static HTML sites
+gem 'uglifier', '~> 2.0.1'	# Ruby wrapper for UglifyJS JavaScript compressor
+gem 'cssminify', '~> 1.0.2'	# CSS compression using YUI compressor
+gem 'rb-fsevent', '~> 0.9.3'	# FSEvents API with Signals catching (without RubyCocoa)
+gem 'kramdown', '~> 1.0.1' # Kramdown works on all platforms, rdiscount only on mri
+gem 'htmlcompressor', '~> 0.0.3' # Adds in HTML minification, helps remove the warning on awestruct startup
