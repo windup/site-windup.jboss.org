@@ -1,7 +1,7 @@
 html
   head
     meta charset='utf-8'
-    title An awesome site 
+    title Windup Migration Platform
     meta name='viewport' content='width=device-width, initial-scale=1.0'
     css:
       body {
@@ -11,13 +11,27 @@ html
     /[if lt IE 9]
       script type='text/javascript' src='//html5shim.googlecode.com/svn/trunk/html5.js'
   body
-    .navbar.navbar-fixed-top
-      .navbar-inner
-        .container
-          a.brand href="#{site.base_url}" #{site.name}
-          ul.nav
+    img src="#{site.base_url}/images/windup_logo_200px.png"
+    img src="#{site.base_url}/images/hero_720.png"
+    nav.navbar.navbar-default role="navigation" 
+      .container-fluid
+        /! Collect the nav links, forms, and other content for toggling
+        #bs-example-navbar-collapse-1.collapse.navbar-collapse
+          ul.nav.navbar-nav
+            li.active
+              a href="#{site.base_url}/" Home
             li
-              a href="#{site.base_url}" Home
+              a href="#{site.base_url}/get-started.html"  Get Started
+            li
+              a href="#{site.base_url}/learn.html"  Learn
+            li
+              a href="#{site.base_url}/get-involved.html"  Get Involved
+            li
+              a href="#{site.base_url}/download.html"  Download
+            li
+              a href="#{site.base_url}/user-stories.html"  User Stories
+            li
+              a href="#{site.base_url}/contact.html"  Contact
     .container
       = content
       hr
