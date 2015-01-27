@@ -13,8 +13,12 @@ layout: base
             a href='#mailing-lists' role="tab" data-toggle="tab" Mailing Lists and Forums
           li
             a href='#contribute' role="tab" data-toggle="tab" Contribute
+          li
+            a href='#jira' role="tab" data-toggle="tab" JIRA or Track an Issue
+          li
+            a href='#tell-us' role="tab" data-toggle="tab" Tell us About Your Project
         .tab-content
-          .tab-pane.active id='get-involved'
+          .tab-pane.well.active id='get-involved'
             h2 Get Involved
             p Everyone can help! Remember, birds of a feature stick together. 
               Maybe you are an expert in WebLogic or WebSphere in a previous life and can answer some details and build some rules. 
@@ -32,4 +36,44 @@ layout: base
               li Join the IRC Channel #windup on FreeNode
 
             p All help is welcome &amp; appreciated!
+          .tab-pane.well id='mailing-lists'
+            h2 Mailing Lists and Forums
+            p You’ll find two discussion forums in the Windup space on the JBoss Community site. The forums are synchronized with our mailing lists and vice versa.
+            .row
+              .col-md-6
+                h2 Windup Users (windup-dev)
+                ul
+                  li 
+                    a href='#' Forum
+                  li
+                    a href='#' Mailing List
+              .col-md-6
+                p User discussions
+                  This list/forum hosts discussions for developers using Windup in their migration projects.
+            .row
+              .col-md-6
+                h2 Windup Developers (windup-dev)
+                a href='#' Forum
+                a href='#' Mailing List
+              .col-md-6
+                p Development discussions
+                  The development list and forum are reserved for discussions about contributing to Windup.
+          .tab-pane.well id='contribute'
+            h2 Contribute - help enhance Windup
+            p 
+              Windup's source is available through Github. Windup is open sourced under the Eclipse Public License v.1.0.
+            p 
+              We currently package a number of rules with Windup that aim to support
+              you as you move between containers to JBoss. But we could always do 
+              more! Windup is not just a tool; it is a platform, and we hope with your 
+              help to continue to enhance the rules!
+            p
+              Unlike a lot of projects, Windup does not require programming to enhance 
+              the product! Windup contains XML based rules which generate the report, which you can add without even needing to recompile. 
+          .tab-pane.well id='jira'
+            h2 JIRA or Track an Issue
+          .tab-pane.well id='tell-us'
+            h2 Tell us About Your Project
+              
+              
         
