@@ -1,4 +1,19 @@
 name: Windup
 title: Windup Migration Platform
 org: Red Hat
-base_url: ''
+base_url: '/staging'
+
+deploy_base: &deploy
+  host: www@filemgmt.jboss.org
+  
+profiles:
+
+  development: &development
+    base_url: /
+
+  staging: 
+    base_url: http://windup.jboss.org/staging/
+    deploy:
+      <<: *deploy
+      path: /www_htdocs/windup/staging
+    
