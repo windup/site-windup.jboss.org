@@ -4,7 +4,7 @@ org: Red Hat
 base_url: '/staging'
 
 deploy_base: &deploy
-  host: www@filemgmt.jboss.org
+  host: filemgmt.jboss.org
   
 profiles:
 
