@@ -107,8 +107,8 @@ task :gen, [:profile] => :check do |task, args|
 end
 
 desc 'Generate the site and deploy to production'
-task :deploy => :check do
-  run_awestruct '-P production -g --force --deploy'
+task :deploy, [:profile] => [:check] do |task, args|
+  run_awestruct "-P #{args[:profile]} -g --force -q --deploy"
 end
 
 desc 'Clean out generated site and temporary files'
