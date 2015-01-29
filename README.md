@@ -29,7 +29,7 @@ This section covers the steps you need to do in order to setup your environment 
  
          git clone git@github.com:YOUR_USER_NAME/windup.jboss.org.git
          cd windup.jboss.org
-         git remote add -f upstream git@github.com:jboss-developer/windup.jboss.org.git
+         git remote add -f upstream git@github.com:windup/windup.jboss.org.git
 
 4. Bootstrap the environment (only needed the first time)
         
@@ -42,14 +42,10 @@ This section covers the steps you need to do in order to setup your environment 
 6. Build the site for display at <http://localhost:4242>
         rake clean preview
 
-_NOTE_ The site will take a long time to build for the first time (10 minutes+). Subsequent builds are much quicker.
-
 If the build was successful, you should be able to visit the site here: <http://localhost:4242>
 
 
 ## Development
-
-If you are working on the CSS, make sure to also run `compass watch`
 
 New pages should be added to the root with the extension `.html.slim`
 
@@ -69,27 +65,6 @@ To clean the generated site before you build, execute:
 
 `rake clean preview`
 
-To deploy using the production profile, execute:
-
-`rake deploy`
-
 To get a list of all tasks, execute:
 
 `rake -T`
-
-Now you're Awestruct with rake!
-
-## Common issues
-This area documents fixes to common issues:
-
-
-### "Too many open files"
-This can be caused by running out of file descriptors. Currently only seen on Macs. See the following for how to fix: http://superuser.com/questions/433746/is-there-a-fix-for-the-too-many-open-files-in-system-error-on-os-x-10-7-1
-
-### "An error occurred: getaddrinfo: nodename nor servname provided, or not known"
-Same fix as "Too many open files"
-
-### "Unable to decrypt vault (GPGME::Error::BadPassphrase)" 
-If using GNU PGP, sometimes you're not presented with a popup asking for the passphrase. This will result in the following error being presented:  `Unable to decrypt vault (GPGME::Error::BadPassphrase)`.
-To fix, use the instructions in the following url:
-https://www.gnupg.org/documentation/manuals/gnupg/Invoking-GPG_002dAGENT.html
