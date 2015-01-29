@@ -44,7 +44,6 @@ app.buzz = {
             // Delay loading this until the DOM is ready
             // PLM: Do we really need to do this?
             $( function() {
-                app.buzz.infiniteScrollCalled = false;
                 var hits = data.hits.hits;
                 var html = "";
                 for (var i = 0; i < hits.length; i++) {
@@ -77,21 +76,8 @@ app.buzz = {
                     container.html(html);
                 }
 
-                if (container.hasClass('isotoped')) {
-                    container.imagesLoaded(function(){
-                        container.isotope('destroy').isotope({
-                            itemSelector: '.buzz-item'
-                        });
-                        typeof callback === 'function' && callback();
-                    });
-                }
-
                 container.removeClass('buzz-loading');
-
-                $('.share-this').on('click mouseover', function() {
-                    Socialite.load($(this)[0]);
-
-                });
+                
             });
 
         }); // end ajax done
