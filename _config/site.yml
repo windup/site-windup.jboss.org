@@ -18,3 +18,9 @@ profiles:
       <<: *deploy
       path: /www_htdocs/windup/staging
     
+  production: 
+    base_url: http://windup.jboss.org/production/
+    deploy:
+      <<: *deploy
+      path: /www_htdocs/windup/production
+      

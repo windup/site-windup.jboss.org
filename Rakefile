@@ -108,7 +108,7 @@ end
 
 desc 'Generate the site and deploy to production'
 task :deploy => :check do
-  run_awestruct '-P staging -g --force --deploy'
+  run_awestruct '-P production -g --force --deploy'
 end
 
 desc 'Clean out generated site and temporary files'
