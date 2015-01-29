@@ -154,74 +154,10 @@ app.buzz = {
 
     init : function() {
 
-        $( function() {
-
-            /*
-             Isotope
-             */
-            var $container = $('.buzz-container');
-
-            if($container.length) {
-
-                $(window).load(function() {
-
-                    // Filtering
-                    /*$('.sort-icons a').click(function(){
-                     $('.buzz-filter-active').removeClass('buzz-filter-active');
-                     $(this).addClass('buzz-filter-active');
-                     var filterType = ".buzz-item-"+$(this).data('filter');
-                     if(filterType == '.buzz-item-all') {
-                     filterType = ".buzz-item";
-                     }
-                     $container.isotope({ filter: filterType });
-                     });*/
-
-                });
-
-                // Bind to window resize
-                $(window).resize(function() {
-                    $container.isotope({
-                        itemSelector: '.buzz-item'
-                    });
-                });
-            }
-        });
-
-        
-
-        /* 
-         Product Page Buzz by tag
-         */
-        var $pbuzz = $('.product-buzz-container');
-
-        if($pbuzz.length) {
-            app.buzz.filter(app.templates.buzzTemplate , $pbuzz);
+        var $buzz = $('.product-buzz-container');
+        if($buzz.length) {
+            app.buzz.filter(app.templates.buzzTemplate , $buzz);
         }
-
-        // Event Listeners for Buzz Filter
-        // When the buzz filter input is changed, search
-
-        var timeOut;
-        var lastSearch = "";
-        $('form.buzz-filters').on('keyup','input',function(e){
-            var el = $(this);
-            var query = el.val();
-            clearTimeout(timeOut);
-            // throttle ajax requests
-            timeOut = setTimeout(function() {
-                var $buzz = $('.buzz-container');
-                if(lastSearch !== query) {
-                    app.buzz.filter(app.templates.buzzTemplate, $buzz);
-                    app.utils.updatePageHash(el);
-                }
-                lastSearch = query;
-            }, 300);
-        });
-
-        $('form.buzz-filters').on('submit',function(e) {
-            e.preventDefault();
-        });
-
     }
 };
 
