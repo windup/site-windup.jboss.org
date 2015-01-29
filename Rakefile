@@ -106,7 +106,7 @@ task :gen, [:profile] => :check do |task, args|
   run_awestruct "-P #{profile} -g --force"
 end
 
-desc 'Generate the site and deploy to production'
+desc 'Generate the site and deploy to chosen environment'
 task :deploy, [:profile] => [:check] do |task, args|
   run_awestruct "-P #{args[:profile]} -g --force -q --deploy"
 end

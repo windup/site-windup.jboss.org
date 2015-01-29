@@ -5,7 +5,7 @@ base_url: '/staging'
 dcp_base_protocol_relative_url: //dcp.jboss.org/
 
 deploy_base: &deploy
-  host: filemgmt.jboss.org
+  host: design@filemgmt.jboss.org
   
 profiles:
 
