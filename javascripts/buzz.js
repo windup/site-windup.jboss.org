@@ -37,8 +37,7 @@ app.buzz = {
                 }
             },
             error : function() {
-                $('.buzz-filters').html(app.dcp.error_message);
-                $('.mini-buzz-container').html(app.dcp.error_message);
+                $('.buzz-container').html(app.dcp.error_message);
                 $('.buzz-loading').removeClass('buzz-loading');
             }
         }).done(function(data){
@@ -100,7 +99,7 @@ app.buzz = {
 
     init : function() {
 
-        var $buzz = $('.product-buzz-container');
+        var $buzz = $('.buzz-container');
         if($buzz.length) {
             app.buzz.filter(app.templates.buzzTemplate , $buzz);
         }
