@@ -2,6 +2,7 @@ name: Windup
 title: Windup Migration Platform
 org: Red Hat
 base_url: '/staging'
+dcp_base_protocol_relative_url: //dcpbeta-searchisko.rhcloud.com/
 
 deploy_base: &deploy
   host: filemgmt.jboss.org
