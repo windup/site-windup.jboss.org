@@ -14,60 +14,9 @@ app.buzz = {
         // append loading class to wrapper
         container.addClass('buzz-loading');
 
-        /*
-         Keyword
-         */
-        var keyword = $('input[name="buzz-filter-text"]').val();
 
-        var filters = {
-            "keyword" : keyword
-        };
-        var currentFilters = {};
-
-        $.each(filters, function(key, val) {
-            // if its empty, or undefined, remove it from the filters
-            if(val && val.length) {
-                currentFilters[key] = val;
-            }
-        });
-
-        // Prep each filter
-        var query = [];
-
-        // Pass search params to GTM for analytics
-        window.dataLayer = window.dataLayer || [];
-
-
-        if(currentFilters.keyword) {
-            query.push(keyword);
-            window.dataLayer.push({ 'keyword' : keyword });
-        } else {
-            window.dataLayer.push({ 'keyword' : null });
-        }
-
-
-        // Pull the json array, switch back to double quotes, then parse it.
-        var tags = container.data('tags') || "";
-        try {
-            tags = JSON.parse(tags.replace(/'/g, "\""));
-        } catch (e) {
-            tags = "";
-        }
-
-        if(tags){
-            for (var i = 0; i < tags.length; i++) {
-                if (tags[i].contains(" ")) {
-                    tags[i] = "\"" + tags[i] + "\"";
-                }
-            }
-            query.push("sys_tags:"+tags);
-            window.dataLayer.push({ 'tags' : tags });
-        } else {
-            window.dataLayer.push({ 'tags' : null });
-        }
-        query = query.join(" AND ");
-
-        window.dataLayer.push({'event': 'buzz-search'});
+        var tag = container.data('tags') || "";
+        var query = "sys_tags:"+tag;
 
         $.ajax({
             url : app.dcp.url.search,
@@ -98,9 +47,6 @@ app.buzz = {
             $( function() {
                 app.buzz.infiniteScrollCalled = false;
                 var hits = data.hits.hits;
-                if(keyword && keyword.length) {
-                    app.search.format(keyword,hits, $('.buzz-filters .searchResults'));
-                }
                 var html = "";
                 for (var i = 0; i < hits.length; i++) {
                     var d = hits[i].fields;
