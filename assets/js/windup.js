@@ -1,5 +1,5 @@
 $(".windup-download-now").click(function() {
-    window.location = 'http://download.jboss.org/windup/windup-cli-0.6.8.zip';
+    window.location = 'https://repository.jboss.org/nexus/service/local/artifact/maven/redirect?r=releases&g=org.jboss.windup&a=windup-distribution&v=LATEST&e=zip&c=offline'
 });
 
 $.extend($.expr[':'], {
