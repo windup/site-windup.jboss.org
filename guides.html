@@ -72,37 +72,22 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
               <p>
                 <ul>
                   <li>
-                    <strong><a href="http://github.com/windup/windup-legacy/wiki/1.0-What-is-Windup">1.0 What is Windup</a></strong>
+                    <strong><a href="https://github.com/windup/windup/wiki">1.0 Windup Wiki</a></strong>
                   </li>
                   <li>
-                    <strong><a href="http://github.com/windup/windup-legacy/wiki/2.0-Build-Windup">2.0 Build Windup</a></strong>
+                    <strong><a href="https://github.com/windup/windup/wiki/What-is-Windup">2.0 What is Windup</a></strong>
                   </li>
                   <li>
-                    <strong><a href="http://github.com/windup/windup-legacy/wiki/3.0-Execute-Windup">3.0 Execute Windup</a></strong>
+                    <strong><a href="https://github.com/windup/windup/wiki/Install-Windup">3.0 Install Windup</a></strong>
                   </li>
                   <li>
-                    <strong><a href="http://github.com/windup/windup-legacy/wiki/4.0-Extend-Windup-Rules">4.0 Extend Windup Rules</a></strong>
+                    <strong><a href="https://github.com/windup/windup/wiki/Execute-Windup">4.0 Execute Windup</a></strong>
                   </li>
                   <li>
-                    <strong><a href="http://github.com/windup/windup-legacy/wiki/5.0-Reviewing-the-Report">5.0 Reviewing the Report</a></strong>
+                    <strong><a href="https://github.com/windup/windup/wiki/Review-the-Report">5.0 Reviewing the Report</a></strong>
                   </li>
                   <li>
-                    <strong><a href="http://github.com/windup/windup-legacy/wiki/6.0-Coding-Windup-Rules">6.0 Coding Windup Rules</a></strong>
-                  </li>
-                  <li>
-                    <strong><a href="http://github.com/windup/windup-legacy/wiki/6.1-Java-Classification">6.1 Java Classification</a></strong>
-                  </li>
-                  <li>
-                    <strong><a href="http://github.com/windup/windup-legacy/wiki/6.2-Java-Source-Hints">6.2 Java Source Hints</a></strong>
-                  </li>
-                  <li>
-                    <strong><a href="http://github.com/windup/windup-legacy/wiki/6.3-XML-Classification">6.3 XML Classification</a></strong>
-                  </li>
-                  <li>
-                    <strong><a href="http://github.com/windup/windup-legacy/wiki/6.4-XML-Source-Hints">6.4 XML Source Hints</a></strong>
-                  </li>
-                  <li>
-                    <strong><a href="http://github.com/windup/windup-legacy/wiki/7.0-JadRetro-and-Jad-Decompiler-Setup">7.0 JadRetro and Jad Decompiler Setup</a></strong>
+                    <strong><a href="https://github.com/windup/windup/wiki/Rules-Development-Guide">6.0 Coding Windup Rules</a></strong>
                   </li>
                 </ul>
               </p>
@@ -124,50 +109,31 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
               <div class="thumbnail"><iframe width="360" height="180" src="http://www.youtube.com/embed/NwbTmWxZ3XI" frameborder="0" allowfullscreen style="width:360px; height:180px"></iframe></div>
               <p>Runs Windup against a real application, and provides insight on reading the report.</p>
             </div>
+            <!-- 
             <div class="span4">
               <h3>3. Enhancing Rules</h3>
               <div class="thumbnail"><iframe width="360" height="180" src="http://www.youtube.com/embed/2f91zAV6_OY" frameborder="0" allowfullscreen style="width:360px; height:180px"></iframe></div>
               <p>Enhances Windup rules for Java, to show you how to extend Windup to meet your needs!</p>
-            </div>
+            </div> -->
           </div>
 
           <hr />
 
           <div class="row">
-            <h2>Quick Guide: Running Windup on Source</h2>
+            <h2>Quick Guide: Running Windup</h2>
             <p>
               <ol>
                 <li>Download Windup and Unzip to your favorite directory.</li>
-                <li>Edit the jboss-windup.sh, with the <i>-input</i> parameter set to your source directory.</li>
-                <li>Make sure to set your <i>-javaPkg</i> parameter to your Java package structure.</li>
-                <li>Make sure to set the <i>-source true</i> flag.</li>
-                <li>Make sure to set your <i>-output</i> parameter to your favorite output directory for the report.</li>
-                <li>Execute the jboss-windup.sh</li>
+                <li>Execute bin/windup, with the <i>--input</i> parameter set to your source directory or application archive.</li>
+                <li>Make sure to set your <i>--packages</i> parameter to your Java package structure.</li>
+                <li>Make sure to set the <i>--source true</i> flag.</li>
+                <li>Make sure to set your <i>--output</i> parameter to your favorite output directory for the report.</li>
+                <li>Execute windup</li>
                 <li>View the report!</li>
               </ol>
             </p>
           </div>
 
-          <hr />
-
-          <div class="row">
-            <h2>Quick Guide: Running Windup on Archives</h2>
-            <div class="alert alert-info">
-              <strong>Before you get started: </strong>Make sure you setup your favorite decompiler to run in Archive mode! | 
-              <a href="http://github.com/windup/windup-legacy/wiki/7.0-JadRetro-and-Jad-Decompiler-Setup">See How!</a>
-            </div>
-            <p>
-              <ol>
-                <li>Download Windup and Unzip to your favorite directory.</li>
-                <li>Edit the jboss-windup.sh, with the <i>-input</i> parameter set to a directory containing your archive.</li>
-                <li>Make sure to set your <i>-javaPkg</i> parameter to your Java package structure.</li>
-                <li>Execute the jboss-windup.sh</li>
-                <li>View the report!</li>
-              </ol>
-            </p>
-          </div>
-        </div>
-      	
 		</div>
     <!--END OF MAIN-->
 
