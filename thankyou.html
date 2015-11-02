@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+			<title>Download | Windup Migration Platform</title>
+			<link href="assets/img/favicon.ico" rel="shortcut icon">
+			<link href="assets/css/bootstrap.css" rel="stylesheet">
+			<link href="assets/css/windup.css" rel="stylesheet">
+
+	</head>
+	<body>
+
+<!--Place GTM Code just below the opening body tag -->
+<script>dataLayer = [{'channel' : 'Windup', 'additional_tracking_code' : 'UA-41014823-1'}];</script>
+<!-- Google Tag Manager -->
+<noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-NJWS5L"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-NJWS5L');</script>
+<!-- End Google Tag Manager -->
+
+    <div class="navbar navbar-fixed-top">
+      <div class="navbar-inner">
+        <div class="container">
+          <a class="brand" href="#"><img src='assets/img/windup_logo_100px.png'/></a>
+          <div class="windup-nav-right">
+            <a href="http://github.com/windup/windup" class="social"><img title="Github" src="assets/img/glyphicons_blue_github.png"/></a>
+            <a href="http://twitter.com/jbosswindup" class="social"><img title="Twitter" src="assets/img/glyphicons_blue_twitter.png"/></a>
+          </div>
+          <div class="nav-collapse collapse">
+            <ul class="nav">
+              <li><a href="index.html">Overview</a></li>
+              <li><a href="features.html">Features</a></li>
+              <li><a href="guides.html">Guides</a></li>
+              <li class="active"><a href="download.html">Download</a></li>
+              <li><a href="code.html">Code</a></li>
+              <li><a href="demo.html">Demo</a></li>
+            </ul>
+          </div><!--/.nav-collapse -->
+        </div>
+      </div>
+    </div>
+
+    <!--START OF MAIN-->
+    <div class="wrapper">
+
+        <div class="hero-unit content-header">
+          <div class="container">
+          <div class="row">
+            <div class="span9">
+              <h1>Download</h1>
+            </div>
+          </div>
+          </div>
+        </div>
+
+        <div class="container page">
+          <div class="row">
+			  <p>Thank you for downloading JBoss Migration Toolkit / Windup</b>. </p>
+			  <p>
+				  If your download does not start automatically in <span id="tcRedirectIn">a few seconds</span>,
+				  please, click <a href="#" id="tcDownloadLink"><span id="tcDownloadFileName">here</span></a>.</p>
+			  <p></p>
+			  <p>
+			  	To get started, have a look at the <a href="https://access.redhat.com/documentation/en/red-hat-jboss-migration-toolkit/">Windup User Guide</a>.</p>
+			  <p></p>
+			  <p>To get started analyzing your first application, have a look at the <a href="https://access.redhat.com/documentation/en/red-hat-jboss-migration-toolkit/">Windup User Guide</a>.</p>
+			  <p>
+				  Need help? Have feedback? Let us know! Join the <a href="https://developer.jboss.org/en/windup?view=discussions">discussion forum</a>,
+				  join the <a href="http://webchat.freenode.net/?channels=#windup">IRC Channel #windup</a> on FreeNode,
+				  <a href="https://community.jboss.org/en/windup?view=discussions">report any issues or suggestions you may have</a>.
+			  </p>
+
+			  <script type="text/javascript">
+			      function xss(text) {
+			          return text.replace(/</g, '&lt;').replace(/>/g, '&gt; ');
+			      }
+
+
+			      $.urlParam = function(name){
+			          var results = new RegExp('[\\?&]' + name + '=([^&#]*)').exec(window.location.href);
+			          if (results==null){
+			              return null;
+			          }
+			          else{
+			              return results[1] || 0;
+			          }
+			      }
+
+			      var tcUser = $.urlParam('tcUser');
+			      var tcWhenSigned = $.urlParam('tcWhenSigned');
+			      var tcEndsIn = $.urlParam('tcEndsIn');
+			      var tcDownloadURL = $.urlParam('tcDownloadURL');
+			      var tcDownloadFileName = $.urlParam('tcDownloadFileName');
+			      var tcRedirect = $.urlParam('tcRedirect');
+			      if( tcUser ) {
+			          $("#tcUser").html(xss(decodeURIComponent(tcUser)));
+			      }
+
+			      if(tcWhenSigned) {
+			          $("#tcWhenSigned").html(" on <b>"+ xss(decodeURIComponent(tcWhenSigned)))+"</b>";
+			      }
+
+			      if(tcEndsIn) {
+			          tcEndsIn = xss(tcEndsIn);
+			          if(tcEndsIn =="1") {
+			              $("#tcEndsIn").html(" in one day");
+			          } else {
+			              $("#tcEndsIn").html(" in "+tcEndsIn +" days");
+			          }
+			      }
+
+			      if(tcDownloadURL) {
+			          tcDownloadURL =  window.location.href.substr(window.location.href.indexOf("tcDownloadURL=")+14);
+
+			          $("a#tcDownloadLink").attr("href",tcDownloadURL);
+			          if(tcDownloadFileName) {
+			              $("#tcDownloadFileName").html(xss(decodeURIComponent(tcDownloadFileName)));
+			          }
+
+			          <!-- if not magnolia staging, redirect -->
+
+			          if(tcRedirect) {
+			              $("#tcRedirectIn").html(tcRedirect/1000+" seconds");
+			              setTimeout("location.href = '"+tcDownloadURL+"';",tcRedirect);
+			          }
+			      }
+
+
+
+			  </script>
+          </div>
+
+        </div>
+
+	</div>
+
+    <!--END OF MAIN-->
+
+    <div class="footer">
+      <div class="footer-logo">
+        <a href="http://redhat.com"><img src="assets/img/redhat_logo.png"/></a>
+      </div>
+    </div>
+
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="assets/js/jquery-1.10.1.min.js"></script>
+    <script src="assets/js/bootstrap.js"></script>
+    <script src="assets/js/windup.js"></script>
+	</body>
+</html>
