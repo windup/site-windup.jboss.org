@@ -95,8 +95,8 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 			      var tcUser = $.urlParam('tcUser');
 			      var tcWhenSigned = $.urlParam('tcWhenSigned');
 			      var tcEndsIn = $.urlParam('tcEndsIn');
-			      var tcDownloadURL = $.urlParam('tcDownloadURL');
-			      var tcDownloadFileName = $.urlParam('tcDownloadFileName');
+			      var tcDownloadURL = decodeURIComponent($.urlParam('tcDownloadURL'));
+			      var tcDownloadFileName = decodeURIComponent($.urlParam('tcDownloadFileName'));
 			      var tcRedirect = $.urlParam('tcRedirect');
 			      if( tcUser ) {
 			          $("#tcUser").html(xss(decodeURIComponent(tcUser)));
@@ -116,11 +116,10 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 			      }
 
 			      if(tcDownloadURL) {
-			          tcDownloadURL =  window.location.href.substr(window.location.href.indexOf("tcDownloadURL=")+14);
-
 			          $("a#tcDownloadLink").attr("href",tcDownloadURL);
+
 			          if(tcDownloadFileName) {
-			              $("#tcDownloadFileName").html(xss(decodeURIComponent(tcDownloadFileName)));
+			              $("#tcDownloadFileName").html(xss(tcDownloadFileName));
 			          }
 
 			          <!-- if not magnolia staging, redirect -->
@@ -134,6 +133,8 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 
 
 			  </script>
+
+
           </div>
 
         </div>
