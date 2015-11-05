@@ -1,5 +1,5 @@
 $(".windup-download-now").click(function() {
-    window.location = 'https://repository.jboss.org/nexus/service/local/artifact/maven/redirect?r=releases&g=org.jboss.windup&a=windup-distribution&v=2.3.0.Final&e=zip&c=offline'
+    window.location = 'https://www.jboss.org/download-manager/file/jboss-migrationtoolkit-windup-2.4.0.GA.zip'
 });
 
 $.extend($.expr[':'], {
