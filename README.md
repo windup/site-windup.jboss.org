@@ -17,9 +17,9 @@ The source code for [windup.jboss.org](http://windup.jboss.org) is currently loc
 
 1. Navigate to the `windup.jboss.org` directory, then add and fetch the `upstream` repository so you can update your git with any changes.
 
-```
-git remote add -f upstream git@github.com:windup/windup.jboss.org.git
-```
+    ```
+    git remote add -f upstream git@github.com:windup/windup.jboss.org.git
+    ```
 
 ### Request Write Access to the Web Site Remote Server
 
@@ -29,9 +29,10 @@ The [windup.jboss.org](http://windup.jboss.org) web site is hosted on the `filem
 1. Attach your ssh public key to the email request.
 1. When you receive confirmation, you can test access in a terminal with the following command. If you are prompted for a password, you do not have proper access.
 
-```
-sftp windup@filemgmt.jboss.org
-```
+    ```
+    sftp windup@filemgmt.jboss.org
+    ```
+
 
 ## Update the Web Site
 
@@ -58,25 +59,25 @@ The following example assumes you have modified the `windup.jboss.org/assets/win
 
 1. Use the `lcd` command to navigate to the directory containing your updates on your local machine. You can verify the path on the local machine using the `lpwd` command. For example:
 
-```
-sftp> lcd ~/windup.jboss.org/assets/js
-sftp> lpwd
-Local working directory: /home/username/windup.jboss.org/assets/js
-```
+    ```
+    sftp> lcd ~/windup.jboss.org/assets/js
+    sftp> lpwd
+    Local working directory: /home/username/windup.jboss.org/assets/js
+    ```
 1. Use the `cd` command to navigate to the corresponding directory on the remote server. You can verify the path on the remote machine using the `pwd` command.
 
-```
-sftp> cd www_htdocs/windup/assets/js/
-sftp> pwd
-Remote working directory: /www_htdocs/windup/assets/js
-```
+    ```
+    sftp> cd www_htdocs/windup/assets/js/
+    sftp> pwd
+    Remote working directory: /www_htdocs/windup/assets/js
+    ```
 1. Upload the modified file to the remote server.
 
-```
-sftp> put windup.js
-Uploading windup.js to /www_htdocs/windup/assets/js/windup.js
-windup.js                                        100% 1316     1.3KB/s   00:00
-```
+    ```
+    sftp> put windup.js
+    Uploading windup.js to /www_htdocs/windup/assets/js/windup.js
+    windup.js                                        100% 1316     1.3KB/s   00:00
+    ```
 1. Test the change on [windup.jboss.org](http://windup.jboss.org).
 
 ### Push the Rule Schema to the Web Site Remote Server
@@ -111,5 +112,4 @@ Use your favorite browser to browse to http://windup.jboss.org/schema/windup-jbo
 * https://access.redhat.com/documentation/en-US/Red_Hat_Enterprise_Linux/6/html-single/Deployment_Guide/index.html#s2-ssh-clients-sftp
 * http://www.tecmint.com/sftp-command-examples/
 * https://docs.oracle.com/cd/E26502_01/html/E29001/remotehowtoaccess-14.html
-
 
