@@ -50,10 +50,11 @@ The following example assumes you have modified the `windup.jboss.org/assets/win
 
 1. Log into the remote server and navigate to the `www_htdocs/windup/` directory on the remote server.
 
-```
-$ sftp windup@filemgmt.jboss.org
-sftp> cd www_htdocs/windup
-```
+    ```
+    $ sftp windup@filemgmt.jboss.org
+    sftp> cd www_htdocs/windup
+    ```
+
 1. Use the `lcd` command to navigate to the directory containing your updates on your local machine. You can verify the path on the local machine using the `lpwd` command. For example:
 
 ```
