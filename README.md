@@ -1,11 +1,4 @@
-# windup.jboss.org
-Instructions for modifying the website and pushing updates are here: https://github.com/windup/windup/wiki/Dev-Web-Instructions
-
-# windup.jboss.org
-# Instructions for modifying the website and pushing updates are here: https://github.com/windup/windup/wiki/Dev-Web-Instructions
-
-
-=== Windup Web Instructions
+# Windup Web Upload Instructions
 
 The [windup.jboss.org](http://windup.jboss.org) web site is hosted by Red Hat / JBoss.org
 
