@@ -8,7 +8,7 @@ The [windup.jboss.org](http://windup.jboss.org) web site is hosted by Red Hat / 
 
 The source code for [windup.jboss.org](http://windup.jboss.org) is currently located at https://github.com/windup/windup.jboss.org.
 
-1. https://github.com/windup/windup.jboss.org/fork[Fork] the windup.jboss.org project. This creates the `windup.jboss.org` project in your own Git with the default remote name 'origin'.
+1. [Fork](https://github.com/windup/windup.jboss.org/fork) the windup.jboss.org project. This creates the `windup.jboss.org` project in your own Git with the default remote name 'origin'.
 1. Clone your fork. This creates and populates a `windup.jboss.org` directory in your local file system.
 
 ```
