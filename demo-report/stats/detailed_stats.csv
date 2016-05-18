@@ -1,0 +1,184 @@
+Number Of Executions, Total Milliseconds,  Milliseconds per execution, Type
+     1,      0,     0.00, "Query.fromType(org.jboss.windup.rules.apps.xml.model.NamespaceMetaModel).gremlin().has(namespaceURI,EQUALS,http://java.sun.com/xml/ns/persistence).as(default)"
+     1,      0,     0.00, Query.as(e7ba7799-fa85-47ec-adf1-06265ee94dec)
+   125,    436,     3.49, JavaClass.evaluate
+     1,     32,    32.00, Query.fromType(org.jboss.windup.graph.model.resource.SourceFileModel).gremlin()org.jboss.windup.reporting.query.FindSourceReportFilesGremlinCriterion@7e0d4ba1.as(default)
+    87,    186,     2.14, Hint.performParameterized
+     1,      0,     0.00, "Query.gremlin().has(referenceType,CONTAINS_ANY_TOKEN,[IMPLEMENTS_TYPE]).as(b83609b0-e5d1-446d-b579-5e4996ffc5d3)"
+     1,      0,     0.00, "Query.fromType(org.jboss.windup.rules.apps.xml.model.XmlFileModel).gremlin().has(rootTagName,EQUALS,weblogic-ejb-jar).as(default)"
+     1,     49,    49.00, "FreeMarkerIterationOperation.render(/reports/templates/source.ftl, pom_xml.5.html)"
+     1,     18,    18.00, getTechnologyTagsForProject
+     1,      1,     1.00, "Query.fromType(org.jboss.windup.rules.apps.xml.model.XmlFileModel).gremlin().has(fileName,EQUALS,pom.xml).as(default)"
+     1,      0,     0.00, "Query.gremlin().has(referenceType,CONTAINS_ANY_TOKEN,[IMPLEMENTS_TYPE, INHERITANCE]).as(5c167606-a019-42a4-81dc-31b822fe899b)"
+     1,      0,     0.00, "Query.fromType(org.jboss.windup.rules.apps.xml.model.XmlFileModel).gremlin().has(fileName,EQUALS,ibm-webservicesclient-bnd.xmi).has(rootTagName,EQUALS,ClientBinding).as(default)"
+     1,      5,     5.00, Query.fromType(org.jboss.windup.graph.model.ArchiveModel).gremlin()org.jboss.windup.config.query.Query$1@7db4c883.as(default)
+     1,    104,   104.00, "FreeMarkerIterationOperation.render(/reports/templates/source.ftl, AnvilWebStartupListener_java.html)"
+    13,      1,     0.08, GraphService.findAllByPropertyMatchingRegex(fileName)
+     1,      0,     0.00, Query.fromType(org.jboss.windup.rules.apps.java.model.WindupJavaConfigurationModel).as(default)
+     1,     81,    81.00, "FreeMarkerIterationOperation.render(/reports/templates/source.ftl, AnvilWebLifecycleListener_java.html)"
+   118,     42,     0.36, "TypeReferenceService.createTypeReference(fileModel,location,lineNumber,columnNumber,length,source)"
+     1,     24,    24.00, "FreeMarkerIterationOperation.render(/reports/templates/source.ftl, MANIFEST_MF.6.html)"
+     1,      1,     1.00, Query.fromType(org.jboss.windup.rules.apps.javaee.model.RemoteServiceModel).as(default)
+     1,      1,     1.00, "Query.fromType(org.jboss.windup.rules.apps.java.model.WindupJavaConfigurationModel).gremlin().has(classNotFoundAnalysisEnabled,EQUALS,true).as(default)"
+     4,      1,     0.25, GraphService.findAllByProperty(JNDI_LOCATION)
+   539,     11,     0.02, "GraphService.findAllByProperties([coordinate:groupId, coordinate:artifactId, coordinate:version])"
+     1,      2,     2.00, Query.fromType(org.jboss.windup.rules.apps.javaee.model.EjbDeploymentDescriptorModel).as(default)
+     1,    174,   174.00, "FreeMarkerIterationOperation.render(/reports/templates/source.ftl, MANIFEST_MF.html)"
+   121,    471,     3.89, XmlFile.evaluate
+     1,      0,     0.00, "Query.fromType(org.jboss.windup.rules.apps.xml.model.XmlFileModel).gremlin().has(rootTagName,EQUALS,web-app).as(default)"
+     1,     39,    39.00, "FreeMarkerIterationOperation.render(/reports/templates/source.ftl, pom_properties.3.html)"
+    48,      1,     0.02, GraphService.addTypeToModel
+     1,    230,   230.00, "FreeMarkerIterationOperation.render(/reports/templates/source.ftl, MANIFEST_MF.1.html)"
+     1,     77,    77.00, "FreeMarkerIterationOperation.render(/reports/templates/source.ftl, AuthenticateFilter_java.html)"
+     1,     27,    27.00, "FreeMarkerIterationOperation.render(/reports/templates/source.ftl, pom_xml.html)"
+     1,    510,   510.00, AnalyzeJavaFilesRuleProvider.analyzeFile
+     1,     45,    45.00, "FreeMarkerIterationOperation.render(/reports/templates/source.ftl, pom_properties.6.html)"
+   336,      6,     0.02, TypeInterestFactory.matchesAny(text).manualSearch
+     1,     46,    46.00, "FreeMarkerIterationOperation.render(/reports/templates/source.ftl, ProductCatalogLocal_java.html)"
+     1,     39,    39.00, "FreeMarkerIterationOperation.render(/reports/templates/source.ftl, NOTICE_txt.html)"
+     1,     33,    33.00, "FreeMarkerIterationOperation.render(/reports/templates/source.ftl, ejb_jar_xml.1.html)"
+     1,      0,     0.00, "Query.fromType(org.jboss.windup.rules.apps.xml.model.XmlFileModel).gremlin().has(fileName,EQUALS,ibm-ejb-jar-bnd.xmi).has(rootTagName,EQUALS,EJBJarBinding).as(default)"
+     1,      0,     0.00, "Query.gremlin().has(referenceType,CONTAINS_ANY_TOKEN,[METHOD_CALL]).as(dc43c50b-296f-4f7b-97a3-40d428352b2d)"
+     1,      0,     0.00, "Query.gremlin().has(referenceType,CONTAINS_ANY_TOKEN,[CONSTRUCTOR_CALL]).as(2fc1621c-fa5c-459c-b6eb-0a9912e4d4d7)"
+     1,    100,   100.00, "FreeMarkerIterationOperation.render(/reports/templates/report_index.ftl, report_index_JEE_Example_App.html)"
+     1,     16,    16.00, "FreeMarkerIterationOperation.render(/reports/templates/source.ftl, MANIFEST_MF.4.html)"
+     1,    314,   314.00, "FreeMarkerIterationOperation.render(/reports/templates/source.ftl, weblogic_ejb_jar_xml.html)"
+     1,     37,    37.00, "FreeMarkerIterationOperation.render(/reports/templates/source.ftl, ProductCatalogLocalHome_java.html)"
+     1,     62,    62.00, "FreeMarkerIterationOperation.render(/reports/templates/ejb.ftl, ejbreport_JEE_Example_App.html)"
+   507,      9,     0.02, TypeInterestFactory.matchesAny(text)
+     1,      0,     0.00, "Query.fromType(org.jboss.windup.rules.apps.xml.model.XmlFileModel).gremlin().has(rootTagName,EQUALS,orion-ejb-jar).as(default)"
+     1,    589,   589.00, "FreeMarkerIterationOperation.render(/reports/templates/migration-issues.ftl, migration_issues.html)"
+     1,     18,    18.00, "FreeMarkerIterationOperation.render(/reports/templates/source.ftl, pom_properties.html)"
+    53,      2,     0.04, fileModelToSourceReport
+    58,      0,     0.00, getEffortDescriptionForPoints
+     1,     11,    11.00, Query.fromType(org.jboss.windup.graph.model.WindupConfigurationModel).gremlin()org.jboss.windup.rules.apps.java.scan.provider.DiscoverFilesAndTypesRuleProvider$1@295d8b70.as(default)
+     1,      0,     0.00, "Query.fromType(org.jboss.windup.rules.apps.xml.model.XmlFileModel).gremlin().has(rootTagName,EQUALS,beans).as(default)"
+     1,     62,    62.00, "FreeMarkerIterationOperation.render(/reports/templates/source.ftl, pom_properties.7.html)"
+    53,     27,     0.51, getTagsFromFileClassificationsAndHints
+     2,    268,   134.00, FernflowerDecompilationOperation.perform
+     1,     38,    38.00, "FreeMarkerIterationOperation.render(/reports/templates/source.ftl, pom_xml.3.html)"
+     1,     50,    50.00, "FreeMarkerIterationOperation.render(/reports/templates/source.ftl, weblogic_ejb_jar_xml.1.html)"
+     1,     20,    20.00, "FreeMarkerIterationOperation.render(/reports/templates/source.ftl, ItemLookupLocal_java.html)"
+     1,      0,     0.00, Query.fromType(org.jboss.windup.rules.apps.javaee.model.ThreadPoolModel).as(default)
+     1,    147,   147.00, "FreeMarkerIterationOperation.render(/reports/templates/application_list.ftl, ../index.html)"
+    81,    172,     2.12, ClassFilePreDecompilationScan.perform()
+     1,      0,     0.00, Query.fromType(org.jboss.windup.rules.apps.javaee.model.JspSourceFileModel).as(default)
+    53,      0,     0.00, projectModelToApplicationIndex
+     1,      2,     2.00, "Query.gremlin().has(referenceType,CONTAINS_ANY_TOKEN,[IMPLEMENTS_TYPE, INHERITANCE, IMPORT]).as(0932f1c1-9180-4261-b60a-5209c0378b56)"
+   183,      2,     0.01, GraphService.findAllByProperty(qualifiedName)
+    11,      2,     0.18, sortProjectsByPathAscending
+     1,     11,    11.00, "Query.fromType(org.jboss.windup.graph.model.resource.FileModel).gremlin().has(isDirectory,EQUALS,false).has(filePath,REGEX,.*\.properties$).as(default)"
+     1,      0,     0.00, "Query.gremlin().has(referenceType,CONTAINS_ANY_TOKEN,[METHOD_CALL]).as(9b8b90cf-4911-4c43-a289-f2503f9ca9e4)"
+   337,     35,     0.10, "FileService.createByFilePath(parentFile, filePath)"
+     1,     37,    37.00, "FreeMarkerIterationOperation.render(/reports/templates/source.ftl, pom_properties.1.html)"
+     1,      0,     0.00, Query.as(022ab0ee-b796-4ec4-8fe4-cc5b5c020d07)
+     1,      0,     0.00, "Query.fromType(org.jboss.windup.rules.apps.xml.model.XmlFileModel).gremlin().has(rootTagName,EQUALS,jboss-web).as(default)"
+     1,      0,     0.00, "Query.fromType(org.jboss.windup.rules.apps.xml.model.XmlFileModel).gremlin().has(rootTagName,EQUALS,ejb-jar).has(fileName,EQUALS,jboss-ejb3.xml).as(default)"
+     1,    170,   170.00, "FreeMarkerIterationOperation.render(/reports/templates/remote.ftl, remotereport_JEE_Example_App.html)"
+   432,      4,     0.01, GraphService.findAllByProperty(filePath)
+   104,      2,     0.02, JavaClassService.resolveByQualifiedName(qualifiedClassName)
+     1,      0,     0.00, GraphService.findAllWithoutProperty(skipDecompilation)
+     1,     56,    56.00, "FreeMarkerIterationOperation.render(/reports/templates/source.ftl, MANIFEST_MF.5.html)"
+     1,     49,    49.00, "FreeMarkerIterationOperation.render(/reports/templates/source.ftl, ItemLookupBean_java.html)"
+     1,      1,     1.00, "Query.fromType(org.jboss.windup.graph.model.WindupConfigurationModel).gremlin().has(keepWorkDirs,EQUALS,true).as(discard)"
+     1,     51,    51.00, "FreeMarkerIterationOperation.render(/reports/templates/source.ftl, ProductCatalogBean_java.html)"
+     1,    824,   824.00, "FreeMarkerIterationOperation.render(/reports/templates/java_application.ftl, ApplicationDetails_JEE_Example_App.html)"
+     1,     41,    41.00, "FreeMarkerIterationOperation.render(/reports/templates/source.ftl, ItemLookup_java.html)"
+     1,     34,    34.00, "FreeMarkerIterationOperation.render(/reports/templates/source.ftl, LICENSE_txt.html)"
+    26,     18,     0.69, getEffortDetailsForProject
+     1,     25,    25.00, "FreeMarkerIterationOperation.render(/reports/templates/source.ftl, pom_xml.2.html)"
+     7,     16,     2.29, Query.fromType(org.jboss.windup.graph.model.ArchiveModel).as(default)
+     1,      0,     0.00, "Query.gremlin().has(referenceType,CONTAINS_ANY_TOKEN,[METHOD_CALL]).as(5e63aa13-0dd0-4fd8-bd1b-9d1afe289fb2)"
+     1,      0,     0.00, "Query.gremlin().has(referenceType,CONTAINS_ANY_TOKEN,[FIELD_DECLARATION, VARIABLE_DECLARATION]).as(89993cfe-7465-4fea-ae7e-4ecbbd57f06d)"
+     1,      0,     0.00, "Query.fromType(org.jboss.windup.rules.apps.xml.model.XmlFileModel).gremlin().has(rootTagName,EQUALS,process-definition).as(default)"
+     1,      0,     0.00, "Query.fromType(org.jboss.windup.rules.apps.xml.model.XmlFileModel).gremlin().has(fileName,EQUALS,ibm-webservices-ext.xmi).has(rootTagName,EQUALS,WsExtension).as(default)"
+     1,      0,     0.00, "Query.fromType(org.jboss.windup.rules.apps.xml.model.XmlFileModel).gremlin().has(fileName,EQUALS,ibm-webservices-bnd.xmi).has(rootTagName,EQUALS,WSBinding).as(default)"
+     1,      0,     0.00, "Query.fromType(org.jboss.windup.rules.apps.xml.model.XmlFileModel).gremlin().has(rootTagName,EQUALS,ejb-jar).as(default)"
+     6,     31,     5.17, Classification.performParameterized
+    22,      1,     0.05, iterableHasContent
+     1,      0,     0.00, Query.fromType(org.jboss.windup.rules.apps.javaee.model.HibernateEntityModel).as(default)
+     1,      0,     0.00, "Query.fromType(org.jboss.windup.rules.apps.xml.model.XmlFileModel).gremlin().has(rootTagName,EQUALS,orion-web-app).as(default)"
+     6,      0,     0.00, GraphService.findAllByProperty(ClassificationModel:classification)
+     1,     14,    14.00, "FreeMarkerIterationOperation.render(/reports/templates/source.ftl, pom_properties.2.html)"
+     1,      2,     2.00, Query.fromType(org.jboss.windup.rules.apps.javaee.model.JNDIResourceModel).as(default)
+     1,     41,    41.00, "FreeMarkerIterationOperation.render(/reports/templates/source.ftl, ItemLookupHome_java.html)"
+     1,     59,    59.00, "FreeMarkerIterationOperation.render(/reports/templates/source.ftl, pom_properties.5.html)"
+    11,      4,     0.36, projectModelToOrganizations
+     5,      0,     0.00, GraphService.findAllByProperty(ejbBeanName)
+     1,      4,     4.00, Query.fromType(org.jboss.windup.rules.apps.java.model.project.MavenProjectModel).as(default)
+    53,     27,     0.51, getPrettyPathForFile
+     1,     53,    53.00, "FreeMarkerIterationOperation.render(/reports/templates/server.ftl, server_resources_JEE_Example_App.html)"
+   339,     15,     0.04, GraphService.findAllByPropertyMatchingRegex(filePath)
+     1,      3,     3.00, Query.fromType(org.jboss.windup.rules.apps.javaee.model.EjbSessionBeanModel).as(default)
+   491,      1,     0.00, TypeInterestFactory.matchesAny(text).cacheCheck
+     1,      0,     0.00, Query.fromType(org.jboss.windup.rules.apps.java.model.JavaSourceFileModel).as(default)
+     1,      0,     0.00, "Query.fromType(org.jboss.windup.rules.apps.xml.model.XmlFileModel).gremlin().has(fileName,EQUALS,ibm-web-bnd.xmi).as(default)"
+     1,     30,    30.00, "FreeMarkerIterationOperation.render(/reports/templates/windupfreemarkerfunctions.ftl, windup_freemarkerfunctions.html)"
+     1,      0,     0.00, "Query.fromType(org.jboss.windup.rules.apps.xml.model.XmlFileModel).gremlin().has(rootTagName,EQUALS,weblogic-web-app).as(default)"
+     1,      0,     0.00, Query.fromType(org.jboss.windup.rules.apps.javaee.model.Jbpm3ProcessModel).as(default)
+     1,     71,    71.00, "FreeMarkerIterationOperation.render(/reports/templates/source.ftl, LoginFilter_java.html)"
+     1,    486,   486.00, AnalyzeJavaFilesRuleProvider.parseFiles
+     1,      0,     0.00, Query.fromType(org.jboss.windup.rules.apps.xml.model.DoctypeMetaModel).gremlin()org.jboss.windup.rules.apps.javaee.rules.DiscoverHibernateConfigurationRuleProvider$1@147b7f3c.as(default)
+     1,     61,    61.00, "FreeMarkerIterationOperation.render(/reports/templates/source.ftl, NonParsable_xml.html)"
+     1,     16,    16.00, "FreeMarkerIterationOperation.render(/reports/templates/source.ftl, pom_xml.1.html)"
+     1,     57,    57.00, "FreeMarkerIterationOperation.render(/reports/templates/source.ftl, AnvilWebServlet_java.html)"
+     1,     37,    37.00, "FreeMarkerIterationOperation.render(/reports/templates/source.ftl, ProductCatalogHome_java.html)"
+     1,     52,    52.00, "FreeMarkerIterationOperation.render(/reports/templates/source.ftl, pom_xml.4.html)"
+     1,      0,     0.00, "Query.fromType(org.jboss.windup.rules.apps.xml.model.XmlFileModel).gremlin().has(rootTagName,EQUALS,jboss).has(fileName,EQUALS,jboss.xml).as(default)"
+     1,      3,     3.00, Query.as(4f92e38e-5e66-4cd4-b48a-def68da3a715)
+     1,     43,    43.00, "FreeMarkerIterationOperation.render(/reports/templates/source.ftl, LogEventSubscriber_java.html)"
+     1,      0,     0.00, Query.fromType(org.jboss.windup.graph.model.WindupConfigurationModel).as(wc)
+     1,     26,    26.00, "FreeMarkerIterationOperation.render(/reports/templates/source.ftl, pom_xml.7.html)"
+     1,     57,    57.00, "FreeMarkerIterationOperation.render(/reports/templates/source.ftl, MANIFEST_MF.7.html)"
+     1,    113,   113.00, "FreeMarkerIterationOperation.render(/reports/templates/about_windup.ftl, about_JEE_Example_App.html)"
+     8,      7,     0.88, DiscoverPropertiesFilesRuleProvider.perform
+     1,     19,    19.00, "FreeMarkerIterationOperation.render(/reports/templates/source.ftl, LogEventTopic_jms_xml.html)"
+     1,      0,     0.00, "Query.fromType(org.jboss.windup.graph.model.WindupConfigurationModel).gremlin().has(csv,EQUALS,true).as(default)"
+     1,    260,   260.00, "FreeMarkerIterationOperation.render(/reports/templates/unparsable_files.ftl, Unparsable_JEE_Example_App.html)"
+     1,     21,    21.00, "FreeMarkerIterationOperation.render(/reports/templates/source.ftl, ItemLookupLocalHome_java.html)"
+     1,      5,     5.00, "Query.fromType(org.jboss.windup.graph.model.resource.FileModel).gremlin().has(isDirectory,EQUALS,false).has(filePath,REGEX,.+\.\b(|rar|sar|ear|war|jar)\b$).as(default)"
+     1,      2,     2.00, "Query.gremlin().has(referenceType,CONTAINS_ANY_TOKEN,[METHOD_CALL, CONSTRUCTOR_CALL]).as(b0704461-80fe-427b-9d6e-366e2b1ba176)"
+     2,      0,     0.00, Query.fromType(org.jboss.windup.rules.apps.javaee.model.SpringBeanModel).as(default)
+     1,      3,     3.00, Query.fromType(org.jboss.windup.graph.model.ProjectModel).as(projects)
+     1,      0,     0.00, Query.as(a6d3da60-1bf0-4b79-a830-93a13bc6f870)
+     1,    125,   125.00, "FreeMarkerIterationOperation.render(/reports/templates/ignored_files.ftl, ignoredfiles_JEE_Example_App.html)"
+     1,    146,   146.00, "FreeMarkerIterationOperation.render(/reports/templates/source.ftl, weblogic_application_xml.html)"
+     1,     53,    53.00, "FreeMarkerIterationOperation.render(/reports/templates/source.ftl, web_xml.html)"
+     5,      6,     1.20, Query.fromType(org.jboss.windup.graph.model.WindupConfigurationModel).as(default)
+     1,     40,    40.00, "FreeMarkerIterationOperation.render(/reports/templates/source.ftl, ProductCatalog_java.html)"
+    34,      4,     0.12, GraphService.findAllByProperty(mavenIdentifier)
+    13,     53,     4.08, "TypeReferenceService.getPackageUseFrequencies(projectModel,nameDepth,recursive)"
+     1,     15,    15.00, "FreeMarkerIterationOperation.render(/reports/templates/source.ftl, MANIFEST_MF.3.html)"
+     1,      0,     0.00, "Query.fromType(org.jboss.windup.rules.apps.xml.model.XmlFileModel).gremlin().has(fileName,EQUALS,ibm-ejb-jar-ext.xmi).has(rootTagName,EQUALS,EJBJarExtension).as(default)"
+     1,      0,     0.00, Query.fromType(org.jboss.windup.graph.model.resource.ReportResourceFileModel).as(default)
+    18,      2,     0.11, getUniqueByName(qualifiedName)
+     1,      2,     2.00, Query.fromType(org.jboss.windup.rules.apps.javaee.model.WebXmlModel).as(default)
+   141,      0,     0.00, getTechnologyTagsForFile
+     1,      0,     0.00, Query.fromType(org.jboss.windup.rules.apps.java.ip.StaticIPLocationModel).as(default)
+     1,      0,     0.00, Query.fromType(org.jboss.windup.rules.apps.javaee.model.HibernateConfigurationFileModel).as(default)
+   142,     53,     0.37, isReportableFile
+     1,    194,   194.00, "FreeMarkerIterationOperation.render(/reports/templates/jar_report.ftl, dependency_report_JEE_Example_App.html)"
+     1,     41,    41.00, "FreeMarkerIterationOperation.render(/reports/templates/source.ftl, pom_xml.6.html)"
+     1,      1,     1.00, Query.fromType(org.jboss.windup.rules.apps.java.archives.model.IdentifiedArchiveModel).as(default)
+    53,     53,     1.00, "TypeReferenceService.getPackageUseFrequencies(data,projectModel,nameDepth,recursive)"
+     1,     43,    43.00, "FreeMarkerIterationOperation.render(/reports/templates/source.ftl, MANIFEST_MF.8.html)"
+     1,     20,    20.00, getEffortCountForProjectBySeverity
+     1,      0,     0.00, "Query.gremlin().has(referenceType,CONTAINS_ANY_TOKEN,[CONSTRUCTOR_CALL]).as(95589be6-59dc-4575-9242-dc187d2d6f00)"
+     1,     15,    15.00, Query.fromType(org.jboss.windup.reporting.model.ApplicationReportModel).as(default)
+   524,      3,     0.01, FilePathComparator
+    10,     28,     2.80, sortFilesByPathAscending
+     1,    116,   116.00, "FreeMarkerIterationOperation.render(/reports/templates/embedded.ftl, tattletale_JEE_Example_App.html)"
+     1,      2,     2.00, Query.fromType(org.jboss.windup.rules.apps.xml.model.XmlFileModel).as(default)
+     1,     47,    47.00, "FreeMarkerIterationOperation.render(/reports/templates/source.ftl, ejb_jar_xml.html)"
+     1,      8,     8.00, "Query.fromType(org.jboss.windup.rules.apps.java.model.JavaClassFileModel).gremlin().has(parseError,NOT_DEFINED,null).as(default)"
+    70,      6,     0.09, org.jboss.windup.reporting.config.HasHint
+     1,     91,    91.00, "FreeMarkerIterationOperation.render(/reports/templates/source.ftl, LogEventPublisher_java.html)"
+     1,      7,     7.00, "Query.fromType(org.jboss.windup.reporting.model.ReportModel).gremlin().has(templateType,EQUALS,FREEMARKER).as(default)"
+     1,      1,     1.00, Query.fromType(org.jboss.windup.rules.apps.xml.model.DoctypeMetaModel).gremlin()org.jboss.windup.rules.apps.javaee.rules.DiscoverHibernateMappingRuleProvider$1@231a475f.as(default)
+   995,      4,     0.00, GraphService.create
+   106,      2,     0.02, getMigrationEffortPointsForFile
+     1,     65,    65.00, "FreeMarkerIterationOperation.render(/reports/templates/source.ftl, pom_properties.4.html)"
+     1,      0,     0.00, Query.as(cc3f94bf-de59-4a07-90c9-4116fa24b687)
+    24,      0,     0.00, projectModelToSha1
+     1,     97,    97.00, "FreeMarkerIterationOperation.render(/reports/templates/source.ftl, MANIFEST_MF.2.html)"
+     1,     28,    28.00, "FreeMarkerIterationOperation.render(/reports/templates/source.ftl, weblogic_xml.html)"

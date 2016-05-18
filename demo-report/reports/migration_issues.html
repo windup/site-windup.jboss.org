@@ -1,0 +1,990 @@
+<!DOCTYPE html>
+
+
+<html lang="en">
+
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>
+                JEE Example App -
+            Migration Issues Report
+        </title>
+        <link href="resources/css/bootstrap.min.css" rel="stylesheet">
+        <link href="resources/css/windup.css" rel="stylesheet" media="screen">
+        <link href="resources/css/windup.java.css" rel="stylesheet" media="screen">
+        <link href="resources/css/jquery-ui.min.css" rel="stylesheet" media="screen">
+        <link href="resources/img/favicon.png" rel="shortcut icon" type="image/x-icon"/>
+        <style>
+            /* Only horizontal lines. */
+            .migration-issues-table.table-bordered > thead > tr > th,
+            .migration-issues-table.table-bordered > tbody > tr > td {
+                border-left-style: none;
+                border-right-style: none;
+            }
+            /* Light yellow bg for the issue info box. */
+            .hint-detail-panel > .panel-heading {
+                border-color: #c2c2c2;
+                background-color: #fbf4b1;
+            }
+            .hint-detail-panel {
+                border-color: #a8d0e3;
+                background-color: #fffcdc;
+            }
+            /* Reduce the padding, default is too big. */
+            .hint-detail-panel > .panel-body { padding-bottom: 0; }
+
+            /* Colors of various effort levels. */
+            /* Commented out for now (jsight - 2016/02/15)
+            tr.problemSummary.effortINFO td.level { color: #1B540E; }
+            tr.problemSummary.effortTRIVIAL td.level { color: #50A40E; }
+            tr.problemSummary.effortCOMPLEX td.level { color: #0065AC; }
+            tr.problemSummary.effortREDESIGN td.level { color: #C67D00; }
+            tr.problemSummary.effortARCHITECTURAL td.level { color: #C42F0E; }
+            tr.problemSummary.effortUNKNOWN td.level { color: #C42F0E; }
+            */
+        </style>
+    </head>
+    <body role="document">
+        <!-- Navbar -->
+        <div id="main-navbar" class="navbar navbar-default navbar-fixed-top">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-responsive-collapse">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+            </div>
+
+                <div class="navbar-collapse collapse navbar-responsive-collapse">
+<ul class="nav navbar-nav">
+        <li class="">
+            <a href="../index.html"><i class="glyphicon glyphicon-home"></i> All Applications</a>
+        </li>
+
+
+
+            <li class="">
+                <a href="report_index_JEE_Example_App.html">
+                    <i class="glyphicon glyphicon-th-list"></i>
+                  Report Index
+                </a>
+            </li>
+
+
+            <li class="active">
+                <a href="#">
+                    <i class="glyphicon glyphicon-warning-sign"></i>
+                  Migration Issues
+                </a>
+            </li>
+
+
+            <li class="">
+                <a href="ApplicationDetails_JEE_Example_App.html">
+                    <i class="glyphicon glyphicon-th-list"></i>
+                  Application Details
+                </a>
+            </li>
+
+
+            <li class="">
+                <a href="Unparsable_JEE_Example_App.html">
+                    <i class="glyphicon glyphicon-warning-sign"></i>
+                  Unparsable
+                </a>
+            </li>
+
+
+            <li class="">
+                <a href="dependency_report_JEE_Example_App.html">
+                    <i class="glyphicon glyphicon-flag"></i>
+                  JAR Dependencies
+                </a>
+            </li>
+
+
+            <li class="">
+                <a href="remotereport_JEE_Example_App.html">
+                    <i class="glyphicon service-nav-logo"></i>
+                  Remote Services
+                </a>
+            </li>
+
+
+            <li class="">
+                <a href="ejbreport_JEE_Example_App.html">
+                    <i class="glyphicon ejb-nav-logo"></i>
+                  EJBs
+                </a>
+            </li>
+
+
+            <li class="">
+                <a href="server_resources_JEE_Example_App.html">
+                    <i class="glyphicon server-resource-nav-logo"></i>
+                  Server Resources
+                </a>
+            </li>
+
+
+            <li class="">
+                <a href="tattletale_JEE_Example_App.html">
+                    <i class="glyphicon tattletale-nav-logo"></i>
+                  Tattletale
+                </a>
+            </li>
+
+
+            <li class="">
+                <a href="ignoredfiles_JEE_Example_App.html">
+                    <i class="glyphicon glyphicon-eye-close"></i>
+                  Ignored Files
+                </a>
+            </li>
+
+
+            <li class="">
+                <a href="about_JEE_Example_App.html">
+                    <i class="glyphicon glyphicon-info-sign"></i>
+                  About
+                </a>
+            </li>
+</ul>
+<ul class="nav navbar-nav navbar-right">
+<li>
+    <a href="#" id="jiraFeedbackTrigger" class="feedback-nav-btn"><i class="glyphicon glyphicon-comment"></i> Send Feedback </a>
+</li>
+
+
+<script type="text/javascript" src="https://issues.jboss.org/s/f215932e68571747ac58d0f5d554396f-T/en_US-r7luaf/6346/82/1.4.16/_/download/batch/com.atlassian.jira.collector.plugin.jira-issue-collector-plugin:issuecollector/com.atlassian.jira.collector.plugin.jira-issue-collector-plugin:issuecollector.js?locale=en-US&amp;collectorId=8b9e338b"></script>
+<script type="text/javascript">
+window.ATL_JQ_PAGE_PROPS = {
+    "triggerFunction": function(showCollectorDialog) {
+        jQuery("#jiraFeedbackTrigger").click(function(e) {
+            e.preventDefault();
+            showCollectorDialog();
+        });
+    }
+};
+</script>
+</ul>
+
+<script type="text/javascript">
+    var script   = document.createElement("script");
+    script.type  = "text/javascript";
+    script.src   = "resources/js/navbar.js";
+    document.body.appendChild(script);
+</script>                </div><!-- /.nav-collapse -->
+        </div>
+        <!-- / Navbar -->
+
+        <div class="container-fluid" role="main">
+            <div class="row">
+                <div class="page-header page-header-no-border">
+                    <h1>
+                        <div class="main">Migration Issues Report</div>
+                            <div class="path">JEE Example App</div>
+                    </h1>
+                    <div class="desc">
+                        The Migration Issues report provides a concise summary of all issues that require attention.
+                    </div>
+                </div>
+            </div>
+
+        <div class="row">
+        	<div class="container-fluid theme-showcase" role="main">
+	            <div class="panel panel-default panel-primary">
+	                <div class="panel-heading">
+                        <h3 class="panel-title">Analysis Detail</h3>
+                    </div>
+
+
+                    <div class="panel-body">
+                        <table class="table table-bordered table-condensed tablesorter migration-issues-table">
+                            <thead>
+                                <tr>
+                                    <th class="sortable">Issue by Category</th>
+                                    <th class="sortable-right text-right">Incidents Found</th>
+                                    <th class="sortable-right text-right">Story Points per Incident</th>
+                                    <th>Level of Effort</th>
+                                    <th class="sortable-right text-right">Total Story Points</th>
+                                </tr>
+                                <tr class="tablesorter-ignoreRow" style="background: rgb(212, 230, 233);">
+                                    <td>
+                                        <b>Mandatory</b>
+                                    </td>
+                                    <td class="text-right">36</td>
+                                    <td></td>
+                                    <td></td>
+                                    <td class="text-right">61</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+    <tr class="problemSummary effortTRIVIAL">
+        <td>
+            <a href="#" class="toggle">
+                Use of WebLogic specific logging classes
+            </a>
+        </td>
+        <td class="text-right">8</td>
+        <td class="text-right">1</td>
+        <td class="level">Trivial change or 1-1 library swap</td>
+        <td class="text-right">8</td>
+    </tr>
+    <tr class="tablesorter-childRow bg-info" data-summary-id="204288">
+        <td><div class="indent"><strong>File</strong></div></td>
+        <td class="text-right"><strong>Incidents Found</strong></td>
+        <td colspan="3"><strong>Hint</strong></td>
+    </tr>
+
+    <tr class="problemSummary effortTRIVIAL">
+        <td>
+            <a href="#" class="toggle">
+                WebLogic proprietary annotation ServletAuthentication
+            </a>
+        </td>
+        <td class="text-right">1</td>
+        <td class="text-right">1</td>
+        <td class="level">Trivial change or 1-1 library swap</td>
+        <td class="text-right">1</td>
+    </tr>
+    <tr class="tablesorter-childRow bg-info" data-summary-id="177664">
+        <td><div class="indent"><strong>File</strong></div></td>
+        <td class="text-right"><strong>Incidents Found</strong></td>
+        <td colspan="3"><strong>Hint</strong></td>
+    </tr>
+
+    <tr class="problemSummary effortTRIVIAL">
+        <td>
+            <a href="#" class="toggle">
+                Call of JNDI lookup
+            </a>
+        </td>
+        <td class="text-right">5</td>
+        <td class="text-right">1</td>
+        <td class="level">Trivial change or 1-1 library swap</td>
+        <td class="text-right">5</td>
+    </tr>
+    <tr class="tablesorter-childRow bg-info" data-summary-id="208896">
+        <td><div class="indent"><strong>File</strong></div></td>
+        <td class="text-right"><strong>Incidents Found</strong></td>
+        <td colspan="3"><strong>Hint</strong></td>
+    </tr>
+
+    <tr class="problemSummary effortCOMPLEX">
+        <td>
+            <a href="#" class="toggle">
+                WebLogic Initial Context Configuration
+            </a>
+        </td>
+        <td class="text-right">3</td>
+        <td class="text-right">3</td>
+        <td class="level">Complex change with documented solution</td>
+        <td class="text-right">9</td>
+    </tr>
+    <tr class="tablesorter-childRow bg-info" data-summary-id="197888">
+        <td><div class="indent"><strong>File</strong></div></td>
+        <td class="text-right"><strong>Incidents Found</strong></td>
+        <td colspan="3"><strong>Hint</strong></td>
+    </tr>
+
+    <tr class="problemSummary effortINFO">
+        <td>
+            <a href="#" class="toggle">
+                Use of WebLogic Startup Service
+            </a>
+        </td>
+        <td class="text-right">1</td>
+        <td class="text-right">0</td>
+        <td class="level">Info</td>
+        <td class="text-right">0</td>
+    </tr>
+    <tr class="tablesorter-childRow bg-info" data-summary-id="199680">
+        <td><div class="indent"><strong>File</strong></div></td>
+        <td class="text-right"><strong>Incidents Found</strong></td>
+        <td colspan="3"><strong>Hint</strong></td>
+    </tr>
+
+    <tr class="problemSummary effortCOMPLEX">
+        <td>
+            <a href="#" class="toggle">
+                Use of T3ServicesDef
+            </a>
+        </td>
+        <td class="text-right">3</td>
+        <td class="text-right">3</td>
+        <td class="level">Complex change with documented solution</td>
+        <td class="text-right">9</td>
+    </tr>
+    <tr class="tablesorter-childRow bg-info" data-summary-id="200192">
+        <td><div class="indent"><strong>File</strong></div></td>
+        <td class="text-right"><strong>Incidents Found</strong></td>
+        <td colspan="3"><strong>Hint</strong></td>
+    </tr>
+
+    <tr class="problemSummary effortTRIVIAL">
+        <td>
+            <a href="#" class="toggle">
+                WebLogic TransactionManager Usage
+            </a>
+        </td>
+        <td class="text-right">2</td>
+        <td class="text-right">1</td>
+        <td class="level">Trivial change or 1-1 library swap</td>
+        <td class="text-right">2</td>
+    </tr>
+    <tr class="tablesorter-childRow bg-info" data-summary-id="179200">
+        <td><div class="indent"><strong>File</strong></div></td>
+        <td class="text-right"><strong>Incidents Found</strong></td>
+        <td colspan="3"><strong>Hint</strong></td>
+    </tr>
+
+    <tr class="problemSummary effortTRIVIAL">
+        <td>
+            <a href="#" class="toggle">
+                WebLogic TransactionManager Usage of resume method
+            </a>
+        </td>
+        <td class="text-right">1</td>
+        <td class="text-right">1</td>
+        <td class="level">Trivial change or 1-1 library swap</td>
+        <td class="text-right">1</td>
+    </tr>
+    <tr class="tablesorter-childRow bg-info" data-summary-id="180480">
+        <td><div class="indent"><strong>File</strong></div></td>
+        <td class="text-right"><strong>Incidents Found</strong></td>
+        <td colspan="3"><strong>Hint</strong></td>
+    </tr>
+
+    <tr class="problemSummary effortTRIVIAL">
+        <td>
+            <a href="#" class="toggle">
+                WebLogic TransactionManager Usage of suspend method
+            </a>
+        </td>
+        <td class="text-right">1</td>
+        <td class="text-right">1</td>
+        <td class="level">Trivial change or 1-1 library swap</td>
+        <td class="text-right">1</td>
+    </tr>
+    <tr class="tablesorter-childRow bg-info" data-summary-id="180736">
+        <td><div class="indent"><strong>File</strong></div></td>
+        <td class="text-right"><strong>Incidents Found</strong></td>
+        <td colspan="3"><strong>Hint</strong></td>
+    </tr>
+
+    <tr class="problemSummary effortCOMPLEX">
+        <td>
+            <a href="#" class="toggle">
+                WebLogic Initial Context Configuration
+            </a>
+        </td>
+        <td class="text-right">2</td>
+        <td class="text-right">3</td>
+        <td class="level">Complex change with documented solution</td>
+        <td class="text-right">6</td>
+    </tr>
+    <tr class="tablesorter-childRow bg-info" data-summary-id="196352">
+        <td><div class="indent"><strong>File</strong></div></td>
+        <td class="text-right"><strong>Incidents Found</strong></td>
+        <td colspan="3"><strong>Hint</strong></td>
+    </tr>
+
+    <tr class="problemSummary effortTRIVIAL">
+        <td>
+            <a href="#" class="toggle">
+                Proprietary InitialContext initialization
+            </a>
+        </td>
+        <td class="text-right">2</td>
+        <td class="text-right">1</td>
+        <td class="level">Trivial change or 1-1 library swap</td>
+        <td class="text-right">2</td>
+    </tr>
+    <tr class="tablesorter-childRow bg-info" data-summary-id="209920">
+        <td><div class="indent"><strong>File</strong></div></td>
+        <td class="text-right"><strong>Incidents Found</strong></td>
+        <td colspan="3"><strong>Hint</strong></td>
+    </tr>
+
+    <tr class="problemSummary effortTRIVIAL">
+        <td>
+            <a href="#" class="toggle">
+                javax.jms.QueueConnectionFactory
+            </a>
+        </td>
+        <td class="text-right">1</td>
+        <td class="text-right">1</td>
+        <td class="level">Trivial change or 1-1 library swap</td>
+        <td class="text-right">1</td>
+    </tr>
+    <tr class="tablesorter-childRow bg-info" data-summary-id="216832">
+        <td><div class="indent"><strong>File</strong></div></td>
+        <td class="text-right"><strong>Incidents Found</strong></td>
+        <td colspan="3"><strong>Hint</strong></td>
+    </tr>
+
+    <tr class="problemSummary effortCOMPLEX">
+        <td>
+            <a href="#" class="toggle">
+                WebLogic ApplicationLifecycleEvent
+            </a>
+        </td>
+        <td class="text-right">1</td>
+        <td class="text-right">3</td>
+        <td class="level">Complex change with documented solution</td>
+        <td class="text-right">3</td>
+    </tr>
+    <tr class="tablesorter-childRow bg-info" data-summary-id="175360">
+        <td><div class="indent"><strong>File</strong></div></td>
+        <td class="text-right"><strong>Incidents Found</strong></td>
+        <td colspan="3"><strong>Hint</strong></td>
+    </tr>
+
+    <tr class="problemSummary effortCOMPLEX">
+        <td>
+            <a href="#" class="toggle">
+                WebLogic ApplicationLifecycleListener
+            </a>
+        </td>
+        <td class="text-right">1</td>
+        <td class="text-right">3</td>
+        <td class="level">Complex change with documented solution</td>
+        <td class="text-right">3</td>
+    </tr>
+    <tr class="tablesorter-childRow bg-info" data-summary-id="176640">
+        <td><div class="indent"><strong>File</strong></div></td>
+        <td class="text-right"><strong>Incidents Found</strong></td>
+        <td colspan="3"><strong>Hint</strong></td>
+    </tr>
+
+    <tr class="problemSummary effortTRIVIAL">
+        <td>
+            <a href="#" class="toggle">
+                WebLogic EAR Application Descriptor
+            </a>
+        </td>
+        <td class="text-right">1</td>
+        <td class="text-right">1</td>
+        <td class="level">Trivial change or 1-1 library swap</td>
+        <td class="text-right">1</td>
+    </tr>
+    <tr class="tablesorter-childRow bg-info" data-summary-id="168448">
+        <td><div class="indent"><strong>File</strong></div></td>
+        <td class="text-right"><strong>Incidents Found</strong></td>
+        <td colspan="3"><strong>Hint</strong></td>
+    </tr>
+
+    <tr class="problemSummary effortCOMPLEX">
+        <td>
+            <a href="#" class="toggle">
+                WebLogic JMS Descriptor
+            </a>
+        </td>
+        <td class="text-right">1</td>
+        <td class="text-right">3</td>
+        <td class="level">Complex change with documented solution</td>
+        <td class="text-right">3</td>
+    </tr>
+    <tr class="tablesorter-childRow bg-info" data-summary-id="172032">
+        <td><div class="indent"><strong>File</strong></div></td>
+        <td class="text-right"><strong>Incidents Found</strong></td>
+        <td colspan="3"><strong>Hint</strong></td>
+    </tr>
+
+    <tr class="problemSummary effortCOMPLEX">
+        <td>
+            <a href="#" class="toggle">
+                WebLogic Web Application Descriptor
+            </a>
+        </td>
+        <td class="text-right">1</td>
+        <td class="text-right">3</td>
+        <td class="level">Complex change with documented solution</td>
+        <td class="text-right">3</td>
+    </tr>
+    <tr class="tablesorter-childRow bg-info" data-summary-id="174080">
+        <td><div class="indent"><strong>File</strong></div></td>
+        <td class="text-right"><strong>Incidents Found</strong></td>
+        <td colspan="3"><strong>Hint</strong></td>
+    </tr>
+
+    <tr class="problemSummary effortCOMPLEX">
+        <td>
+            <a href="#" class="toggle">
+                WebLogic Startup Service
+            </a>
+        </td>
+        <td class="text-right">1</td>
+        <td class="text-right">3</td>
+        <td class="level">Complex change with documented solution</td>
+        <td class="text-right">3</td>
+    </tr>
+    <tr class="tablesorter-childRow bg-info" data-summary-id="198656">
+        <td><div class="indent"><strong>File</strong></div></td>
+        <td class="text-right"><strong>Incidents Found</strong></td>
+        <td colspan="3"><strong>Hint</strong></td>
+    </tr>
+
+                            </tbody>
+                        </table>
+                        <table class="table table-bordered table-condensed tablesorter migration-issues-table">
+                            <thead>
+                                <tr>
+                                    <th class="sortable">Issue by Category</th>
+                                    <th class="sortable-right text-right">Incidents Found</th>
+                                    <th class="sortable-right text-right">Story Points per Incident</th>
+                                    <th>Level of Effort</th>
+                                    <th class="sortable-right text-right">Total Story Points</th>
+                                </tr>
+                                <tr class="tablesorter-ignoreRow" style="background: rgb(212, 230, 233);">
+                                    <td>
+                                        <b>Optional</b>
+                                    </td>
+                                    <td class="text-right">41</td>
+                                    <td></td>
+                                    <td></td>
+                                    <td class="text-right">22</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+    <tr class="problemSummary effortINFO">
+        <td>
+            <a href="#" class="toggle">
+                weblogic-application.xml Elements mapping
+            </a>
+        </td>
+        <td class="text-right">1</td>
+        <td class="text-right">0</td>
+        <td class="level">Info</td>
+        <td class="text-right">0</td>
+    </tr>
+    <tr class="tablesorter-childRow bg-info" data-summary-id="169216">
+        <td><div class="indent"><strong>File</strong></div></td>
+        <td class="text-right"><strong>Incidents Found</strong></td>
+        <td colspan="3"><strong>Hint</strong></td>
+    </tr>
+
+    <tr class="problemSummary effortTRIVIAL">
+        <td>
+            <a href="#" class="toggle">
+                WebLogic Logger Usage
+            </a>
+        </td>
+        <td class="text-right">19</td>
+        <td class="text-right">1</td>
+        <td class="level">Trivial change or 1-1 library swap</td>
+        <td class="text-right">19</td>
+    </tr>
+    <tr class="tablesorter-childRow bg-info" data-summary-id="182016">
+        <td><div class="indent"><strong>File</strong></div></td>
+        <td class="text-right"><strong>Incidents Found</strong></td>
+        <td colspan="3"><strong>Hint</strong></td>
+    </tr>
+
+    <tr class="problemSummary effortTRIVIAL">
+        <td>
+            <a href="#" class="toggle">
+                Reference to javax.management.ObjectName
+            </a>
+        </td>
+        <td class="text-right">3</td>
+        <td class="text-right">1</td>
+        <td class="level">Trivial change or 1-1 library swap</td>
+        <td class="text-right">3</td>
+    </tr>
+    <tr class="tablesorter-childRow bg-info" data-summary-id="211456">
+        <td><div class="indent"><strong>File</strong></div></td>
+        <td class="text-right"><strong>Incidents Found</strong></td>
+        <td colspan="3"><strong>Hint</strong></td>
+    </tr>
+
+    <tr class="problemSummary effortINFO">
+        <td>
+            <a href="#" class="toggle">
+                Malformed archive
+            </a>
+        </td>
+        <td class="text-right">1</td>
+        <td class="text-right">0</td>
+        <td class="level">Info</td>
+        <td class="text-right">0</td>
+    </tr>
+    <tr class="tablesorter-childRow bg-info" data-summary-id="80128">
+        <td><div class="indent"><strong>File</strong></div></td>
+        <td class="text-right"><strong>Incidents Found</strong></td>
+        <td colspan="3"><strong>Hint</strong></td>
+    </tr>
+
+    <tr class="problemSummary effortINFO">
+        <td>
+            <a href="#" class="toggle">
+                Unparsable XML File
+            </a>
+        </td>
+        <td class="text-right">2</td>
+        <td class="text-right">0</td>
+        <td class="level">Info</td>
+        <td class="text-right">0</td>
+    </tr>
+    <tr class="tablesorter-childRow bg-info" data-summary-id="87296">
+        <td><div class="indent"><strong>File</strong></div></td>
+        <td class="text-right"><strong>Incidents Found</strong></td>
+        <td colspan="3"><strong>Hint</strong></td>
+    </tr>
+
+    <tr class="problemSummary effortINFO">
+        <td>
+            <a href="#" class="toggle">
+                Maven POM
+            </a>
+        </td>
+        <td class="text-right">7</td>
+        <td class="text-right">0</td>
+        <td class="level">Info</td>
+        <td class="text-right">0</td>
+    </tr>
+    <tr class="tablesorter-childRow bg-info" data-summary-id="90368">
+        <td><div class="indent"><strong>File</strong></div></td>
+        <td class="text-right"><strong>Incidents Found</strong></td>
+        <td colspan="3"><strong>Hint</strong></td>
+    </tr>
+
+    <tr class="problemSummary effortINFO">
+        <td>
+            <a href="#" class="toggle">
+                Unparseable Class File
+            </a>
+        </td>
+        <td class="text-right">2</td>
+        <td class="text-right">0</td>
+        <td class="level">Info</td>
+        <td class="text-right">0</td>
+    </tr>
+    <tr class="tablesorter-childRow bg-info" data-summary-id="103168">
+        <td><div class="indent"><strong>File</strong></div></td>
+        <td class="text-right"><strong>Incidents Found</strong></td>
+        <td colspan="3"><strong>Hint</strong></td>
+    </tr>
+
+    <tr class="problemSummary effortINFO">
+        <td>
+            <a href="#" class="toggle">
+                EJB XML
+            </a>
+        </td>
+        <td class="text-right">2</td>
+        <td class="text-right">0</td>
+        <td class="level">Info</td>
+        <td class="text-right">0</td>
+    </tr>
+    <tr class="tablesorter-childRow bg-info" data-summary-id="158208">
+        <td><div class="indent"><strong>File</strong></div></td>
+        <td class="text-right"><strong>Incidents Found</strong></td>
+        <td colspan="3"><strong>Hint</strong></td>
+    </tr>
+
+    <tr class="problemSummary effortINFO">
+        <td>
+            <a href="#" class="toggle">
+                Web XML
+            </a>
+        </td>
+        <td class="text-right">1</td>
+        <td class="text-right">0</td>
+        <td class="level">Info</td>
+        <td class="text-right">0</td>
+    </tr>
+    <tr class="tablesorter-childRow bg-info" data-summary-id="160768">
+        <td><div class="indent"><strong>File</strong></div></td>
+        <td class="text-right"><strong>Incidents Found</strong></td>
+        <td colspan="3"><strong>Hint</strong></td>
+    </tr>
+
+    <tr class="problemSummary effortINFO">
+        <td>
+            <a href="#" class="toggle">
+                WebLogic EJB XML
+            </a>
+        </td>
+        <td class="text-right">3</td>
+        <td class="text-right">0</td>
+        <td class="level">Info</td>
+        <td class="text-right">0</td>
+    </tr>
+    <tr class="tablesorter-childRow bg-info" data-summary-id="162816">
+        <td><div class="indent"><strong>File</strong></div></td>
+        <td class="text-right"><strong>Incidents Found</strong></td>
+        <td colspan="3"><strong>Hint</strong></td>
+    </tr>
+
+                            </tbody>
+                        </table>
+                        <table class="table table-bordered table-condensed tablesorter migration-issues-table">
+                            <thead>
+                                <tr>
+                                    <th class="sortable">Issue by Category</th>
+                                    <th class="sortable-right text-right">Incidents Found</th>
+                                    <th class="sortable-right text-right">Story Points per Incident</th>
+                                    <th>Level of Effort</th>
+                                    <th class="sortable-right text-right">Total Story Points</th>
+                                </tr>
+                                <tr class="tablesorter-ignoreRow" style="background: rgb(212, 230, 233);">
+                                    <td>
+                                        <b>Potential Issues</b>
+                                    </td>
+                                    <td class="text-right">32</td>
+                                    <td></td>
+                                    <td></td>
+                                    <td class="text-right">0</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+    <tr class="problemSummary effortINFO">
+        <td>
+            <a href="#" class="toggle">
+                Oracle proprietary type reference
+            </a>
+        </td>
+        <td class="text-right">32</td>
+        <td class="text-right">0</td>
+        <td class="level">Info</td>
+        <td class="text-right">0</td>
+    </tr>
+    <tr class="tablesorter-childRow bg-info" data-summary-id="224000">
+        <td><div class="indent"><strong>File</strong></div></td>
+        <td class="text-right"><strong>Incidents Found</strong></td>
+        <td colspan="3"><strong>Hint</strong></td>
+    </tr>
+
+                            </tbody>
+                        </table>
+                    </div>
+	            </div>
+	    	</div>
+        </div>
+
+        <script src="resources/js/jquery-1.10.1.min.js"></script>
+        <script src="resources/js/jquery-ui.min.js"></script>
+        <script src="resources/js/bootstrap.min.js"></script>
+        <script src="resources/js/jquery.tablesorter.min.js"></script>
+        <script src="resources/js/jquery.tablesorter.widgets.min.js"></script>
+        <script src="resources/libraries/handlebars/handlebars.4.0.5.min.js"></script>
+
+        <script type="text/javascript">
+            $(document).ready(function() {
+
+                var $table = $('.tablesorter');
+
+                // hide child rows & make draggable
+                $table.find('.tablesorter-childRow')
+                    .find('td')
+                    .droppable({
+                        accept: '.draggingSiblings',
+                        drop: function(event, ui) {
+                            if ($(this).closest('tr').length){
+                                $(this).closest('tr').before(
+                                    ui.draggable
+                                        .css({ left: 0, top: 0 })
+                                        .parent()
+                                        .removeClass('draggingRow')
+                                    );
+                                $table
+                                    .find('.draggingSiblingsRow')
+                                    .removeClass('draggingSiblingsRow')
+                                    .find('.draggingSiblings')
+                                    .removeClass('draggingSiblings');
+                                $table.trigger('update');
+                            } else {
+                                return false;
+                            }
+                        }
+                    })
+                    .draggable({
+                        revert: "invalid",
+                        start: function( event, ui ) {
+                            $(this)
+                                .parent()
+                                .addClass('draggingRow')
+                                .prevUntil('.tablesorter-hasChildRow')
+                                .nextUntil('tr:not(.tablesorter-childRow)')
+                                .addClass('draggingSiblingsRow')
+                                .find('td')
+                                .addClass('draggingSiblings');
+                        }
+                    })
+                    .hide();
+
+                // we need these parsers because we are using comma to separate thousands and are also sorting links
+                $.tablesorter.addParser({
+                     id: 'thousands',
+                     is: function(s) { return true; },
+                     format: function(s) {
+                         return s.replace('$','').replace(/,/g,'');
+                     },
+                     type: 'numeric'
+                });
+                $.tablesorter.addParser({
+                    id: 'a-elements',
+                    is: function(s) { return true; },
+                    format: function(s)
+                    {
+                        // format your data for normalization
+                        return s.replace(new RegExp(/<.*?>/),"");
+                    },
+                    parsed: true,
+                    type: 'text'
+                });
+
+                $table
+                    .tablesorter({
+                        // this is the default setting
+                        cssChildRow: "tablesorter-childRow",
+                        sortList: [[1,1]],
+                        headers: {
+                            0: {sorter: 'a-elements'},
+                            1: {sorter: 'thousands'},
+                            2: {sorter: 'thousands'},
+                            3: {sorter: false},
+                            4: {sorter: 'thousands'},
+                        }
+                    })
+                    .delegate('.toggle', 'click' ,function(){
+                        $(this)
+                            .closest('tr')
+                            .nextUntil('tr.tablesorter-hasChildRow')
+                            .find('td').first().each(function(index, element) { showDetails(element) });
+                        return false;
+                    });
+
+            });
+
+       	    function resizeTables()
+            {
+                var tableArr = document.getElementsByClassName('migration-issues-table');
+                var cellWidths = new Array();
+
+                // get widest
+                for(i = 0; i < tableArr.length; i++)
+                {
+                    for(j = 0; j < tableArr[i].rows[0].cells.length; j++)
+                    {
+                       var cell = tableArr[i].rows[0].cells[j];
+
+                       if(!cellWidths[j] || cellWidths[j] < cell.clientWidth)
+                            cellWidths[j] = cell.clientWidth;
+                    }
+                }
+
+                // set all columns to the widest width found
+                for(i = 0; i < tableArr.length; i++)
+                {
+                    for(j = 0; j < tableArr[i].rows[0].cells.length; j++)
+                    {
+                        tableArr[i].rows[0].cells[j].style.width = cellWidths[j]+'px';
+                    }
+                }
+            }
+
+            window.onload = resizeTables;
+
+        </script>
+
+        <script id="detail-row-template" type="text/x-handlebars-template">
+            {{#each problemSummaries}}
+                {{#each files}}
+                    <tr class="fileSummary tablesorter-childRow fileSummary_id_{{../problemSummaryID}}">
+                        <td>
+                            <div class="indent">
+                                {{{l}}}
+                            </div>
+                        </td>
+                        <td class="text-right">
+                            {{oc}}
+                        </td>
+
+                        {{#if @first}}
+                            <td colspan="3" rowspan="{{../files.length}}">
+                                <div class="panel panel-default hint-detail-panel">
+                                    <div class="panel-heading">
+                                        <h4 class="panel-title pull-left">Issue Detail: {{../issueName}}</h4>
+                                        {{#if ../ruleID}}
+                                            <div class="pull-right">
+                                                <a class="sh_url" title="{{../ruleID}}" href="windup_ruleproviders.html#{{../ruleID}}">Show Rule</a>
+                                            </div>
+                                        {{/if}}
+                                        <div class="clearfix"></div>
+                                    </div>
+                                    <div class="panel-body">
+                                        {{{../description}}}
+                                    </div>
+
+                                    {{#if ../resourceLinks}}
+                                        <div class="panel-body">
+                                            <ul>
+                                                {{#each ../resourceLinks}}
+                                                    <li><a href="{{h}}">{{t}}</a></li>
+                                                {{/each}}
+                                            </ul>
+                                        </div>
+                                    {{/if}}
+                                </div>
+                            </td>
+                        {{/if}}
+                    </tr>
+                {{/each}}
+            {{/each}}
+        </script>
+
+        <script type="text/javascript">
+            var issueDataLoaded = [];
+
+            function showDetails(element) {
+                var problemSummaryID = $(element).parent().attr("data-summary-id")
+                var tr = $(element).parent();
+
+                var issueDataArray = MIGRATION_ISSUES_DETAILS[problemSummaryID];
+                if (!issueDataLoaded[problemSummaryID]) {
+                    // append it and try again in a second
+                    var script = document.createElement("script");
+                    script.type = "text/javascript";
+                    script.src = "data/problem_summary_" + problemSummaryID + ".js";
+                    document.body.appendChild(script);
+
+                    issueDataLoaded[problemSummaryID] = true;
+                    setTimeout(function() { showDetails(element); }, 25);
+                    return;
+                } else if (issueDataArray == null) {
+                    setTimeout(function() { showDetails(element); }, 25);
+                    return;
+                }
+
+                function toggleRow () {
+                    $(tr).find("td").toggle();
+                }
+
+                $(".fileSummary_id_" + problemSummaryID).remove();
+                if ($(element).is(":visible")) {
+                    toggleRow();
+                    return;
+                }
+
+                var source   = $("#detail-row-template").html();
+                var template = Handlebars.compile(source);
+                var html = template({problemSummaries: issueDataArray});
+
+                $(html).insertAfter(tr);
+
+                var issuesTable = $(element).parent().parent().parent();
+                $(issuesTable).trigger("update", [true]);
+
+                toggleRow();
+            }
+
+            // summary in JS should go here
+            var MIGRATION_ISSUES_DETAILS = [];
+        </script>
+
+    </body>
+</html>

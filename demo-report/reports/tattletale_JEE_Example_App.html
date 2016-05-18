@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+
+
+<html lang="en">
+<head>
+    <meta charset="utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <title>JEE Example App - Tattletale Report</title>
+    <link href="resources/css/bootstrap.min.css" rel="stylesheet"/>
+    <link href="resources/css/windup.css" rel="stylesheet" media="screen"/>
+    <link href="resources/img/favicon.png" rel="shortcut icon" type="image/x-icon"/>
+</head>
+<body role="document">
+
+    <!-- Navbar -->
+    <div id="main-navbar" class="navbar navbar-default navbar-fixed-top">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-responsive-collapse">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+        </div>
+        <div class="navbar-collapse collapse navbar-responsive-collapse">
+<ul class="nav navbar-nav">
+        <li class="">
+            <a href="../index.html"><i class="glyphicon glyphicon-home"></i> All Applications</a>
+        </li>
+
+
+
+            <li class="">
+                <a href="report_index_JEE_Example_App.html">
+                    <i class="glyphicon glyphicon-th-list"></i>
+                  Report Index
+                </a>
+            </li>
+
+
+            <li class="">
+                <a href="migration_issues.html">
+                    <i class="glyphicon glyphicon-warning-sign"></i>
+                  Migration Issues
+                </a>
+            </li>
+
+
+            <li class="">
+                <a href="ApplicationDetails_JEE_Example_App.html">
+                    <i class="glyphicon glyphicon-th-list"></i>
+                  Application Details
+                </a>
+            </li>
+
+
+            <li class="">
+                <a href="Unparsable_JEE_Example_App.html">
+                    <i class="glyphicon glyphicon-warning-sign"></i>
+                  Unparsable
+                </a>
+            </li>
+
+
+            <li class="">
+                <a href="dependency_report_JEE_Example_App.html">
+                    <i class="glyphicon glyphicon-flag"></i>
+                  JAR Dependencies
+                </a>
+            </li>
+
+
+            <li class="">
+                <a href="remotereport_JEE_Example_App.html">
+                    <i class="glyphicon service-nav-logo"></i>
+                  Remote Services
+                </a>
+            </li>
+
+
+            <li class="">
+                <a href="ejbreport_JEE_Example_App.html">
+                    <i class="glyphicon ejb-nav-logo"></i>
+                  EJBs
+                </a>
+            </li>
+
+
+            <li class="">
+                <a href="server_resources_JEE_Example_App.html">
+                    <i class="glyphicon server-resource-nav-logo"></i>
+                  Server Resources
+                </a>
+            </li>
+
+
+            <li class="active">
+                <a href="#">
+                    <i class="glyphicon tattletale-nav-logo"></i>
+                  Tattletale
+                </a>
+            </li>
+
+
+            <li class="">
+                <a href="ignoredfiles_JEE_Example_App.html">
+                    <i class="glyphicon glyphicon-eye-close"></i>
+                  Ignored Files
+                </a>
+            </li>
+
+
+            <li class="">
+                <a href="about_JEE_Example_App.html">
+                    <i class="glyphicon glyphicon-info-sign"></i>
+                  About
+                </a>
+            </li>
+</ul>
+<ul class="nav navbar-nav navbar-right">
+<li>
+    <a href="#" id="jiraFeedbackTrigger" class="feedback-nav-btn"><i class="glyphicon glyphicon-comment"></i> Send Feedback </a>
+</li>
+
+
+<script type="text/javascript" src="https://issues.jboss.org/s/f215932e68571747ac58d0f5d554396f-T/en_US-r7luaf/6346/82/1.4.16/_/download/batch/com.atlassian.jira.collector.plugin.jira-issue-collector-plugin:issuecollector/com.atlassian.jira.collector.plugin.jira-issue-collector-plugin:issuecollector.js?locale=en-US&amp;collectorId=8b9e338b"></script>
+<script type="text/javascript">
+window.ATL_JQ_PAGE_PROPS = {
+    "triggerFunction": function(showCollectorDialog) {
+        jQuery("#jiraFeedbackTrigger").click(function(e) {
+            e.preventDefault();
+            showCollectorDialog();
+        });
+    }
+};
+</script>
+</ul>
+
+<script type="text/javascript">
+    var script   = document.createElement("script");
+    script.type  = "text/javascript";
+    script.src   = "resources/js/navbar.js";
+    document.body.appendChild(script);
+</script>        </div>
+    </div>
+    <!-- / Navbar -->
+
+    <iframe style="width:100%; height: 100%; position:absolute;" src="tattletale/jee-example-app-1.0.0-unparsable.ear/index.html"></iframe>
+    <script src="resources/js/jquery-1.10.1.min.js"></script>
+    <script src="resources/js/bootstrap.min.js"></script>
+</body>
+</html>
