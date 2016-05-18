@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <parent>
+        <groupId>com.mycompany.mavenized</groupId>
+        <artifactId>jee-example-app-parent</artifactId>
+        <version>1.0</version>
+    </parent>
+
+    <groupId>com.mycompany.mavenized</groupId>
+    <artifactId>jee-example-app-unparsable-ear</artifactId>
+    <version>1.0</version>
+    <packaging>ear</packaging>
+
+
+    <properties>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <!-- maven-compiler-plugin -->
+        <maven.compiler.target>1.8</maven.compiler.target>
+        <maven.compiler.source>1.8</maven.compiler.source>
+
+        <version.plugin.surefire>2.10</version.plugin.surefire>
+        <version.plugin.war>2.1.1</version.plugin.war>
+        <version.plugin.exec>1.2.1</version.plugin.exec>
+    </properties>
+
+    <dependencies>
+        <dependency>
+            <groupId>com.mycompany.mavenized</groupId>
+            <artifactId>jee-example-services2-jar</artifactId>
+            <version>1.0</version>
+        </dependency>
+        <dependency>
+            <groupId>com.mycompany.mavenized</groupId>
+            <artifactId>migration-support-jar</artifactId>
+            <version>1.0</version>
+        </dependency>
+        <dependency>
+            <groupId>com.mycompany.mavenized</groupId>
+            <artifactId>jee-example-web-war</artifactId>
+            <version>1.0</version>
+            <type>war</type>
+        </dependency>
+        <dependency>
+            <groupId>com.mycompany.mavenized</groupId>
+            <artifactId>jee-example-services-jar</artifactId>
+            <version>1.0</version>
+        </dependency>
+        <dependency>
+            <groupId>com.mycompany.mavenized</groupId>
+            <artifactId>unparsableclass-jar</artifactId>
+            <version>1.0</version>
+        </dependency>
+        <dependency>
+            <groupId>log4j</groupId>
+            <artifactId>log4j</artifactId>
+            <version>1.2.6</version>
+        </dependency>
+    </dependencies>
+
+    <build>
+        <finalName>${project.parent.artifactId}</finalName>
+        <plugins>
+            <!-- EAR plug-in -->
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-ear-plugin</artifactId>
+                <version>2.10.1</version>
+                <!-- configuring the EAR plug-in -->
+                <configuration>
+                    <!-- Tell Maven to generate Java EE 7 application.xml. -->
+                    <version>7</version>
+                    <!-- Use Java EE EAR libraries as needed. Java EE ear libraries
+                        are in easy way to package any libraries needed in the EAR, and automatically
+                        have any modules (EJB-JARs and WARs) use them. -->
+                    <defaultLibBundleDir>lib</defaultLibBundleDir>
+                    <modules>
+                    <!-- Default context root of the web app is /jboss-ejb-in-ear-web.
+                        If a custom context root is needed, uncomment the following snippet to
+                        register our War as a web module and set the contextRoot property.
+                        <webModule>
+                            <groupId>${project.groupId}</groupId>
+                            <artifactId>...-web</artifactId>
+                            <contextRoot>/${project.parent.artifactId}-ear</contextRoot>
+                        </webModule>
+                    -->
+                    </modules>
+                    <fileNameMapping>no-version</fileNameMapping>
+                </configuration>
+            </plugin>
+
+            <!-- WildFly plug-in to deploy EAR -->
+            <plugin>
+                <groupId>org.wildfly.plugins</groupId>
+                <artifactId>wildfly-maven-plugin</artifactId>
+                <configuration>
+                    <skip>false</skip>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
+
+</project>

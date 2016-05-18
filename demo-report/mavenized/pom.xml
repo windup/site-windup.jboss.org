@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+
+    <groupId>com.mycompany.mavenized</groupId>
+    <artifactId>jee-example-app-parent</artifactId>
+    <version>1.0</version>
+    <packaging>pom</packaging>
+
+    <name>JEE Example App - Parent</name>
+    <description>Parent of JEE Example App</description>
+
+    <properties>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <!-- maven-compiler-plugin -->
+        <maven.compiler.target>1.8</maven.compiler.target>
+        <maven.compiler.source>1.8</maven.compiler.source>
+
+        <version.plugin.surefire>2.10</version.plugin.surefire>
+        <version.plugin.war>2.1.1</version.plugin.war>
+        <version.plugin.exec>1.2.1</version.plugin.exec>
+    </properties>
+
+    <modules>
+        <module>jee-example-app-bom</module>
+        <module>jee-example-app-unparsable-ear</module>
+        <module>jee-example-services2-jar</module>
+        <module>migration-support-jar</module>
+        <module>jee-example-web-war</module>
+        <module>jee-example-services-jar</module>
+        <module>unparsableclass-jar</module>
+    </modules>
+
+
+    <!-- Activate JBoss Product Maven repository.
+
+        NOTE: Configuring the Maven repository in the pom.xml file is not a recommended procedure
+        and is only done here to make it easier.
+        See the section entitled 'Use the Maven Repository' in the Development Guide for Red Hat JBoss EAP:
+        https://access.redhat.com/documentation/en/jboss-enterprise-application-platform/
+    -->
+    <repositories>
+        <repository>
+            <id>jboss-enterprise-maven-repository</id>
+            <url>https://maven.repository.redhat.com/ga/</url>
+        </repository>
+    </repositories>
+    <pluginRepositories>
+        <pluginRepository>
+            <id>jboss-enterprise-maven-repository</id>
+            <url>https://maven.repository.redhat.com/ga/</url>
+        </pluginRepository>
+    </pluginRepositories>
+
+    <build>
+        <plugins>
+            <!-- The WildFly plug-in deploys your EAR to a local JBoss EAP container. -->
+            <plugin>
+                <groupId>org.wildfly.plugins</groupId>
+                <artifactId>wildfly-maven-plugin</artifactId>
+                <version>1.0.2.Final</version>
+                <configuration>
+                    <!-- Due to Maven's lack of intelligence with EARs we need to skip deployment for all modules.
+                         We then enable it specifically in the EAR module. -->
+                    <skip>true</skip>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
+
+</project>

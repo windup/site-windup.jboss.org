@@ -1,0 +1,15 @@
+Manifest-Version: 1.0
+Archiver-Version: Plexus Archiver
+Built-By: bradsdavis
+Build-Jdk: 1.6.0_45
+Created-By: Apache Maven 3.0.4
+
+
+### OSGi information
+Bundle-ManifestVersion: 2
+Bundle-SymbolicName: UNKNOWN
+Bundle-Description: jee-example-app-1.0.0-unparsable
+Bundle-Name: jee-example-app-1.0.0-unparsable
+Bundle-Version: 0.0.0
+Export-Package: 
+Import-Package: 

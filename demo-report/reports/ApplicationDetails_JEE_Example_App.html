@@ -1,0 +1,2756 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>jee-example-app-1.0.0-unparsable.ear - Application Details Report</title>
+    <link href="resources/css/bootstrap.min.css" rel="stylesheet">
+    <link href="resources/css/windup.css" rel="stylesheet" media="screen">
+    <link href="resources/css/windup.java.css" rel="stylesheet" media="screen">
+    <link href="resources/img/favicon.png" rel="shortcut icon" type="image/x-icon"/>
+    <script src="resources/js/windup-overview-head.js"></script>
+    <style>
+        .desc { z-index: 5000; }
+    </style>
+</head>
+<body role="document" class="java-application report-Application Details">
+
+    <!-- Navbar -->
+    <div id="main-navbar" class="navbar navbar-default navbar-fixed-top">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-responsive-collapse">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+        </div>
+
+        <div class="navbar-collapse collapse navbar-responsive-collapse">
+<ul class="nav navbar-nav">
+        <li class="">
+            <a href="../index.html"><i class="glyphicon glyphicon-home"></i> All Applications</a>
+        </li>
+
+
+
+            <li class="">
+                <a href="report_index_JEE_Example_App.html">
+                    <i class="glyphicon glyphicon-th-list"></i>
+                  Report Index
+                </a>
+            </li>
+
+
+            <li class="">
+                <a href="migration_issues.html">
+                    <i class="glyphicon glyphicon-warning-sign"></i>
+                  Migration Issues
+                </a>
+            </li>
+
+
+            <li class="active">
+                <a href="#">
+                    <i class="glyphicon glyphicon-th-list"></i>
+                  Application Details
+                </a>
+            </li>
+
+
+            <li class="">
+                <a href="Unparsable_JEE_Example_App.html">
+                    <i class="glyphicon glyphicon-warning-sign"></i>
+                  Unparsable
+                </a>
+            </li>
+
+
+            <li class="">
+                <a href="dependency_report_JEE_Example_App.html">
+                    <i class="glyphicon glyphicon-flag"></i>
+                  JAR Dependencies
+                </a>
+            </li>
+
+
+            <li class="">
+                <a href="remotereport_JEE_Example_App.html">
+                    <i class="glyphicon service-nav-logo"></i>
+                  Remote Services
+                </a>
+            </li>
+
+
+            <li class="">
+                <a href="ejbreport_JEE_Example_App.html">
+                    <i class="glyphicon ejb-nav-logo"></i>
+                  EJBs
+                </a>
+            </li>
+
+
+            <li class="">
+                <a href="server_resources_JEE_Example_App.html">
+                    <i class="glyphicon server-resource-nav-logo"></i>
+                  Server Resources
+                </a>
+            </li>
+
+
+            <li class="">
+                <a href="tattletale_JEE_Example_App.html">
+                    <i class="glyphicon tattletale-nav-logo"></i>
+                  Tattletale
+                </a>
+            </li>
+
+
+            <li class="">
+                <a href="ignoredfiles_JEE_Example_App.html">
+                    <i class="glyphicon glyphicon-eye-close"></i>
+                  Ignored Files
+                </a>
+            </li>
+
+
+            <li class="">
+                <a href="about_JEE_Example_App.html">
+                    <i class="glyphicon glyphicon-info-sign"></i>
+                  About
+                </a>
+            </li>
+</ul>
+<ul class="nav navbar-nav navbar-right">
+<li>
+    <a href="#" id="jiraFeedbackTrigger" class="feedback-nav-btn"><i class="glyphicon glyphicon-comment"></i> Send Feedback </a>
+</li>
+
+
+<script type="text/javascript" src="https://issues.jboss.org/s/f215932e68571747ac58d0f5d554396f-T/en_US-r7luaf/6346/82/1.4.16/_/download/batch/com.atlassian.jira.collector.plugin.jira-issue-collector-plugin:issuecollector/com.atlassian.jira.collector.plugin.jira-issue-collector-plugin:issuecollector.js?locale=en-US&amp;collectorId=8b9e338b"></script>
+<script type="text/javascript">
+window.ATL_JQ_PAGE_PROPS = {
+    "triggerFunction": function(showCollectorDialog) {
+        jQuery("#jiraFeedbackTrigger").click(function(e) {
+            e.preventDefault();
+            showCollectorDialog();
+        });
+    }
+};
+</script>
+</ul>
+
+<script type="text/javascript">
+    var script   = document.createElement("script");
+    script.type  = "text/javascript";
+    script.src   = "resources/js/navbar.js";
+    document.body.appendChild(script);
+</script>        </div><!-- /.nav-collapse -->
+    </div>
+    <!-- / Navbar -->
+
+    <div class="container-fluid" role="main">
+
+        <div class="row">
+            <div class="page-header page-header-no-border">
+                <h1>
+                    <div class="main">Application Details Report</div>
+                    <div class="path">jee-example-app-1.0.0-unparsable.ear</div>
+                </h1>
+                <div class="desc">
+                    This provides a detailed overview of all resources found within the application that may need attention during the migration.
+                </div>
+            </div>
+        </div>
+
+        <!-- Summary -->
+        <div class="row container-fluid">
+            <div class="container mainGraphContainer">
+                <table class="summaryLayout" style="width: 100%;">
+                    <tr>
+                        <td colspan="2">
+                            <div class="points" style="text-align: center; color: #00254b; padding-bottom: 1ex;">
+                                <div class="number">83</div>
+                                <div>Story Points</div>
+                            </div>
+                            <div id="treeView-Projects-wrap" class="short">
+                                <div id="overlayFog" class="showMore">
+                                    <span style="position: relative; top: 4ex; left: 4em;" class="hideWhenComputed">Computing...</span>
+                                </div>
+                                <div id="treeView-Projects"></div>
+                                <div class="showButtons hideUntilComputed">
+                                    <a class="showMore" href="#" onclick='$("#treeView-Projects-wrap").removeClass("short")'>Show all &#x21F2;</a>
+                                    <a class="showLess" href="#" onclick='$("#treeView-Projects-wrap").addClass("short")'>Show less &#x21F1;</a>
+                                </div>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div class="chartBoundary">
+                                <h4>Java Incidents by Package</h4>
+                                <div id="application_pie" class="windupPieGraph"></div>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="chartBoundary">
+                                <h4>Technologies found - occurrence count</h4>
+                                <div id="tagsChartContainer-sum" style="height: 300px; width: 500px;">
+                                    <div class="hideWhenComputed" style="position: relative; top: 4ex; left: 4em;">Computing...</div>
+                                </div>
+                            </div>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+
+        <script>
+            // For projects TreeView - used when gathering the projects data to JavaScript.
+            var rootProject = null;
+            var parentProject = null;
+            var thisProject = null;
+        </script>
+
+        <div class="row container-fluid">
+            <div class="theme-showcase" role="main">
+    <div class="panel panel-primary">
+        <div class="panel-heading">
+            <h3 class="panel-title">Application Messages</h3>
+        </div>
+        <table class="table table-striped table-bordered">
+            <tr>
+                <td>
+                    Deploying log4j.jar can result in non-deterministic ClassLoading issues. It is recommended to use the built-in JBoss EAP Log4j module configured via `jboss-deployment-structure.xml`
+<a title='View Rule: log4j-01000' href='windup_ruleproviders.html#log4j-01000'><span class='glyphicon glyphicon-link rule-link'></span></a>                </td>
+            </tr>
+        </table>
+    </div>
+                <div>
+                    <a id="collapseAll" href="javascript:collapseAll()">Collapse All</a>
+                    <a id="expandAll" href="javascript:expandAll()">Expand All</a>
+                </div>
+    <div class="panel panel-primary projectBox" id="project_96000" data-windup-projectguid="58456c34-abc3-4e05-8c61-aa63292a1558" data-windup-project-storypoints="4">
+        <div class="panel-heading panel-collapsed clickable">
+            <span class="pull-left"><i class="glyphicon glyphicon-expand arrowIcon"></i></span>
+            <h3 class="panel-title">jee-example-app-1.0.0-unparsable.ear
+                <span class="storyPoints">(4 story points)</span>
+            </h3>
+        </div>
+        <div class="panel-body" style="display:none">
+        <div class="container-fluid summaryMargin">
+
+            <table class="summaryLayout">
+                <tr>
+                    <td colspan="2">
+                        <!-- Points -->
+                        <div class="points">
+                            <div class="number">4</div>
+                            <div>Story Points</div>
+                        </div>
+
+                        <!-- Basic info -->
+                        <div class="basicInfo">
+                            <table class="table">
+                                <tr>
+                                    <th>Maven coordinates</th>
+                                    <td> org.windup.example:jee-example-app:1.0.0 </td>
+                                </tr>
+                                <tr>
+                                    <th>Organization</th>
+                                    <td>
+                                                Unknown
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th>Name</th>
+                                    <td>JEE Example App</td>
+                                </tr>
+                                <tr>
+                                    <th>Version</th>
+                                    <td>1.0.0</td>
+                                </tr>
+                                <tr>
+                                    <th>Links</th>
+                                    <td>
+
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th>Description</th>
+                                    <td>
+                                        
+                                    </td>
+                                </tr>
+                            </table>
+                        </div><!-- /.basicInfo -->
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <!-- Packages pie chart -->
+                        <div class="chartBoundary">
+                            <h4>Java Incidents by Package</h4>
+                            <div id="project_96000_pie" class="windupPieGraph"></div>
+                        </div>
+                    </td>
+                    <td>
+                        <div class="tagsBarChart chartBoundary">
+                            <h4>Technologies found - occurrence count</h4>
+                            <!-- Tags bar chart will be appended here. -->
+                        </div>
+                    </td>
+                </tr>
+            </table>
+
+        </div>
+        <table class="subprojects table table-striped table-bordered">
+            <tr>
+                <th>Name</th><th>Technology</th><th>Issues</th><th>Story Points</th>
+            </tr>
+
+    <tr class="projectFile">
+        <td class="path">
+            <a href="LogEventTopic_jms_xml.html">
+                LogEventTopic-jms.xml
+            </a>
+        </td>
+        <td class="tech">
+                <span class="label label-info tag" data-windup-tag="jms">jms</span>
+                <span class="label label-info tag" data-windup-tag="configuration">configuration</span>
+                <span class="label label-info tag" data-windup-tag="weblogic">weblogic</span>
+            <div style="clear: both;"></div>
+        </td>
+
+        <td class="warnCount1">
+                    WebLogic JMS Descriptor
+        </td>
+
+        <td>
+            3
+        </td>
+    </tr>
+
+    <tr class="projectFile">
+        <td class="path">
+            <a href="MANIFEST_MF.7.html">
+                META-INF/MANIFEST.MF
+            </a>
+        </td>
+        <td class="tech">
+    <span title="INFORMATIONAL" class="label label-info tag-Manifest "
+          data-windup-tag="Manifest">
+                    Manifest 
+    </span>
+            <div style="clear: both;"></div>
+        </td>
+
+        <td class="warnCount0">
+        </td>
+
+        <td>
+            0
+        </td>
+    </tr>
+
+    <tr class="projectFile">
+        <td class="path">
+            <a href="weblogic_application_xml.html">
+                META-INF/weblogic-application.xml
+            </a>
+        </td>
+        <td class="tech">
+                <span class="label label-info tag" data-windup-tag="weblogic">weblogic</span>
+                <span class="label label-info tag" data-windup-tag="webservice">webservice</span>
+            <div style="clear: both;"></div>
+        </td>
+
+        <td class="warnCount2">
+                <div class="warns">Warnings: 2 items</div>
+                <ul class="notifications">
+                        <li class="warning"> WebLogic EAR Application Descriptor <small>1&#215;</small></li>
+                        <li class="warning"> weblogic-application.xml Elements mapping <small>1&#215;</small></li>
+                </ul>
+        </td>
+
+        <td>
+            1
+        </td>
+    </tr>
+
+    <tr class="projectFile">
+        <td class="path">
+            <a href="pom_properties.5.html">
+                META-INF/maven/org.windup.example/jee-example-app/pom.properties
+            </a>
+        </td>
+        <td class="tech">
+    <span title="INFORMATIONAL" class="label label-info tag-Properties "
+          data-windup-tag="Properties">
+                    Properties 
+    </span>
+            <div style="clear: both;"></div>
+        </td>
+
+        <td class="warnCount0">
+        </td>
+
+        <td>
+            0
+        </td>
+    </tr>
+
+    <tr class="projectFile">
+        <td class="path">
+            <a href="pom_xml.4.html">
+                META-INF/maven/org.windup.example/jee-example-app/pom.xml
+            </a>
+        </td>
+        <td class="tech">
+    <span title="INFORMATIONAL" class="label label-info tag-MavenXML "
+          data-windup-tag="Maven XML">
+                    Maven XML 
+    </span>
+            <div style="clear: both;"></div>
+        </td>
+
+        <td class="warnCount1">
+                    Maven POM
+        </td>
+
+        <td>
+            0
+        </td>
+    </tr>
+
+    <tr class="projectFile">
+        <td class="path">
+            <a href="pom_properties.6.html">
+                META-INF/maven/org.windup.example/unparsable/pom.properties
+            </a>
+        </td>
+        <td class="tech">
+    <span title="INFORMATIONAL" class="label label-info tag-Properties "
+          data-windup-tag="Properties">
+                    Properties 
+    </span>
+            <div style="clear: both;"></div>
+        </td>
+
+        <td class="warnCount0">
+        </td>
+
+        <td>
+            0
+        </td>
+    </tr>
+
+    <tr class="projectFile">
+        <td class="path">
+            <a href="pom_xml.6.html">
+                META-INF/maven/org.windup.example/unparsable/pom.xml
+            </a>
+        </td>
+        <td class="tech">
+            <div style="clear: both;"></div>
+        </td>
+
+        <td class="warnCount1">
+                    Unparsable XML File
+        </td>
+
+        <td>
+            0
+        </td>
+    </tr>
+        </table>
+        </div>
+    </div>
+
+    <script>
+        thisProject = new ProjectNode("jee-example-app-1.0.0-unparsable.ear", "project_96000");
+        thisProject.sourceBased = false;
+        var $tagLabels = $("#project_96000 .projectFile .tech .label");
+        var $tagWarns = $tagLabels.find(".warning");
+        $tagWarns.add( $tagLabels.find(".danger") );
+        thisProject.warnings = $tagWarns.size();
+        thisProject.tags = []; /// TODO: Need to execute all this after the tag JS analysis.
+
+        if (parentProject == null)
+            rootProject = thisProject;
+        else
+            parentProject.addSubproject(thisProject);
+        parentProject = thisProject;
+    </script>
+    <div class="panel panel-primary projectBox" id="project_94976" data-windup-projectguid="d677eb14-4377-40e1-9737-38ff17bf6713" data-windup-project-storypoints="62">
+        <div class="panel-heading panel-collapsed clickable">
+            <span class="pull-left"><i class="glyphicon glyphicon-expand arrowIcon"></i></span>
+            <h3 class="panel-title">jee-example-app-1.0.0-unparsable.ear/jee-example-services.jar
+                <span class="storyPoints">(62 story points)</span>
+            </h3>
+        </div>
+        <div class="panel-body" style="display:none">
+        <div class="container-fluid summaryMargin">
+
+            <table class="summaryLayout">
+                <tr>
+                    <td colspan="2">
+                        <!-- Points -->
+                        <div class="points">
+                            <div class="number">62</div>
+                            <div>Story Points</div>
+                        </div>
+
+                        <!-- Basic info -->
+                        <div class="basicInfo">
+                            <table class="table">
+                                <tr>
+                                    <th>Maven coordinates</th>
+                                    <td> org.windup.example:jee-example-services:1.0.0 </td>
+                                </tr>
+                                <tr>
+                                    <th>Organization</th>
+                                    <td>
+                                                Unknown
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th>Name</th>
+                                    <td>JEE Example EJB Services</td>
+                                </tr>
+                                <tr>
+                                    <th>Version</th>
+                                    <td>1.0.0</td>
+                                </tr>
+                                <tr>
+                                    <th>Links</th>
+                                    <td>
+
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th>Description</th>
+                                    <td>
+                                        
+                                    </td>
+                                </tr>
+                            </table>
+                        </div><!-- /.basicInfo -->
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <!-- Packages pie chart -->
+                        <div class="chartBoundary">
+                            <h4>Java Incidents by Package</h4>
+                            <div id="project_94976_pie" class="windupPieGraph"></div>
+                        </div>
+                    </td>
+                    <td>
+                        <div class="tagsBarChart chartBoundary">
+                            <h4>Technologies found - occurrence count</h4>
+                            <!-- Tags bar chart will be appended here. -->
+                        </div>
+                    </td>
+                </tr>
+            </table>
+
+        </div>
+        <table class="subprojects table table-striped table-bordered">
+            <tr>
+                <th>Name</th><th>Technology</th><th>Issues</th><th>Story Points</th>
+            </tr>
+
+    <tr class="projectFile">
+        <td class="path">
+            <a href="MANIFEST_MF.8.html">
+                META-INF/MANIFEST.MF
+            </a>
+        </td>
+        <td class="tech">
+    <span title="INFORMATIONAL" class="label label-info tag-Manifest "
+          data-windup-tag="Manifest">
+                    Manifest 
+    </span>
+            <div style="clear: both;"></div>
+        </td>
+
+        <td class="warnCount0">
+        </td>
+
+        <td>
+            0
+        </td>
+    </tr>
+
+    <tr class="projectFile">
+        <td class="path">
+            <a href="NonParsable_xml.html">
+                META-INF/NonParsable.xml
+            </a>
+        </td>
+        <td class="tech">
+            <div style="clear: both;"></div>
+        </td>
+
+        <td class="warnCount1">
+                    Unparsable XML File
+        </td>
+
+        <td>
+            0
+        </td>
+    </tr>
+
+    <tr class="projectFile">
+        <td class="path">
+            <a href="ejb_jar_xml.1.html">
+                META-INF/ejb-jar.xml
+            </a>
+        </td>
+        <td class="tech">
+    <span title="INFORMATIONAL" class="label label-info tag-EJBXML "
+          data-windup-tag="EJB XML">
+                    EJB XML 2.1
+    </span>
+            <div style="clear: both;"></div>
+        </td>
+
+        <td class="warnCount1">
+                    EJB XML
+        </td>
+
+        <td>
+            0
+        </td>
+    </tr>
+
+    <tr class="projectFile">
+        <td class="path">
+            <a href="weblogic_ejb_jar_xml.1.html">
+                META-INF/weblogic-ejb-jar.xml
+            </a>
+        </td>
+        <td class="tech">
+    <span title="IMPORTANT" class="label label-danger tag-WebLogicEJBXML "
+          data-windup-tag="WebLogic EJB XML">
+                    WebLogic EJB XML 
+    </span>
+            <div style="clear: both;"></div>
+        </td>
+
+        <td class="warnCount1">
+                    WebLogic EJB XML
+        </td>
+
+        <td>
+            0
+        </td>
+    </tr>
+
+    <tr class="projectFile">
+        <td class="path">
+            <a href="pom_properties.7.html">
+                META-INF/maven/org.windup.example/jee-example-services/pom.properties
+            </a>
+        </td>
+        <td class="tech">
+    <span title="INFORMATIONAL" class="label label-info tag-Properties "
+          data-windup-tag="Properties">
+                    Properties 
+    </span>
+            <div style="clear: both;"></div>
+        </td>
+
+        <td class="warnCount0">
+        </td>
+
+        <td>
+            0
+        </td>
+    </tr>
+
+    <tr class="projectFile">
+        <td class="path">
+            <a href="pom_xml.7.html">
+                META-INF/maven/org.windup.example/jee-example-services/pom.xml
+            </a>
+        </td>
+        <td class="tech">
+    <span title="INFORMATIONAL" class="label label-info tag-MavenXML "
+          data-windup-tag="Maven XML">
+                    Maven XML 
+    </span>
+            <div style="clear: both;"></div>
+        </td>
+
+        <td class="warnCount1">
+                    Maven POM
+        </td>
+
+        <td>
+            0
+        </td>
+    </tr>
+
+    <tr class="projectFile">
+        <td class="path">
+            <a href="AnvilWebLifecycleListener_java.html">
+                com.acme.anvil.listener.AnvilWebLifecycleListener
+            </a>
+        </td>
+        <td class="tech">
+    <span title="INFORMATIONAL" class="label label-info tag-DecompiledJavaFile "
+          data-windup-tag="Decompiled Java File">
+                    Decompiled Java File 
+    </span>
+                <span class="label label-info tag" data-windup-tag="lifecycle">lifecycle</span>
+                <span class="label label-info tag" data-windup-tag="catchall">catchall</span>
+                <span class="label label-info tag" data-windup-tag="jmx">jmx</span>
+                <span class="label label-info tag" data-windup-tag="configuration">configuration</span>
+                <span class="label label-info tag" data-windup-tag="weblogic">weblogic</span>
+                <span class="label label-info tag" data-windup-tag="jndi">jndi</span>
+            <div style="clear: both;"></div>
+        </td>
+
+        <td class="warnCount22">
+                <div class="warns">Warnings: 22 items</div>
+                <ul class="notifications">
+                        <li class="warning"> WebLogic ApplicationLifecycleEvent <small>1&#215;</small></li>
+                        <li class="warning"> WebLogic ApplicationLifecycleListener <small>1&#215;</small></li>
+                        <li class="warning"> WebLogic Initial Context Configuration <small>2&#215;</small></li>
+                        <li class="warning"> Call of JNDI lookup <small>1&#215;</small></li>
+                        <li class="warning"> Proprietary InitialContext initialization <small>1&#215;</small></li>
+                        <li class="warning"> Reference to javax.management.ObjectName <small>2&#215;</small></li>
+                        <li class="warning"> Oracle proprietary type reference <small>14&#215;</small></li>
+                </ul>
+        </td>
+
+        <td>
+            16
+        </td>
+    </tr>
+
+    <tr class="projectFile">
+        <td class="path">
+            <a href="AnvilWebStartupListener_java.html">
+                com.acme.anvil.listener.AnvilWebStartupListener
+            </a>
+        </td>
+        <td class="tech">
+    <span title="INFORMATIONAL" class="label label-info tag-DecompiledJavaFile "
+          data-windup-tag="Decompiled Java File">
+                    Decompiled Java File 
+    </span>
+                <span class="label label-info tag" data-windup-tag="catchall">catchall</span>
+                <span class="label label-info tag" data-windup-tag="jmx">jmx</span>
+                <span class="label label-info tag" data-windup-tag="configuration">configuration</span>
+                <span class="label label-info tag" data-windup-tag="startup">startup</span>
+                <span class="label label-info tag" data-windup-tag="weblogic">weblogic</span>
+                <span class="label label-info tag" data-windup-tag="jndi">jndi</span>
+                <span class="label label-info tag" data-windup-tag="logging">logging</span>
+                <span class="label label-info tag" data-windup-tag="webservice">webservice</span>
+            <div style="clear: both;"></div>
+        </td>
+
+        <td class="warnCount24">
+                <div class="warns">Warnings: 24 items</div>
+                <ul class="notifications">
+                        <li class="warning"> WebLogic Startup Service <small>1&#215;</small></li>
+                        <li class="warning"> WebLogic Logger Usage <small>6&#215;</small></li>
+                        <li class="warning"> WebLogic Initial Context Configuration <small>1&#215;</small></li>
+                        <li class="warning"> Use of WebLogic Startup Service <small>1&#215;</small></li>
+                        <li class="warning"> Use of T3ServicesDef <small>3&#215;</small></li>
+                        <li class="warning"> Use of WebLogic specific logging classes <small>2&#215;</small></li>
+                        <li class="warning"> Call of JNDI lookup <small>1&#215;</small></li>
+                        <li class="warning"> Reference to javax.management.ObjectName <small>1&#215;</small></li>
+                        <li class="warning"> Oracle proprietary type reference <small>8&#215;</small></li>
+                </ul>
+        </td>
+
+        <td>
+            25
+        </td>
+    </tr>
+
+    <tr class="projectFile">
+        <td class="path">
+            <a href="ItemLookup_java.html">
+                com.acme.anvil.service.ItemLookup
+            </a>
+        </td>
+        <td class="tech">
+    <span title="INFORMATIONAL" class="label label-info tag-DecompiledJavaFile "
+          data-windup-tag="Decompiled Java File">
+                    Decompiled Java File 
+    </span>
+            <div style="clear: both;"></div>
+        </td>
+
+        <td class="warnCount0">
+        </td>
+
+        <td>
+            0
+        </td>
+    </tr>
+
+    <tr class="projectFile">
+        <td class="path">
+            <a href="ItemLookupBean_java.html">
+                com.acme.anvil.service.ItemLookupBean
+            </a>
+        </td>
+        <td class="tech">
+    <span title="INFORMATIONAL" class="label label-info tag-DecompiledJavaFile "
+          data-windup-tag="Decompiled Java File">
+                    Decompiled Java File 
+    </span>
+                <span class="label label-info tag" data-windup-tag="catchall">catchall</span>
+            <div style="clear: both;"></div>
+        </td>
+
+        <td class="warnCount3">
+                <div class="warns">Warnings: 3 items</div>
+                <ul class="notifications">
+                        <li class="warning"> Oracle proprietary type reference <small>3&#215;</small></li>
+                </ul>
+        </td>
+
+        <td>
+            0
+        </td>
+    </tr>
+
+    <tr class="projectFile">
+        <td class="path">
+            <a href="ItemLookupHome_java.html">
+                com.acme.anvil.service.ItemLookupHome
+            </a>
+        </td>
+        <td class="tech">
+    <span title="INFORMATIONAL" class="label label-info tag-DecompiledJavaFile "
+          data-windup-tag="Decompiled Java File">
+                    Decompiled Java File 
+    </span>
+            <div style="clear: both;"></div>
+        </td>
+
+        <td class="warnCount0">
+        </td>
+
+        <td>
+            0
+        </td>
+    </tr>
+
+    <tr class="projectFile">
+        <td class="path">
+            <a href="ItemLookupLocal_java.html">
+                com.acme.anvil.service.ItemLookupLocal
+            </a>
+        </td>
+        <td class="tech">
+    <span title="INFORMATIONAL" class="label label-info tag-DecompiledJavaFile "
+          data-windup-tag="Decompiled Java File">
+                    Decompiled Java File 
+    </span>
+            <div style="clear: both;"></div>
+        </td>
+
+        <td class="warnCount0">
+        </td>
+
+        <td>
+            0
+        </td>
+    </tr>
+
+    <tr class="projectFile">
+        <td class="path">
+            <a href="ItemLookupLocalHome_java.html">
+                com.acme.anvil.service.ItemLookupLocalHome
+            </a>
+        </td>
+        <td class="tech">
+    <span title="INFORMATIONAL" class="label label-info tag-DecompiledJavaFile "
+          data-windup-tag="Decompiled Java File">
+                    Decompiled Java File 
+    </span>
+            <div style="clear: both;"></div>
+        </td>
+
+        <td class="warnCount0">
+        </td>
+
+        <td>
+            0
+        </td>
+    </tr>
+
+    <tr class="projectFile">
+        <td class="path">
+            <a href="ProductCatalog_java.html">
+                com.acme.anvil.service.ProductCatalog
+            </a>
+        </td>
+        <td class="tech">
+    <span title="INFORMATIONAL" class="label label-info tag-DecompiledJavaFile "
+          data-windup-tag="Decompiled Java File">
+                    Decompiled Java File 
+    </span>
+            <div style="clear: both;"></div>
+        </td>
+
+        <td class="warnCount0">
+        </td>
+
+        <td>
+            0
+        </td>
+    </tr>
+
+    <tr class="projectFile">
+        <td class="path">
+            <a href="ProductCatalogBean_java.html">
+                com.acme.anvil.service.ProductCatalogBean
+            </a>
+        </td>
+        <td class="tech">
+    <span title="INFORMATIONAL" class="label label-info tag-DecompiledJavaFile "
+          data-windup-tag="Decompiled Java File">
+                    Decompiled Java File 
+    </span>
+                <span class="label label-info tag" data-windup-tag="weblogic">weblogic</span>
+                <span class="label label-info tag" data-windup-tag="logging">logging</span>
+            <div style="clear: both;"></div>
+        </td>
+
+        <td class="warnCount7">
+                <div class="warns">Warnings: 7 items</div>
+                <ul class="notifications">
+                        <li class="warning"> WebLogic Logger Usage <small>5&#215;</small></li>
+                        <li class="warning"> Use of WebLogic specific logging classes <small>2&#215;</small></li>
+                </ul>
+        </td>
+
+        <td>
+            7
+        </td>
+    </tr>
+
+    <tr class="projectFile">
+        <td class="path">
+            <a href="ProductCatalogHome_java.html">
+                com.acme.anvil.service.ProductCatalogHome
+            </a>
+        </td>
+        <td class="tech">
+    <span title="INFORMATIONAL" class="label label-info tag-DecompiledJavaFile "
+          data-windup-tag="Decompiled Java File">
+                    Decompiled Java File 
+    </span>
+            <div style="clear: both;"></div>
+        </td>
+
+        <td class="warnCount0">
+        </td>
+
+        <td>
+            0
+        </td>
+    </tr>
+
+    <tr class="projectFile">
+        <td class="path">
+            <a href="ProductCatalogLocal_java.html">
+                com.acme.anvil.service.ProductCatalogLocal
+            </a>
+        </td>
+        <td class="tech">
+    <span title="INFORMATIONAL" class="label label-info tag-DecompiledJavaFile "
+          data-windup-tag="Decompiled Java File">
+                    Decompiled Java File 
+    </span>
+            <div style="clear: both;"></div>
+        </td>
+
+        <td class="warnCount0">
+        </td>
+
+        <td>
+            0
+        </td>
+    </tr>
+
+    <tr class="projectFile">
+        <td class="path">
+            <a href="ProductCatalogLocalHome_java.html">
+                com.acme.anvil.service.ProductCatalogLocalHome
+            </a>
+        </td>
+        <td class="tech">
+    <span title="INFORMATIONAL" class="label label-info tag-DecompiledJavaFile "
+          data-windup-tag="Decompiled Java File">
+                    Decompiled Java File 
+    </span>
+            <div style="clear: both;"></div>
+        </td>
+
+        <td class="warnCount0">
+        </td>
+
+        <td>
+            0
+        </td>
+    </tr>
+
+    <tr class="projectFile">
+        <td class="path">
+            <a href="LogEventPublisher_java.html">
+                com.acme.anvil.service.jms.LogEventPublisher
+            </a>
+        </td>
+        <td class="tech">
+    <span title="INFORMATIONAL" class="label label-info tag-DecompiledJavaFile "
+          data-windup-tag="Decompiled Java File">
+                    Decompiled Java File 
+    </span>
+                <span class="label label-info tag" data-windup-tag="catchall">catchall</span>
+                <span class="label label-info tag" data-windup-tag="jms">jms</span>
+                <span class="label label-info tag" data-windup-tag="configuration">configuration</span>
+                <span class="label label-info tag" data-windup-tag="weblogic">weblogic</span>
+                <span class="label label-info tag" data-windup-tag="jndi">jndi</span>
+                <span class="label label-info tag" data-windup-tag="transactions">transactions</span>
+            <div style="clear: both;"></div>
+        </td>
+
+        <td class="warnCount15">
+                <div class="warns">Warnings: 15 items</div>
+                <ul class="notifications">
+                        <li class="warning"> WebLogic TransactionManager Usage <small>2&#215;</small></li>
+                        <li class="warning"> WebLogic TransactionManager Usage of resume method <small>1&#215;</small></li>
+                        <li class="warning"> WebLogic TransactionManager Usage of suspend method <small>1&#215;</small></li>
+                        <li class="warning"> WebLogic Initial Context Configuration <small>2&#215;</small></li>
+                        <li class="warning"> Call of JNDI lookup <small>2&#215;</small></li>
+                        <li class="warning"> Proprietary InitialContext initialization <small>1&#215;</small></li>
+                        <li class="warning"> javax.jms.QueueConnectionFactory <small>1&#215;</small></li>
+                        <li class="warning"> Oracle proprietary type reference <small>5&#215;</small></li>
+                </ul>
+        </td>
+
+        <td>
+            14
+        </td>
+    </tr>
+
+    <tr class="projectFile">
+        <td class="path">
+            <a href="LogEventSubscriber_java.html">
+                com.acme.anvil.service.jms.LogEventSubscriber
+            </a>
+        </td>
+        <td class="tech">
+    <span title="INFORMATIONAL" class="label label-info tag-DecompiledJavaFile "
+          data-windup-tag="Decompiled Java File">
+                    Decompiled Java File 
+    </span>
+            <div style="clear: both;"></div>
+        </td>
+
+        <td class="warnCount0">
+        </td>
+
+        <td>
+            0
+        </td>
+    </tr>
+        </table>
+        </div>
+    </div>
+
+    <script>
+        thisProject = new ProjectNode("jee-example-services.jar", "project_94976");
+        thisProject.sourceBased = false;
+        var $tagLabels = $("#project_94976 .projectFile .tech .label");
+        var $tagWarns = $tagLabels.find(".warning");
+        $tagWarns.add( $tagLabels.find(".danger") );
+        thisProject.warnings = $tagWarns.size();
+        thisProject.tags = []; /// TODO: Need to execute all this after the tag JS analysis.
+
+        if (parentProject == null)
+            rootProject = thisProject;
+        else
+            parentProject.addSubproject(thisProject);
+        parentProject = thisProject;
+    </script>
+    <script>
+        parentProject = parentProject.getParent();
+    </script>
+    <div class="panel panel-primary projectBox" id="project_87808" data-windup-projectguid="30b9c9f7-a9b3-4571-898d-c943f3b0ac90" data-windup-project-storypoints="0">
+        <div class="panel-heading panel-collapsed clickable">
+            <span class="pull-left"><i class="glyphicon glyphicon-expand arrowIcon"></i></span>
+            <h3 class="panel-title">jee-example-app-1.0.0-unparsable.ear/jee-example-services2.jar
+                <span class="storyPoints">(0 story points)</span>
+            </h3>
+        </div>
+        <div class="panel-body" style="display:none">
+        <div class="container-fluid summaryMargin">
+
+            <table class="summaryLayout">
+                <tr>
+                    <td colspan="2">
+                        <!-- Points -->
+                        <div class="points">
+                            <div class="number">0</div>
+                            <div>Story Points</div>
+                        </div>
+
+                        <!-- Basic info -->
+                        <div class="basicInfo">
+                            <table class="table">
+                                <tr>
+                                    <th>Maven coordinates</th>
+                                    <td> org.windup.example:jee-example-services2:1.0.0 </td>
+                                </tr>
+                                <tr>
+                                    <th>Organization</th>
+                                    <td>
+                                                Unknown
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th>Name</th>
+                                    <td>JEE Example EJB Services</td>
+                                </tr>
+                                <tr>
+                                    <th>Version</th>
+                                    <td>1.0.0</td>
+                                </tr>
+                                <tr>
+                                    <th>Links</th>
+                                    <td>
+
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th>Description</th>
+                                    <td>
+                                        
+                                    </td>
+                                </tr>
+                            </table>
+                        </div><!-- /.basicInfo -->
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <!-- Packages pie chart -->
+                        <div class="chartBoundary">
+                            <h4>Java Incidents by Package</h4>
+                            <div id="project_87808_pie" class="windupPieGraph"></div>
+                        </div>
+                    </td>
+                    <td>
+                        <div class="tagsBarChart chartBoundary">
+                            <h4>Technologies found - occurrence count</h4>
+                            <!-- Tags bar chart will be appended here. -->
+                        </div>
+                    </td>
+                </tr>
+            </table>
+
+        </div>
+        <table class="subprojects table table-striped table-bordered">
+            <tr>
+                <th>Name</th><th>Technology</th><th>Issues</th><th>Story Points</th>
+            </tr>
+
+    <tr class="projectFile">
+        <td class="path">
+            <a href="MANIFEST_MF.2.html">
+                META-INF/MANIFEST.MF
+            </a>
+        </td>
+        <td class="tech">
+    <span title="INFORMATIONAL" class="label label-info tag-Manifest "
+          data-windup-tag="Manifest">
+                    Manifest 
+    </span>
+            <div style="clear: both;"></div>
+        </td>
+
+        <td class="warnCount0">
+        </td>
+
+        <td>
+            0
+        </td>
+    </tr>
+
+    <tr class="projectFile">
+        <td class="path">
+            <a href="ejb_jar_xml.html">
+                META-INF/ejb-jar.xml
+            </a>
+        </td>
+        <td class="tech">
+    <span title="INFORMATIONAL" class="label label-info tag-EJBXML "
+          data-windup-tag="EJB XML">
+                    EJB XML 2.1
+    </span>
+            <div style="clear: both;"></div>
+        </td>
+
+        <td class="warnCount1">
+                    EJB XML
+        </td>
+
+        <td>
+            0
+        </td>
+    </tr>
+
+    <tr class="projectFile">
+        <td class="path">
+            <a href="weblogic_ejb_jar_xml.html">
+                META-INF/weblogic-ejb-jar.xml
+            </a>
+        </td>
+        <td class="tech">
+    <span title="IMPORTANT" class="label label-danger tag-WebLogicEJBXML "
+          data-windup-tag="WebLogic EJB XML">
+                    WebLogic EJB XML 
+    </span>
+            <div style="clear: both;"></div>
+        </td>
+
+        <td class="warnCount2">
+                <div class="warns">Warnings: 2 items</div>
+                <ul class="notifications">
+                        <li class="warning"> WebLogic EJB XML <small>2&#215;</small></li>
+                </ul>
+        </td>
+
+        <td>
+            0
+        </td>
+    </tr>
+
+    <tr class="projectFile">
+        <td class="path">
+            <a href="pom_properties.html">
+                META-INF/maven/org.windup.example/jee-example-services2/pom.properties
+            </a>
+        </td>
+        <td class="tech">
+    <span title="INFORMATIONAL" class="label label-info tag-Properties "
+          data-windup-tag="Properties">
+                    Properties 
+    </span>
+            <div style="clear: both;"></div>
+        </td>
+
+        <td class="warnCount0">
+        </td>
+
+        <td>
+            0
+        </td>
+    </tr>
+
+    <tr class="projectFile">
+        <td class="path">
+            <a href="pom_xml.html">
+                META-INF/maven/org.windup.example/jee-example-services2/pom.xml
+            </a>
+        </td>
+        <td class="tech">
+    <span title="INFORMATIONAL" class="label label-info tag-MavenXML "
+          data-windup-tag="Maven XML">
+                    Maven XML 
+    </span>
+            <div style="clear: both;"></div>
+        </td>
+
+        <td class="warnCount1">
+                    Maven POM
+        </td>
+
+        <td>
+            0
+        </td>
+    </tr>
+        </table>
+        </div>
+    </div>
+
+    <script>
+        thisProject = new ProjectNode("jee-example-services2.jar", "project_87808");
+        thisProject.sourceBased = false;
+        var $tagLabels = $("#project_87808 .projectFile .tech .label");
+        var $tagWarns = $tagLabels.find(".warning");
+        $tagWarns.add( $tagLabels.find(".danger") );
+        thisProject.warnings = $tagWarns.size();
+        thisProject.tags = []; /// TODO: Need to execute all this after the tag JS analysis.
+
+        if (parentProject == null)
+            rootProject = thisProject;
+        else
+            parentProject.addSubproject(thisProject);
+        parentProject = thisProject;
+    </script>
+    <script>
+        parentProject = parentProject.getParent();
+    </script>
+    <div class="panel panel-primary projectBox" id="project_94720" data-windup-projectguid="6cf55255-5464-4c00-b3a8-398906107383" data-windup-project-storypoints="17">
+        <div class="panel-heading panel-collapsed clickable">
+            <span class="pull-left"><i class="glyphicon glyphicon-expand arrowIcon"></i></span>
+            <h3 class="panel-title">jee-example-app-1.0.0-unparsable.ear/jee-example-web.war
+                <span class="storyPoints">(17 story points)</span>
+            </h3>
+        </div>
+        <div class="panel-body" style="display:none">
+        <div class="container-fluid summaryMargin">
+
+            <table class="summaryLayout">
+                <tr>
+                    <td colspan="2">
+                        <!-- Points -->
+                        <div class="points">
+                            <div class="number">17</div>
+                            <div>Story Points</div>
+                        </div>
+
+                        <!-- Basic info -->
+                        <div class="basicInfo">
+                            <table class="table">
+                                <tr>
+                                    <th>Maven coordinates</th>
+                                    <td> org.windup.example:jee-example-web:1.0.0 </td>
+                                </tr>
+                                <tr>
+                                    <th>Organization</th>
+                                    <td>
+                                                Unknown
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th>Name</th>
+                                    <td>JEE Example Web Application</td>
+                                </tr>
+                                <tr>
+                                    <th>Version</th>
+                                    <td>1.0.0</td>
+                                </tr>
+                                <tr>
+                                    <th>Links</th>
+                                    <td>
+
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th>Description</th>
+                                    <td>
+                                        
+                                    </td>
+                                </tr>
+                            </table>
+                        </div><!-- /.basicInfo -->
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <!-- Packages pie chart -->
+                        <div class="chartBoundary">
+                            <h4>Java Incidents by Package</h4>
+                            <div id="project_94720_pie" class="windupPieGraph"></div>
+                        </div>
+                    </td>
+                    <td>
+                        <div class="tagsBarChart chartBoundary">
+                            <h4>Technologies found - occurrence count</h4>
+                            <!-- Tags bar chart will be appended here. -->
+                        </div>
+                    </td>
+                </tr>
+            </table>
+
+        </div>
+        <table class="subprojects table table-striped table-bordered">
+            <tr>
+                <th>Name</th><th>Technology</th><th>Issues</th><th>Story Points</th>
+            </tr>
+
+    <tr class="projectFile">
+        <td class="path">
+            <a href="MANIFEST_MF.6.html">
+                META-INF/MANIFEST.MF
+            </a>
+        </td>
+        <td class="tech">
+    <span title="INFORMATIONAL" class="label label-info tag-Manifest "
+          data-windup-tag="Manifest">
+                    Manifest 
+    </span>
+            <div style="clear: both;"></div>
+        </td>
+
+        <td class="warnCount0">
+        </td>
+
+        <td>
+            0
+        </td>
+    </tr>
+
+    <tr class="projectFile">
+        <td class="path">
+            <a href="web_xml.html">
+                WEB-INF/web.xml
+            </a>
+        </td>
+        <td class="tech">
+    <span title="INFORMATIONAL" class="label label-info tag-WebXML "
+          data-windup-tag="Web XML">
+                    Web XML 2.4
+    </span>
+            <div style="clear: both;"></div>
+        </td>
+
+        <td class="warnCount1">
+                    Web XML
+        </td>
+
+        <td>
+            0
+        </td>
+    </tr>
+
+    <tr class="projectFile">
+        <td class="path">
+            <a href="weblogic_xml.html">
+                WEB-INF/weblogic.xml
+            </a>
+        </td>
+        <td class="tech">
+    <span title="IMPORTANT" class="label label-danger tag-WebLogicWebXML "
+          data-windup-tag="WebLogic Web XML">
+                    WebLogic Web XML 
+    </span>
+                <span class="label label-info tag" data-windup-tag="web-app">web-app</span>
+                <span class="label label-info tag" data-windup-tag="weblogic">weblogic</span>
+            <div style="clear: both;"></div>
+        </td>
+
+        <td class="warnCount1">
+                    WebLogic Web Application Descriptor
+        </td>
+
+        <td>
+            3
+        </td>
+    </tr>
+
+    <tr class="projectFile">
+        <td class="path">
+            <a href="pom_properties.4.html">
+                META-INF/maven/org.windup.example/jee-example-web/pom.properties
+            </a>
+        </td>
+        <td class="tech">
+    <span title="INFORMATIONAL" class="label label-info tag-Properties "
+          data-windup-tag="Properties">
+                    Properties 
+    </span>
+            <div style="clear: both;"></div>
+        </td>
+
+        <td class="warnCount0">
+        </td>
+
+        <td>
+            0
+        </td>
+    </tr>
+
+    <tr class="projectFile">
+        <td class="path">
+            <a href="pom_xml.5.html">
+                META-INF/maven/org.windup.example/jee-example-web/pom.xml
+            </a>
+        </td>
+        <td class="tech">
+    <span title="INFORMATIONAL" class="label label-info tag-MavenXML "
+          data-windup-tag="Maven XML">
+                    Maven XML 
+    </span>
+            <div style="clear: both;"></div>
+        </td>
+
+        <td class="warnCount1">
+                    Maven POM
+        </td>
+
+        <td>
+            0
+        </td>
+    </tr>
+
+    <tr class="projectFile">
+        <td class="path">
+            <a href="AnvilWebServlet_java.html">
+                com.acme.anvil.AnvilWebServlet
+            </a>
+        </td>
+        <td class="tech">
+    <span title="INFORMATIONAL" class="label label-info tag-DecompiledJavaFile "
+          data-windup-tag="Decompiled Java File">
+                    Decompiled Java File 
+    </span>
+                <span class="label label-info tag" data-windup-tag="jndi">jndi</span>
+            <div style="clear: both;"></div>
+        </td>
+
+        <td class="warnCount1">
+                    Call of JNDI lookup
+        </td>
+
+        <td>
+            1
+        </td>
+    </tr>
+
+    <tr class="projectFile">
+        <td class="path">
+            <a href="AuthenticateFilter_java.html">
+                com.acme.anvil.AuthenticateFilter
+            </a>
+        </td>
+        <td class="tech">
+    <span title="INFORMATIONAL" class="label label-info tag-DecompiledJavaFile "
+          data-windup-tag="Decompiled Java File">
+                    Decompiled Java File 
+    </span>
+                <span class="label label-info tag" data-windup-tag="catchall">catchall</span>
+                <span class="label label-info tag" data-windup-tag="security">security</span>
+                <span class="label label-info tag" data-windup-tag="weblogic">weblogic</span>
+                <span class="label label-info tag" data-windup-tag="logging">logging</span>
+            <div style="clear: both;"></div>
+        </td>
+
+        <td class="warnCount10">
+                <div class="warns">Warnings: 10 items</div>
+                <ul class="notifications">
+                        <li class="warning"> WebLogic proprietary annotation ServletAuthentication <small>1&#215;</small></li>
+                        <li class="warning"> WebLogic Logger Usage <small>5&#215;</small></li>
+                        <li class="warning"> Use of WebLogic specific logging classes <small>2&#215;</small></li>
+                        <li class="warning"> Oracle proprietary type reference <small>2&#215;</small></li>
+                </ul>
+        </td>
+
+        <td>
+            8
+        </td>
+    </tr>
+
+    <tr class="projectFile">
+        <td class="path">
+            <a href="LoginFilter_java.html">
+                com.acme.anvil.LoginFilter
+            </a>
+        </td>
+        <td class="tech">
+    <span title="INFORMATIONAL" class="label label-info tag-DecompiledJavaFile "
+          data-windup-tag="Decompiled Java File">
+                    Decompiled Java File 
+    </span>
+                <span class="label label-info tag" data-windup-tag="weblogic">weblogic</span>
+                <span class="label label-info tag" data-windup-tag="logging">logging</span>
+            <div style="clear: both;"></div>
+        </td>
+
+        <td class="warnCount5">
+                <div class="warns">Warnings: 5 items</div>
+                <ul class="notifications">
+                        <li class="warning"> WebLogic Logger Usage <small>3&#215;</small></li>
+                        <li class="warning"> Use of WebLogic specific logging classes <small>2&#215;</small></li>
+                </ul>
+        </td>
+
+        <td>
+            5
+        </td>
+    </tr>
+        </table>
+        </div>
+    </div>
+
+    <script>
+        thisProject = new ProjectNode("jee-example-web.war", "project_94720");
+        thisProject.sourceBased = false;
+        var $tagLabels = $("#project_94720 .projectFile .tech .label");
+        var $tagWarns = $tagLabels.find(".warning");
+        $tagWarns.add( $tagLabels.find(".danger") );
+        thisProject.warnings = $tagWarns.size();
+        thisProject.tags = []; /// TODO: Need to execute all this after the tag JS analysis.
+
+        if (parentProject == null)
+            rootProject = thisProject;
+        else
+            parentProject.addSubproject(thisProject);
+        parentProject = thisProject;
+    </script>
+    <div class="panel panel-primary projectBox" id="project_92416" data-windup-projectguid="03b8ba87-2a7a-42bd-840e-6b3d5fa338e7" data-windup-project-storypoints="0">
+        <div class="panel-heading panel-collapsed clickable">
+            <span class="pull-left"><i class="glyphicon glyphicon-expand arrowIcon"></i></span>
+            <h3 class="panel-title">jee-example-app-1.0.0-unparsable.ear/jee-example-web.war/WEB-INF/lib/commons-lang-2.5.jar
+                <span class="storyPoints">(0 story points)</span>
+            </h3>
+        </div>
+        <div class="panel-body" style="display:none">
+        <div class="container-fluid summaryMargin">
+
+            <table class="summaryLayout">
+                <tr>
+                    <td colspan="2">
+                        <!-- Points -->
+                        <div class="points">
+                            <div class="number">0</div>
+                            <div>Story Points</div>
+                        </div>
+
+                        <!-- Basic info -->
+                        <div class="basicInfo">
+                            <table class="table">
+                                <tr>
+                                    <th>Maven coordinates</th>
+                                    <td> commons-lang:commons-lang:2.5 </td>
+                                </tr>
+                                <tr>
+                                    <th>Organization</th>
+                                    <td>
+                                                Apache
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th>Name</th>
+                                    <td>Commons Lang</td>
+                                </tr>
+                                <tr>
+                                    <th>Version</th>
+                                    <td>2.5</td>
+                                </tr>
+                                <tr>
+                                    <th>Links</th>
+                                    <td>
+
+                                            <a href="http://search.maven.org/#search%7Cga%7C1%7C1%3A%22b0236b252e86419eef20c31a44579d2aee2f0a69%22">Maven Central</a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th>Description</th>
+                                    <td>
+                                        Commons Lang, a package of Java utility classes for the
+        classes that are in java.lang's hierarchy, or are considered to be so
+        standard as to justify existence in java.lang.
+                                    </td>
+                                </tr>
+                            </table>
+                        </div><!-- /.basicInfo -->
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <!-- Packages pie chart -->
+                        <div class="chartBoundary">
+                            <h4>Java Incidents by Package</h4>
+                            <div id="project_92416_pie" class="windupPieGraph"></div>
+                        </div>
+                    </td>
+                    <td>
+                        <div class="tagsBarChart chartBoundary">
+                            <h4>Technologies found - occurrence count</h4>
+                            <!-- Tags bar chart will be appended here. -->
+                        </div>
+                    </td>
+                </tr>
+            </table>
+
+        </div>
+        <table class="subprojects table table-striped table-bordered">
+            <tr>
+                <th>Name</th><th>Technology</th><th>Issues</th><th>Story Points</th>
+            </tr>
+
+    <tr class="projectFile">
+        <td class="path">
+            <a href="LICENSE_txt.html">
+                META-INF/LICENSE.txt
+            </a>
+        </td>
+        <td class="tech">
+    <span title="INFORMATIONAL" class="label label-info tag-ApacheLicense2.0 "
+          data-windup-tag="Apache License 2.0">
+                    Apache License 2.0 
+    </span>
+            <div style="clear: both;"></div>
+        </td>
+
+        <td class="warnCount0">
+        </td>
+
+        <td>
+            0
+        </td>
+    </tr>
+
+    <tr class="projectFile">
+        <td class="path">
+            <a href="MANIFEST_MF.html">
+                META-INF/MANIFEST.MF
+            </a>
+        </td>
+        <td class="tech">
+    <span title="INFORMATIONAL" class="label label-info tag-Manifest "
+          data-windup-tag="Manifest">
+                    Manifest 
+    </span>
+            <div style="clear: both;"></div>
+        </td>
+
+        <td class="warnCount0">
+        </td>
+
+        <td>
+            0
+        </td>
+    </tr>
+
+    <tr class="projectFile">
+        <td class="path">
+            <a href="NOTICE_txt.html">
+                META-INF/NOTICE.txt
+            </a>
+        </td>
+        <td class="tech">
+    <span title="INFORMATIONAL" class="label label-info tag-UnknownLicense "
+          data-windup-tag="Unknown License">
+                    Unknown License 
+    </span>
+            <div style="clear: both;"></div>
+        </td>
+
+        <td class="warnCount0">
+        </td>
+
+        <td>
+            0
+        </td>
+    </tr>
+
+    <tr class="projectFile">
+        <td class="path">
+            <a href="pom_properties.2.html">
+                META-INF/maven/commons-lang/commons-lang/pom.properties
+            </a>
+        </td>
+        <td class="tech">
+    <span title="INFORMATIONAL" class="label label-info tag-Properties "
+          data-windup-tag="Properties">
+                    Properties 
+    </span>
+            <div style="clear: both;"></div>
+        </td>
+
+        <td class="warnCount0">
+        </td>
+
+        <td>
+            0
+        </td>
+    </tr>
+
+    <tr class="projectFile">
+        <td class="path">
+            <a href="pom_xml.2.html">
+                META-INF/maven/commons-lang/commons-lang/pom.xml
+            </a>
+        </td>
+        <td class="tech">
+    <span title="INFORMATIONAL" class="label label-info tag-MavenXML "
+          data-windup-tag="Maven XML">
+                    Maven XML 
+    </span>
+            <div style="clear: both;"></div>
+        </td>
+
+        <td class="warnCount1">
+                    Maven POM
+        </td>
+
+        <td>
+            0
+        </td>
+    </tr>
+        </table>
+        </div>
+    </div>
+
+    <script>
+        thisProject = new ProjectNode("commons-lang-2.5.jar", "project_92416");
+        thisProject.sourceBased = false;
+        var $tagLabels = $("#project_92416 .projectFile .tech .label");
+        var $tagWarns = $tagLabels.find(".warning");
+        $tagWarns.add( $tagLabels.find(".danger") );
+        thisProject.warnings = $tagWarns.size();
+        thisProject.tags = []; /// TODO: Need to execute all this after the tag JS analysis.
+
+        if (parentProject == null)
+            rootProject = thisProject;
+        else
+            parentProject.addSubproject(thisProject);
+        parentProject = thisProject;
+    </script>
+    <script>
+        parentProject = parentProject.getParent();
+    </script>
+    <div class="panel panel-primary projectBox" id="project_98304" data-windup-projectguid="e053b13a-5c98-4545-b713-de0346cbf293" data-windup-project-storypoints="0">
+        <div class="panel-heading panel-collapsed clickable">
+            <span class="pull-left"><i class="glyphicon glyphicon-expand arrowIcon"></i></span>
+            <h3 class="panel-title">jee-example-app-1.0.0-unparsable.ear/jee-example-web.war/WEB-INF/lib/log4j-1.2.6.jar
+                <span class="storyPoints">(0 story points)</span>
+            </h3>
+        </div>
+        <div class="panel-body" style="display:none">
+        <div class="container-fluid summaryMargin">
+
+            <table class="summaryLayout">
+                <tr>
+                    <td colspan="2">
+                        <!-- Points -->
+                        <div class="points">
+                            <div class="number">0</div>
+                            <div>Story Points</div>
+                        </div>
+
+                        <!-- Basic info -->
+                        <div class="basicInfo">
+                            <table class="table">
+                                <tr>
+                                    <th>Maven coordinates</th>
+                                    <td>  </td>
+                                </tr>
+                                <tr>
+                                    <th>Organization</th>
+                                    <td>
+                                                Apache
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th>Name</th>
+                                    <td>log4j</td>
+                                </tr>
+                                <tr>
+                                    <th>Version</th>
+                                    <td>1.2.6</td>
+                                </tr>
+                                <tr>
+                                    <th>Links</th>
+                                    <td>
+
+                                            <a href="http://search.maven.org/#search%7Cga%7C1%7C1%3A%224bf32b10f459a4ecd4df234ae2ccb32b9d9ba9b7%22">Maven Central</a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th>Description</th>
+                                    <td>
+                                        Unidentified Archive
+                                    </td>
+                                </tr>
+                            </table>
+                        </div><!-- /.basicInfo -->
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <!-- Packages pie chart -->
+                        <div class="chartBoundary">
+                            <h4>Java Incidents by Package</h4>
+                            <div id="project_98304_pie" class="windupPieGraph"></div>
+                        </div>
+                    </td>
+                    <td>
+                        <div class="tagsBarChart chartBoundary">
+                            <h4>Technologies found - occurrence count</h4>
+                            <!-- Tags bar chart will be appended here. -->
+                        </div>
+                    </td>
+                </tr>
+            </table>
+
+        </div>
+        <table class="subprojects table table-striped table-bordered">
+            <tr>
+                <th>Name</th><th>Technology</th><th>Issues</th><th>Story Points</th>
+            </tr>
+
+    <tr class="projectFile">
+        <td class="path">
+            <a href="MANIFEST_MF.4.html">
+                META-INF/MANIFEST.MF
+            </a>
+        </td>
+        <td class="tech">
+    <span title="INFORMATIONAL" class="label label-info tag-Manifest "
+          data-windup-tag="Manifest">
+                    Manifest 
+    </span>
+            <div style="clear: both;"></div>
+        </td>
+
+        <td class="warnCount0">
+        </td>
+
+        <td>
+            0
+        </td>
+    </tr>
+        </table>
+        </div>
+    </div>
+
+    <script>
+        thisProject = new ProjectNode("log4j-1.2.6.jar", "project_98304");
+        thisProject.sourceBased = false;
+        var $tagLabels = $("#project_98304 .projectFile .tech .label");
+        var $tagWarns = $tagLabels.find(".warning");
+        $tagWarns.add( $tagLabels.find(".danger") );
+        thisProject.warnings = $tagWarns.size();
+        thisProject.tags = []; /// TODO: Need to execute all this after the tag JS analysis.
+
+        if (parentProject == null)
+            rootProject = thisProject;
+        else
+            parentProject.addSubproject(thisProject);
+        parentProject = thisProject;
+    </script>
+    <script>
+        parentProject = parentProject.getParent();
+    </script>
+    <div class="panel panel-primary projectBox" id="project_93440" data-windup-projectguid="31bce5f9-defd-483f-8c40-931e02e0b1c6" data-windup-project-storypoints="0">
+        <div class="panel-heading panel-collapsed clickable">
+            <span class="pull-left"><i class="glyphicon glyphicon-expand arrowIcon"></i></span>
+            <h3 class="panel-title">jee-example-app-1.0.0-unparsable.ear/jee-example-web.war/WEB-INF/lib/migration-support-1.0.0.jar
+                <span class="storyPoints">(0 story points)</span>
+            </h3>
+        </div>
+        <div class="panel-body" style="display:none">
+        <div class="container-fluid summaryMargin">
+
+            <table class="summaryLayout">
+                <tr>
+                    <td colspan="2">
+                        <!-- Points -->
+                        <div class="points">
+                            <div class="number">0</div>
+                            <div>Story Points</div>
+                        </div>
+
+                        <!-- Basic info -->
+                        <div class="basicInfo">
+                            <table class="table">
+                                <tr>
+                                    <th>Maven coordinates</th>
+                                    <td> org.migration.support:migration-support:1.0.0 </td>
+                                </tr>
+                                <tr>
+                                    <th>Organization</th>
+                                    <td>
+                                                WebLogic
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th>Name</th>
+                                    <td>Sample Migration</td>
+                                </tr>
+                                <tr>
+                                    <th>Version</th>
+                                    <td>1.0.0</td>
+                                </tr>
+                                <tr>
+                                    <th>Links</th>
+                                    <td>
+
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th>Description</th>
+                                    <td>
+                                        Used only to support migration activities.
+                                    </td>
+                                </tr>
+                            </table>
+                        </div><!-- /.basicInfo -->
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <!-- Packages pie chart -->
+                        <div class="chartBoundary">
+                            <h4>Java Incidents by Package</h4>
+                            <div id="project_93440_pie" class="windupPieGraph"></div>
+                        </div>
+                    </td>
+                    <td>
+                        <div class="tagsBarChart chartBoundary">
+                            <h4>Technologies found - occurrence count</h4>
+                            <!-- Tags bar chart will be appended here. -->
+                        </div>
+                    </td>
+                </tr>
+            </table>
+
+        </div>
+        <table class="subprojects table table-striped table-bordered">
+            <tr>
+                <th>Name</th><th>Technology</th><th>Issues</th><th>Story Points</th>
+            </tr>
+
+    <tr class="projectFile">
+        <td class="path">
+            <a href="MANIFEST_MF.5.html">
+                META-INF/MANIFEST.MF
+            </a>
+        </td>
+        <td class="tech">
+    <span title="INFORMATIONAL" class="label label-info tag-Manifest "
+          data-windup-tag="Manifest">
+                    Manifest 
+    </span>
+            <div style="clear: both;"></div>
+        </td>
+
+        <td class="warnCount0">
+        </td>
+
+        <td>
+            0
+        </td>
+    </tr>
+
+    <tr class="projectFile">
+        <td class="path">
+            <a href="pom_properties.3.html">
+                META-INF/maven/org.migration.support/migration-support/pom.properties
+            </a>
+        </td>
+        <td class="tech">
+    <span title="INFORMATIONAL" class="label label-info tag-Properties "
+          data-windup-tag="Properties">
+                    Properties 
+    </span>
+            <div style="clear: both;"></div>
+        </td>
+
+        <td class="warnCount0">
+        </td>
+
+        <td>
+            0
+        </td>
+    </tr>
+
+    <tr class="projectFile">
+        <td class="path">
+            <a href="pom_xml.3.html">
+                META-INF/maven/org.migration.support/migration-support/pom.xml
+            </a>
+        </td>
+        <td class="tech">
+    <span title="INFORMATIONAL" class="label label-info tag-MavenXML "
+          data-windup-tag="Maven XML">
+                    Maven XML 
+    </span>
+            <div style="clear: both;"></div>
+        </td>
+
+        <td class="warnCount1">
+                    Maven POM
+        </td>
+
+        <td>
+            0
+        </td>
+    </tr>
+        </table>
+        </div>
+    </div>
+
+    <script>
+        thisProject = new ProjectNode("migration-support-1.0.0.jar", "project_93440");
+        thisProject.sourceBased = false;
+        var $tagLabels = $("#project_93440 .projectFile .tech .label");
+        var $tagWarns = $tagLabels.find(".warning");
+        $tagWarns.add( $tagLabels.find(".danger") );
+        thisProject.warnings = $tagWarns.size();
+        thisProject.tags = []; /// TODO: Need to execute all this after the tag JS analysis.
+
+        if (parentProject == null)
+            rootProject = thisProject;
+        else
+            parentProject.addSubproject(thisProject);
+        parentProject = thisProject;
+    </script>
+    <script>
+        parentProject = parentProject.getParent();
+    </script>
+    <script>
+        parentProject = parentProject.getParent();
+    </script>
+    <div class="panel panel-primary projectBox" id="project_98816" data-windup-projectguid="f742a1c2-6951-40ca-8cd3-69c6d9d383cf" data-windup-project-storypoints="0">
+        <div class="panel-heading panel-collapsed clickable">
+            <span class="pull-left"><i class="glyphicon glyphicon-expand arrowIcon"></i></span>
+            <h3 class="panel-title">jee-example-app-1.0.0-unparsable.ear/log4j-1.2.6.jar
+                <span class="storyPoints">(0 story points)</span>
+            </h3>
+        </div>
+        <div class="panel-body" style="display:none">
+        <div class="container-fluid summaryMargin">
+
+            <table class="summaryLayout">
+                <tr>
+                    <td colspan="2">
+                        <!-- Points -->
+                        <div class="points">
+                            <div class="number">0</div>
+                            <div>Story Points</div>
+                        </div>
+
+                        <!-- Basic info -->
+                        <div class="basicInfo">
+                            <table class="table">
+                                <tr>
+                                    <th>Maven coordinates</th>
+                                    <td>  </td>
+                                </tr>
+                                <tr>
+                                    <th>Organization</th>
+                                    <td>
+                                                Apache
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th>Name</th>
+                                    <td>log4j</td>
+                                </tr>
+                                <tr>
+                                    <th>Version</th>
+                                    <td>1.2.6</td>
+                                </tr>
+                                <tr>
+                                    <th>Links</th>
+                                    <td>
+
+                                            <a href="http://search.maven.org/#search%7Cga%7C1%7C1%3A%224bf32b10f459a4ecd4df234ae2ccb32b9d9ba9b7%22">Maven Central</a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th>Description</th>
+                                    <td>
+                                        Unidentified Archive
+                                    </td>
+                                </tr>
+                            </table>
+                        </div><!-- /.basicInfo -->
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <!-- Packages pie chart -->
+                        <div class="chartBoundary">
+                            <h4>Java Incidents by Package</h4>
+                            <div id="project_98816_pie" class="windupPieGraph"></div>
+                        </div>
+                    </td>
+                    <td>
+                        <div class="tagsBarChart chartBoundary">
+                            <h4>Technologies found - occurrence count</h4>
+                            <!-- Tags bar chart will be appended here. -->
+                        </div>
+                    </td>
+                </tr>
+            </table>
+
+        </div>
+        <table class="subprojects table table-striped table-bordered">
+            <tr>
+                <th>Name</th><th>Technology</th><th>Issues</th><th>Story Points</th>
+            </tr>
+
+    <tr class="projectFile">
+        <td class="path">
+            <a href="MANIFEST_MF.3.html">
+                META-INF/MANIFEST.MF
+            </a>
+        </td>
+        <td class="tech">
+    <span title="INFORMATIONAL" class="label label-info tag-Manifest "
+          data-windup-tag="Manifest">
+                    Manifest 
+    </span>
+            <div style="clear: both;"></div>
+        </td>
+
+        <td class="warnCount0">
+        </td>
+
+        <td>
+            0
+        </td>
+    </tr>
+        </table>
+        </div>
+    </div>
+
+    <script>
+        thisProject = new ProjectNode("log4j-1.2.6.jar", "project_98816");
+        thisProject.sourceBased = false;
+        var $tagLabels = $("#project_98816 .projectFile .tech .label");
+        var $tagWarns = $tagLabels.find(".warning");
+        $tagWarns.add( $tagLabels.find(".danger") );
+        thisProject.warnings = $tagWarns.size();
+        thisProject.tags = []; /// TODO: Need to execute all this after the tag JS analysis.
+
+        if (parentProject == null)
+            rootProject = thisProject;
+        else
+            parentProject.addSubproject(thisProject);
+        parentProject = thisProject;
+    </script>
+    <script>
+        parentProject = parentProject.getParent();
+    </script>
+    <div class="panel panel-primary projectBox" id="project_88320" data-windup-projectguid="7f17d61a-7d88-43cb-8045-c409d0d755bb" data-windup-project-storypoints="0">
+        <div class="panel-heading panel-collapsed clickable">
+            <span class="pull-left"><i class="glyphicon glyphicon-expand arrowIcon"></i></span>
+            <h3 class="panel-title">jee-example-app-1.0.0-unparsable.ear/migration-support-1.0.0.jar
+                <span class="storyPoints">(0 story points)</span>
+            </h3>
+        </div>
+        <div class="panel-body" style="display:none">
+        <div class="container-fluid summaryMargin">
+
+            <table class="summaryLayout">
+                <tr>
+                    <td colspan="2">
+                        <!-- Points -->
+                        <div class="points">
+                            <div class="number">0</div>
+                            <div>Story Points</div>
+                        </div>
+
+                        <!-- Basic info -->
+                        <div class="basicInfo">
+                            <table class="table">
+                                <tr>
+                                    <th>Maven coordinates</th>
+                                    <td> org.migration.support:migration-support:1.0.0 </td>
+                                </tr>
+                                <tr>
+                                    <th>Organization</th>
+                                    <td>
+                                                WebLogic
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th>Name</th>
+                                    <td>Sample Migration</td>
+                                </tr>
+                                <tr>
+                                    <th>Version</th>
+                                    <td>1.0.0</td>
+                                </tr>
+                                <tr>
+                                    <th>Links</th>
+                                    <td>
+
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th>Description</th>
+                                    <td>
+                                        Used only to support migration activities.
+                                    </td>
+                                </tr>
+                            </table>
+                        </div><!-- /.basicInfo -->
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <!-- Packages pie chart -->
+                        <div class="chartBoundary">
+                            <h4>Java Incidents by Package</h4>
+                            <div id="project_88320_pie" class="windupPieGraph"></div>
+                        </div>
+                    </td>
+                    <td>
+                        <div class="tagsBarChart chartBoundary">
+                            <h4>Technologies found - occurrence count</h4>
+                            <!-- Tags bar chart will be appended here. -->
+                        </div>
+                    </td>
+                </tr>
+            </table>
+
+        </div>
+        <table class="subprojects table table-striped table-bordered">
+            <tr>
+                <th>Name</th><th>Technology</th><th>Issues</th><th>Story Points</th>
+            </tr>
+
+    <tr class="projectFile">
+        <td class="path">
+            <a href="MANIFEST_MF.1.html">
+                META-INF/MANIFEST.MF
+            </a>
+        </td>
+        <td class="tech">
+    <span title="INFORMATIONAL" class="label label-info tag-Manifest "
+          data-windup-tag="Manifest">
+                    Manifest 
+    </span>
+            <div style="clear: both;"></div>
+        </td>
+
+        <td class="warnCount0">
+        </td>
+
+        <td>
+            0
+        </td>
+    </tr>
+
+    <tr class="projectFile">
+        <td class="path">
+            <a href="pom_properties.1.html">
+                META-INF/maven/org.migration.support/migration-support/pom.properties
+            </a>
+        </td>
+        <td class="tech">
+    <span title="INFORMATIONAL" class="label label-info tag-Properties "
+          data-windup-tag="Properties">
+                    Properties 
+    </span>
+            <div style="clear: both;"></div>
+        </td>
+
+        <td class="warnCount0">
+        </td>
+
+        <td>
+            0
+        </td>
+    </tr>
+
+    <tr class="projectFile">
+        <td class="path">
+            <a href="pom_xml.1.html">
+                META-INF/maven/org.migration.support/migration-support/pom.xml
+            </a>
+        </td>
+        <td class="tech">
+    <span title="INFORMATIONAL" class="label label-info tag-MavenXML "
+          data-windup-tag="Maven XML">
+                    Maven XML 
+    </span>
+            <div style="clear: both;"></div>
+        </td>
+
+        <td class="warnCount1">
+                    Maven POM
+        </td>
+
+        <td>
+            0
+        </td>
+    </tr>
+        </table>
+        </div>
+    </div>
+
+    <script>
+        thisProject = new ProjectNode("migration-support-1.0.0.jar", "project_88320");
+        thisProject.sourceBased = false;
+        var $tagLabels = $("#project_88320 .projectFile .tech .label");
+        var $tagWarns = $tagLabels.find(".warning");
+        $tagWarns.add( $tagLabels.find(".danger") );
+        thisProject.warnings = $tagWarns.size();
+        thisProject.tags = []; /// TODO: Need to execute all this after the tag JS analysis.
+
+        if (parentProject == null)
+            rootProject = thisProject;
+        else
+            parentProject.addSubproject(thisProject);
+        parentProject = thisProject;
+    </script>
+    <script>
+        parentProject = parentProject.getParent();
+    </script>
+    <div class="panel panel-primary projectBox" id="project_99072" data-windup-projectguid="71cda6cb-2864-45e7-b23c-18e4b3130a7a" data-windup-project-storypoints="0">
+        <div class="panel-heading panel-collapsed clickable">
+            <span class="pull-left"><i class="glyphicon glyphicon-expand arrowIcon"></i></span>
+            <h3 class="panel-title">jee-example-app-1.0.0-unparsable.ear/unparsable.jar
+                <span class="storyPoints">(0 story points)</span>
+            </h3>
+        </div>
+        <div class="panel-body" style="display:none">
+        <div class="container-fluid summaryMargin">
+
+            <table class="summaryLayout">
+                <tr>
+                    <td colspan="2">
+                        <!-- Points -->
+                        <div class="points">
+                            <div class="number">0</div>
+                            <div>Story Points</div>
+                        </div>
+
+                        <!-- Basic info -->
+                        <div class="basicInfo">
+                            <table class="table">
+                                <tr>
+                                    <th>Maven coordinates</th>
+                                    <td>  </td>
+                                </tr>
+                                <tr>
+                                    <th>Organization</th>
+                                    <td>
+                                                Unknown
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th>Name</th>
+                                    <td>unparsable.jar</td>
+                                </tr>
+                                <tr>
+                                    <th>Version</th>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <th>Links</th>
+                                    <td>
+
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th>Description</th>
+                                    <td>
+                                        Unidentified Archive
+                                    </td>
+                                </tr>
+                            </table>
+                        </div><!-- /.basicInfo -->
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <!-- Packages pie chart -->
+                        <div class="chartBoundary">
+                            <h4>Java Incidents by Package</h4>
+                            <div id="project_99072_pie" class="windupPieGraph"></div>
+                        </div>
+                    </td>
+                    <td>
+                        <div class="tagsBarChart chartBoundary">
+                            <h4>Technologies found - occurrence count</h4>
+                            <!-- Tags bar chart will be appended here. -->
+                        </div>
+                    </td>
+                </tr>
+            </table>
+
+        </div>
+        </div>
+    </div>
+
+    <script>
+        thisProject = new ProjectNode("unparsable.jar", "project_99072");
+        thisProject.sourceBased = false;
+        var $tagLabels = $("#project_99072 .projectFile .tech .label");
+        var $tagWarns = $tagLabels.find(".warning");
+        $tagWarns.add( $tagLabels.find(".danger") );
+        thisProject.warnings = $tagWarns.size();
+        thisProject.tags = []; /// TODO: Need to execute all this after the tag JS analysis.
+
+        if (parentProject == null)
+            rootProject = thisProject;
+        else
+            parentProject.addSubproject(thisProject);
+        parentProject = thisProject;
+    </script>
+    <script>
+        parentProject = parentProject.getParent();
+    </script>
+    <div class="panel panel-primary projectBox" id="project_98560" data-windup-projectguid="bcb63ee1-d37f-4b93-910f-1a0d21106837" data-windup-project-storypoints="0">
+        <div class="panel-heading panel-collapsed clickable">
+            <span class="pull-left"><i class="glyphicon glyphicon-expand arrowIcon"></i></span>
+            <h3 class="panel-title">jee-example-app-1.0.0-unparsable.ear/unparsableClass.jar
+                <span class="storyPoints">(0 story points)</span>
+            </h3>
+        </div>
+        <div class="panel-body" style="display:none">
+        <div class="container-fluid summaryMargin">
+
+            <table class="summaryLayout">
+                <tr>
+                    <td colspan="2">
+                        <!-- Points -->
+                        <div class="points">
+                            <div class="number">0</div>
+                            <div>Story Points</div>
+                        </div>
+
+                        <!-- Basic info -->
+                        <div class="basicInfo">
+                            <table class="table">
+                                <tr>
+                                    <th>Maven coordinates</th>
+                                    <td>  </td>
+                                </tr>
+                                <tr>
+                                    <th>Organization</th>
+                                    <td>
+                                                Unknown
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th>Name</th>
+                                    <td>unparsableClass.jar</td>
+                                </tr>
+                                <tr>
+                                    <th>Version</th>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <th>Links</th>
+                                    <td>
+
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th>Description</th>
+                                    <td>
+                                        Unidentified Archive
+                                    </td>
+                                </tr>
+                            </table>
+                        </div><!-- /.basicInfo -->
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <!-- Packages pie chart -->
+                        <div class="chartBoundary">
+                            <h4>Java Incidents by Package</h4>
+                            <div id="project_98560_pie" class="windupPieGraph"></div>
+                        </div>
+                    </td>
+                    <td>
+                        <div class="tagsBarChart chartBoundary">
+                            <h4>Technologies found - occurrence count</h4>
+                            <!-- Tags bar chart will be appended here. -->
+                        </div>
+                    </td>
+                </tr>
+            </table>
+
+        </div>
+        <table class="subprojects table table-striped table-bordered">
+            <tr>
+                <th>Name</th><th>Technology</th><th>Issues</th><th>Story Points</th>
+            </tr>
+        </table>
+        </div>
+    </div>
+
+    <script>
+        thisProject = new ProjectNode("unparsableClass.jar", "project_98560");
+        thisProject.sourceBased = false;
+        var $tagLabels = $("#project_98560 .projectFile .tech .label");
+        var $tagWarns = $tagLabels.find(".warning");
+        $tagWarns.add( $tagLabels.find(".danger") );
+        thisProject.warnings = $tagWarns.size();
+        thisProject.tags = []; /// TODO: Need to execute all this after the tag JS analysis.
+
+        if (parentProject == null)
+            rootProject = thisProject;
+        else
+            parentProject.addSubproject(thisProject);
+        parentProject = thisProject;
+    </script>
+    <script>
+        parentProject = parentProject.getParent();
+    </script>
+    <script>
+        parentProject = parentProject.getParent();
+    </script>
+            </div> <!-- /container -->
+        </div>
+
+
+        <script src="resources/js/jquery-1.10.1.min.js"></script>
+        <script src="resources/js/jquery.storageapi.min.js"></script>
+        <script src="resources/js/jquery.color-2.1.2.min.js"></script>
+        <script src="resources/libraries/flot/jquery.flot.min.js"></script>
+        <script src="resources/libraries/flot/jquery.flot.pie.min.js"></script>
+        <link   rel="stylesheet"      href="resources/libraries/jstree/themes/default/style.min.css"/>
+        <script type="text/javascript" src="resources/libraries/jstree/jstree.min.js"></script>
+        <script src="resources/js/windup-overview.js"></script>
+        <script src="resources/js/bootstrap.min.js"></script>
+
+<script type='text/javascript'>
+WINDUP_PACKAGE_PIE_DATA = typeof(WINDUP_PACKAGE_PIE_DATA) == 'undefined' ? {} : WINDUP_PACKAGE_PIE_DATA;
+WINDUP_PACKAGE_PIE_DATA['application_pie'] = [];
+WINDUP_PACKAGE_PIE_DATA['application_pie'].push({label: 'weblogic.i18n.*', data: 27});
+WINDUP_PACKAGE_PIE_DATA['application_pie'].push({label: 'weblogic.application.*', data: 16});
+WINDUP_PACKAGE_PIE_DATA['application_pie'].push({label: 'weblogic.transaction.*', data: 9});
+WINDUP_PACKAGE_PIE_DATA['application_pie'].push({label: 'javax.naming.*', data: 7});
+WINDUP_PACKAGE_PIE_DATA['application_pie'].push({label: 'weblogic.jndi.*', data: 7});
+WINDUP_PACKAGE_PIE_DATA['application_pie'].push({label: 'weblogic.common.*', data: 5});
+WINDUP_PACKAGE_PIE_DATA['application_pie'].push({label: 'javax.management.*', data: 3});
+WINDUP_PACKAGE_PIE_DATA['application_pie'].push({label: 'weblogic.servlet.*', data: 3});
+WINDUP_PACKAGE_PIE_DATA['application_pie'].push({label: 'weblogic.ejb.*', data: 3});
+WINDUP_PACKAGE_PIE_DATA['application_pie'].push({label: 'Other', data: 1});
+$(function () {
+  var data_application_pie = [];
+data_application_pie.push({ label: 'weblogic.i18n.* - 27&times;', data: 27 });
+data_application_pie.push({ label: 'weblogic.application.* - 16&times;', data: 16 });
+data_application_pie.push({ label: 'weblogic.transaction.* - 9&times;', data: 9 });
+data_application_pie.push({ label: 'javax.naming.* - 7&times;', data: 7 });
+data_application_pie.push({ label: 'weblogic.jndi.* - 7&times;', data: 7 });
+data_application_pie.push({ label: 'weblogic.common.* - 5&times;', data: 5 });
+data_application_pie.push({ label: 'javax.management.* - 3&times;', data: 3 });
+data_application_pie.push({ label: 'weblogic.servlet.* - 3&times;', data: 3 });
+data_application_pie.push({ label: 'weblogic.ejb.* - 3&times;', data: 3 });
+data_application_pie.push({ label: 'Other - 1&times;', data: 1 });
+  $.plot($('#application_pie'), data_application_pie, {
+      series: { pie: { show: true,  innerRadius: 0.55, offset: { top: 0, left: -120 } } },
+      colors: $.map( data_application_pie, function(item, index) {
+          var len = data_application_pie.length;
+          return jQuery.Color({
+              hue: ((index*0.95*360/len) + 90/len) % 360,
+              saturation: 0.95,
+              lightness: ((index%4 == 3 ? 1:0)/-4)+0.55, alpha: 1
+          }).toHexString();
+      })
+  });
+});</script>
+
+<script type='text/javascript'>$('#project_96000_pie').parent().remove()</script>
+<script type='text/javascript'>$('#project_87808_pie').parent().remove()</script>
+<script type='text/javascript'>$('#project_88320_pie').parent().remove()</script>
+<script type='text/javascript'>
+WINDUP_PACKAGE_PIE_DATA = typeof(WINDUP_PACKAGE_PIE_DATA) == 'undefined' ? {} : WINDUP_PACKAGE_PIE_DATA;
+WINDUP_PACKAGE_PIE_DATA['project_94720_pie'] = [];
+WINDUP_PACKAGE_PIE_DATA['project_94720_pie'].push({label: 'weblogic.i18n.*', data: 12});
+WINDUP_PACKAGE_PIE_DATA['project_94720_pie'].push({label: 'weblogic.servlet.*', data: 3});
+WINDUP_PACKAGE_PIE_DATA['project_94720_pie'].push({label: 'javax.naming.*', data: 1});
+$(function () {
+  var data_project_94720_pie = [];
+data_project_94720_pie.push({ label: 'weblogic.i18n.* - 12&times;', data: 12 });
+data_project_94720_pie.push({ label: 'weblogic.servlet.* - 3&times;', data: 3 });
+data_project_94720_pie.push({ label: 'javax.naming.* - 1&times;', data: 1 });
+  $.plot($('#project_94720_pie'), data_project_94720_pie, {
+      series: { pie: { show: true,  innerRadius: 0.55, offset: { top: 0, left: -120 } } },
+      colors: $.map( data_project_94720_pie, function(item, index) {
+          var len = data_project_94720_pie.length;
+          return jQuery.Color({
+              hue: ((index*0.95*360/len) + 90/len) % 360,
+              saturation: 0.95,
+              lightness: ((index%4 == 3 ? 1:0)/-4)+0.55, alpha: 1
+          }).toHexString();
+      })
+  });
+});</script>
+<script type='text/javascript'>$('#project_92416_pie').parent().remove()</script>
+<script type='text/javascript'>$('#project_93440_pie').parent().remove()</script>
+<script type='text/javascript'>$('#project_98304_pie').parent().remove()</script>
+<script type='text/javascript'>
+WINDUP_PACKAGE_PIE_DATA = typeof(WINDUP_PACKAGE_PIE_DATA) == 'undefined' ? {} : WINDUP_PACKAGE_PIE_DATA;
+WINDUP_PACKAGE_PIE_DATA['project_94976_pie'] = [];
+WINDUP_PACKAGE_PIE_DATA['project_94976_pie'].push({label: 'weblogic.application.*', data: 16});
+WINDUP_PACKAGE_PIE_DATA['project_94976_pie'].push({label: 'weblogic.i18n.*', data: 15});
+WINDUP_PACKAGE_PIE_DATA['project_94976_pie'].push({label: 'weblogic.transaction.*', data: 9});
+WINDUP_PACKAGE_PIE_DATA['project_94976_pie'].push({label: 'weblogic.jndi.*', data: 7});
+WINDUP_PACKAGE_PIE_DATA['project_94976_pie'].push({label: 'javax.naming.*', data: 6});
+WINDUP_PACKAGE_PIE_DATA['project_94976_pie'].push({label: 'weblogic.common.*', data: 5});
+WINDUP_PACKAGE_PIE_DATA['project_94976_pie'].push({label: 'javax.management.*', data: 3});
+WINDUP_PACKAGE_PIE_DATA['project_94976_pie'].push({label: 'weblogic.ejb.*', data: 3});
+WINDUP_PACKAGE_PIE_DATA['project_94976_pie'].push({label: 'javax.jms.*', data: 1});
+$(function () {
+  var data_project_94976_pie = [];
+data_project_94976_pie.push({ label: 'weblogic.application.* - 16&times;', data: 16 });
+data_project_94976_pie.push({ label: 'weblogic.i18n.* - 15&times;', data: 15 });
+data_project_94976_pie.push({ label: 'weblogic.transaction.* - 9&times;', data: 9 });
+data_project_94976_pie.push({ label: 'weblogic.jndi.* - 7&times;', data: 7 });
+data_project_94976_pie.push({ label: 'javax.naming.* - 6&times;', data: 6 });
+data_project_94976_pie.push({ label: 'weblogic.common.* - 5&times;', data: 5 });
+data_project_94976_pie.push({ label: 'javax.management.* - 3&times;', data: 3 });
+data_project_94976_pie.push({ label: 'weblogic.ejb.* - 3&times;', data: 3 });
+data_project_94976_pie.push({ label: 'javax.jms.* - 1&times;', data: 1 });
+  $.plot($('#project_94976_pie'), data_project_94976_pie, {
+      series: { pie: { show: true,  innerRadius: 0.55, offset: { top: 0, left: -120 } } },
+      colors: $.map( data_project_94976_pie, function(item, index) {
+          var len = data_project_94976_pie.length;
+          return jQuery.Color({
+              hue: ((index*0.95*360/len) + 90/len) % 360,
+              saturation: 0.95,
+              lightness: ((index%4 == 3 ? 1:0)/-4)+0.55, alpha: 1
+          }).toHexString();
+      })
+  });
+});</script>
+<script type='text/javascript'>$('#project_98560_pie').parent().remove()</script>
+<script type='text/javascript'>$('#project_98816_pie').parent().remove()</script>
+<script type='text/javascript'>$('#project_99072_pie').parent().remove()</script>
+
+
+        <script>
+            t0 = Date.now();
+            expandMemory();
+            console.log("PERF: expandMemory() took " + (Date.now() - t0) + " ms.");
+
+
+            // Panels toggling - slide up or down.
+            $(document).on("click", ".panel-heading", function(event) {
+                togglePanelSlide.call(this, event);
+            });
+        </script>
+        <script src="resources/tagsData.js"></script>
+        <script>
+            // Tags bar charts.
+            $(document).ready( function() {
+                window.tagService = new TagService();
+                // The hierarchy of tags
+                fillTagService(window.tagService);
+                var chartObjects = {};
+                createTagCharts();
+            })
+
+
+            // Projects TreeView.
+            $(function() {
+                window.setTimeout( function(){
+                    t0 = Date.now();
+                    renderAppTreeView(rootProject);
+                    console.log("PERF: renderAppTreeView() took " + (Date.now() - t0) + " ms.");
+                }, 500 );
+            });
+        </script>
+    </div>
+</body>
+</html>
