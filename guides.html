@@ -1,10 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
 	<head>
-			<title>Guides | Windup Migration Platform</title>
-			<link href="assets/img/favicon.ico" rel="shortcut icon">
-			<link href="assets/css/bootstrap.css" rel="stylesheet">
-			<link href="assets/css/windup.css" rel="stylesheet">
+		<title>Guides | Windup Migration Platform</title>
+		<link href="assets/img/favicon.ico" rel="shortcut icon">
+		<link href="assets/css/bootstrap.css" rel="stylesheet">
+		<link href="assets/css/windup.css" rel="stylesheet">
+		<style>
+		     
+		</style>
 	</head>
 	<body>
 
@@ -124,13 +127,23 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
             <p>
               <ol>
                 <li>Download Windup and Unzip to your favorite directory.</li>
-                <li>Execute bin/windup, with the <i>--input</i> parameter set to your source directory or application archive.</li>
-                <li>Set <i>--sourceMode</i> if analyzing source code.</li>
-                <li>Make sure to set your <i>--packages</i> parameter to your Java package structure.</li>
-                <li>Make sure to set your <i>--output</i> parameter to your favorite output directory for the report.</li>
+                <li>Execute <code>bin/windup</code>, with the <code>--input</code> parameter set to your source directory or application archive.</li>
+                <li>Set <code>--sourceMode</code> if analyzing source code.</li>
+                <li>Make sure to set your <code>--packages</code> parameter to your Java package structure.</li>
+                <li>Make sure to set your <code>--output</code> parameter to your favorite output directory for the report.</li>
                 <li>Execute windup.</li>
                 <li>View the report!</li>
               </ol>
+            </p>
+            <h3>Example commands for Linux</h3>
+            <p>
+	      <pre>
+    cd WINDUP_HOME/
+    bin/windup --input samples/jee-example-app-1.0.0.ear --target eap</pre>
+		This will create a report next to the scanned archive:
+	      <pre>
+    firefox samples/jee-example-app-1.0.0.ear.report/index.html</pre>
+              You will get the same report which you can see here in the <a href="file:///home/ondra/work/Migration/site-windup.jboss.org/example.html">Demo</a> tab.
             </p>
           </div>
         </div>
