@@ -126,13 +126,14 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
             <h2>Quick Guide: Running Windup</h2>
             <p>
               <ol>
-                <li>Download Windup and Unzip to your favorite directory.</li>
-                <li>Execute <code>bin/windup</code>, with the <code>--input</code> parameter set to your source directory or application archive.</li>
-                <li>Set <code>--sourceMode</code> if analyzing source code.</li>
-                <li>Make sure to set your <code>--packages</code> parameter to your Java package structure.</li>
-                <li>Make sure to set your <code>--output</code> parameter to your favorite output directory for the report.</li>
-                <li>Execute windup.</li>
-                <li>View the report!</li>
+                <li>Download Windup and unzip it to your favorite directory.</li>
+                <li>On a command line, write the command to run Windup:</li>
+                <li>Start with <code>bin/windup</code> with the <code>--input</code> parameter set to your source directory or application archive.</li>
+                <li>Set <code>--sourceMode</code> if analyzing source code rather than an application archive (deployment), like <code>.ear</code> or <code>.war</code>.</li>
+                <li>You may use <code>--packages com.myapp net.mycompany</code> parameter to speed things up - Windup will only scan those packages.</li>
+                <li>You may use <code>--output</code> parameter to set where Windup will put the report. By default, it is next to the scanned application.</li>
+                <li>Execute the command.</li>
+                <li>View the report! The link to the report is at the end of the console output.</li>
               </ol>
             </p>
             <h3>Example commands for Linux</h3>
