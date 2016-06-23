@@ -1,5 +1,5 @@
 $(".windup-download-now").click(function() {
-    window.location = 'https://www.jboss.org/download-manager/file/jboss-migrationtoolkit-windup-2.5.0.GA.zip'
+    window.location = 'https://www.jboss.org/download-manager/file/jboss-migrationtoolkit-windup-2.6.0.GA.zip'
 });
 
 $.extend($.expr[':'], {
