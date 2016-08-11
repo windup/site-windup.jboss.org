@@ -1,4 +1,4 @@
-# Windup Web Upload Instructions
+# windup.jboss.org Website Upload Instructions
 
 The [windup.jboss.org](http://windup.jboss.org) web site is hosted by Red Hat / JBoss.org
 
