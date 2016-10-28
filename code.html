@@ -5,6 +5,14 @@
 			<link href="assets/img/favicon.ico" rel="shortcut icon">
 			<link href="assets/css/bootstrap.css" rel="stylesheet">
 			<link href="assets/css/windup.css" rel="stylesheet">
+
+          <style type="text/css">
+            img.windup-contributors {
+              height: 40px;
+              width: 40px;
+              padding: 2px;
+            }
+          </style>
       
 	</head>
 	<body>
@@ -141,7 +149,46 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
             </div>
           </div>
         </div>
+       
+        <hr />
 
+          <div>
+            <h2>Windup Team</h2>
+            <div class="row">
+              <div class="span12">
+                <p>
+                  Windup is sponsored by Red Hat, which employs the core contributors.
+                </p>
+              </div>
+              <div class="span6">
+                <p>
+                  <b>Development Team:</b>
+                  <ul>
+                    <li>David Klingenberg</li>
+                    <li>Marek Novotny</li>
+                    <li>Jess Sightler</li>
+                    <li>Dan Smith</li>
+                    <li>John Steele</li>
+                    <li>Ondra Zizka</li>
+                  </ul>
+                </p>
+              </div>
+              <div class="span6">
+                <p>
+                  <b>Documentation:</b>
+                  <ul>
+                    <li>Andrea Hoffer</li>
+                  </ul>
+		</p>
+              </div>
+              <div class="span12">
+                <p>
+	        And special thanks to the emeritus members of the project and all of our contributors:
+                <div class="span9" id="windup-contributors"></div>
+                </p>
+              </div>
+            </div>
+          </div>
 
 
           
@@ -160,6 +207,20 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     <script src="assets/js/jquery-1.10.1.min.js"></script>
     <script src="assets/js/bootstrap.js"></script>
     <script src="assets/js/windup.js"></script>
-    
+ 
+    <!-- GitHub Contributors -->
+    <script type="text/javascript">
+        var divTarget = $("#windup-contributors");
+        $.getJSON( "https://api.github.com/repos/windup/windup/contributors", function( data ) {
+          $.each( data, function( key, val ) {
+            $( "<a data-toggle='tooltip' title='"+val.login+"' href='"+val.html_url+"'><img class='windup-contributors' src='"+val.avatar_url+"'/></a>").appendTo(divTarget);
+          });
+        });
+
+        $('[data-toggle="tooltip"]').tooltip({
+            'placement': 'top'
+        });
+    </script>
+
 	</body>
 </html>
